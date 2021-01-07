@@ -1,32 +1,5 @@
-% Template for PLoS
-% Version 3.5 March 2018
-%
-% % % % % % % % % % % % % % % % % % % % % %
-%
-% -- IMPORTANT NOTE
-%
-% This template contains comments intended 
-% to minimize problems and delays during our production 
-% process. Please follow the template instructions
-% whenever possible.
-%
-% % % % % % % % % % % % % % % % % % % % % % % 
-%
-% Once your paper is accepted for publication, 
-% PLEASE REMOVE ALL TRACKED CHANGES in this file 
-% and leave only the final text of your manuscript. 
-% PLOS recommends the use of latexdiff to track changes during review, as this will help to maintain a clean tex file.
-% Visit https://www.ctan.org/pkg/latexdiff?lang=en for info or contact us at latex@plos.org.
-%
-%
-% There are no restrictions on package use within the LaTeX files except that 
-% no packages listed in the template may be deleted.
-%
-% Please do not include colors or graphics in the text.
-%
+% Comentarios para Plos {{{
 % The manuscript LaTeX source should be contained within a single file (do not use \input, \externaldocument, or similar commands).
-%
-% % % % % % % % % % % % % % % % % % % % % % %
 %
 % -- FIGURES AND TABLES
 %
@@ -54,25 +27,12 @@
 % IMPORTANT
 % Below are a few tips to help format your equations and other special characters according to our specifications. For more tips to help reduce the possibility of formatting errors during conversion, please see our LaTeX guidelines at http://journals.plos.org/plosone/s/latex
 %
-% For inline equations, please be sure to include all portions of an equation in the math environment.  For example, x$^2$ is incorrect; this should be formatted as $x^2$ (or $\mathrm{x}^2$ if the romanized font is desired).
-%
-% Do not include text that is not math in the math environment. For example, CO2 should be written as CO\textsubscript{2} instead of CO$_2$.
-%
-% Please add line breaks to long display equations when possible in order to fit size of the column. 
-%
-% For inline equations, please do not include punctuation (commas, etc) within the math environment unless this is part of the equation.
-%
 % When adding superscript or subscripts outside of brackets/braces, please group using {}.  For example, change "[U(D,E,\gamma)]^2" to "{[U(D,E,\gamma)]}^2". 
 %
 % Do not use \cal for caligraphic font.  Instead, use \mathcal{}
-%
-% % % % % % % % % % % % % % % % % % % % % % % % 
-%
-% Please contact latex@plos.org with any questions.
-%
-% % % % % % % % % % % % % % % % % % % % % % % %
+% }}}
 
-\documentclass[10pt,letterpaper]{article}
+\documentclass[10pt,letterpaper]{article} % {{{
 \usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
 
 % amsmath and amssymb packages, useful for mathematical formulas and symbols
@@ -111,6 +71,8 @@
 \usepackage{booktabs}
 \usepackage{tcolorbox}
 \usepackage{colortbl}
+\usepackage[draft,inline,nomargin]{fixme} \fxsetup{theme=color}
+\FXRegisterAuthor{cp}{acp}{\color{blue}CP}
 
 \definecolor{C1-EN}{RGB}{0,132,170}
 \definecolor{C1-FR}{RGB}{255,117,0}
@@ -184,8 +146,9 @@
 
 %% END MACROS SECTION
 
-
+% }}}
 \begin{document}
+% Autores, titulo y otros {{{
 \vspace*{0.2in}
 
 % Title must be 250 characters or less.
@@ -196,6 +159,7 @@
 \newline
 % Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
 \\
+\cpnote{Discutir los autores: Josue, CarlosG, FLores, CarlosP, quizá sergio? Fernanda? }
 Name1 Surname \textsuperscript{1,2\Yinyang},
 Name2 Surname \textsuperscript{2\Yinyang},
 Name3 Surname \textsuperscript{2,3\textcurrency},
@@ -241,66 +205,154 @@ with the Lorem Ipsum Consortium\textsuperscript{\textpilcrow}
 
 \end{flushleft}
 % Please keep the abstract below 300 words
-\section*{Abstract}
-
-
-
+% }}}
+\section*{Abstract} % {{{
+\cpnote{Por hacer al final}
+% }}}
+\section*{Author summary} % {{{
 % Please keep the Author Summary between 150 and 200 words
 % Use first person. PLOS ONE authors please skip this step. 
 % Author Summary not valid for PLOS ONE submissions.   
-\section*{Author summary}
-
-
+% }}}
 \linenumbers
-
 % Use "Eq" instead of "Equation" for equation citations.
-\section*{Introduction}
+% For figure citations, please use "Fig" instead of "Figure".
+\section*{Introduction} % {{{
 
+\cpnote{No me gusta el inicio de la intro. Como que sugiere que hacemos el 
+estudio porque podemos. Creo qe toca pensar mejor la justificacion y abrir 
+en esa direccion. Me gusta mucho mas el segundo parrafo y quizá quisiera iniciar
+de esa manera.}
  
-In recent years, the field of linguistics has been benefited from the development of more sophisticated computational tools, helping to process a greater amount of data in less time and allowing the study of linguistics  from a statistical perspective.  This statistical study began with the works of George Zipf~\cite{Zipf}, in them Zipf argues that if  the words used in a text are ranked by their frequency of appearance,  where the lower ranks belong to the most frequent words,  then the frequency  f  of any word and its rank  k are related by a power law of the form f~1/k. The previous expression is known as  Zipf’s law, and it has not only been tested on language datasets,  Morales et al.~\cite{Morales} have also proved on sports and games data,  and  Cristelli et al.~\cite{cristelli} on the gross domestic product of several countries,  wealth of American citizens,  and population of cities.
+In recent years, the field of linguistics has been benefited from the
+development of more sophisticated computational tools, helping to process a
+greater amount of data in less time and allowing the study of linguistics  from
+a statistical perspective.  This statistical study began with the works of
+George Zipf~\cite{Zipf}, in them Zipf argues that if  the words used in a text
+are ranked by their frequency of appearance,  where the lower ranks belong to
+the most frequent words,  then the frequency  f  of any word and its rank  k
+are related by a power law of the form f~1/k. The previous expression is known
+as  Zipf’s law, and it has not only been tested on language datasets,  Morales
+et al.~\cite{Morales} have also proved on sports and games data,  and
+Cristelli et al.~\cite{cristelli} on the gross domestic product of several
+countries,  wealth of American citizens,  and population of cities.
  
-Although Zip’s law has opened several statistical studies in linguistics,  nowadays few studies have been done about how within the vocabulary of a language, words from the language itself and from other languages are mixed. Currently in the spanish language, there are words from the english language  that do not have a translation or that sometimes displace those that already exist in spanish.  For example, for native spanish speakers it is common to hear the word marketing instead of mercadeo  when dealing  with economic or business issues; also the word online has replaced  en línea, when referring to issues related to the internet, a word without translation in spanish.
+Although Zip’s law has opened several statistical studies in linguistics,
+nowadays few studies have been done about how within the vocabulary of a
+language, words from the language itself and from other languages are
+mixed\cpnote{Creo que podemos aca hablar mas de un mixing de cultura. Irnos de
+cosas generales a cosas particulares. Ahora, gracias a google ngram podemos aproximarnos
+a este problema mediante el lengauje}.
+Currently in the Spanish language, there are words from the English language
+that do not have a translation or that sometimes displace those that already
+exist in Spanish.  For example, for native Spanish speakers it is common to
+hear the word \textit{marketing} instead of \textit{mercadeo}  when dealing
+with economic or
+business issues; also the word \textit{online} has replaced \textit{en línea}, when referring to
+issues related to the internet, a word without translation in Spanish\cpnote{Ojo, ver si en la RAE no están estas palabras}.
  
-This trending is not only affecting spanish,  but also other languages that are being influenced by topics where english is the main and common language for communication. However, in different periods of time, the flow of words came from other languages. D’Amore~\cite{damore} discusses with linguistic rigor the flow of words between english and spanish,  showing historical  and cultural causes that allowed such flow; in addition to mentioning the influence of arabic in spanish and french in english.  
+This trending is not only affecting \cpnote{has not only affected} Spanish,  but also other languages that are
+being influenced by topics where English is the main and common language for
+communication. However, in different periods of time, the flow of words came
+from other languages. D’Amore~\cite{damore} discusses with linguistic rigor the
+flow of words between English and Spanish,  showing historical  and cultural
+causes that allowed such flow; in addition to mentioning the influence of
+Arabic in Spanish and French in English. \cpnote{Cuentanos un poco mas de esta
+referencia}
  
-In this work, we use the Google Books N-gram~\cite{ngram} dataset of the most frequent words in books published in  english, french, german, italian and spanish languages.  With that dataset,  we develop an algorithm that identifies the words of one language  and that are being used by others. Once these words have been classified, we construct two models to quantify  the influence that one language has had on another during the 20th century. The first model, we count the number of new words that a language received from another, while in the second method, we develop the concept of the use of one language in another,  from quantifying the relative frequency of  the words of a language  that are being used in another language. In both we identify historical, social and cultural causes that are responsible for the flow of words and the constantly use of them.
+In this work, we use the Google Books N-gram~\cite{ngram} dataset of the most
+frequent words in books published in  English, French, German, Italian and
+Spanish languages.  With that dataset,  we develop an algorithm that identifies
+the words of one language  and that are being used by others\cpnote{Creo qeu es importante
+decir que las que se usan literal}. Once these words
+have been classified, we construct two models to quantify  the influence that
+one language has had on another during the 20th century. The first model, we
+count the number of new words that a language received from another, while in
+the second method, we develop the concept of the use of one language in
+another,  from quantifying the relative frequency of  the words of a language
+that are being used in another language. In both we identify historical, social
+and cultural causes that are responsible for the flow of words and the
+constantly use of them.
  
-Finally, we use the concept of rank diversity,  that shows the number of words occupying a certain rank across the time. This study shows that  regardless of who is the language the flow comes from or who language receives them,  the lower ranks are always occupied by fewer  words, and as the rank increases the diversity curve also increases as a logarithmic. 
+Next, we use the concept of rank diversity,  that shows the number of words
+occupying a certain rank across the time. This study shows that  regardless of
+who is the language the flow comes from or who language receives them,  the
+lower ranks are always occupied by fewer  words, and as the rank increases the
+diversity curve also increases as a logarithmic. 
  
-
+\cpnote{Obvio aca toca poner algunos caveats y discutir la seccion de la estabilidad}
 
 %\begin{eqnarray}
 %\label{eq:schemeP}
 %	\mathrm{P_Y} = \underbrace{H(Y_n) - H(Y_n|\mathbf{V}^{Y}_{n})}_{S_Y} + \underbrace{H(Y_n|\mathbf{V}^{Y}_{n})- H(Y_n|\mathbf{V}^{X,Y}_{n})}_{T_{X\rightarrow Y}},
 %\end{eqnarray}
-
-\section*{Metodology}
-
-
-% For figure citations, please use "Fig" instead of "Figure".
-For the development of this work,  we used the Google Books Ngram data set. This dataset is made up of listing for each year and for each language of publication the most used “n-grams”. The "$n$-grams" are the words or set of words that make up the text of a book, where the number n indicates the number of words that make up the gram, being a 1-gram an individual word, a 2-gram a phrase composed of two 1-gram, 3-gram the set of three 1-gram and so on.
-
-From this data set, the lists of the five thousand most used 1-grams each year between 1740 and 2009 were extracted for the English, French, German, Italian and Spanish languages. In each list, the words are ranked according to their frequency of appearance, where the most frequent words have the lowest ranks.
-
-To determine the presence of one language in another, an algorithm was developed to find the words that are common between at least two languages, these must be the same in writing, letter by letter. These words were defined as \textbf{migrant words}.
-
-A migrant word is associated with a \textbf{source language} and a \textbf{receiving language}, where the source language is the one where the word appeared for the first time within the five thousand most used words, while the receiving language is the one where the word is also present, being a different set from the source language. To determine the source language, we established that this will be the language where the word appeared for the first time within the five thousand most used words; in the case of a migrant word has appeared in the same year in two or more languages, the source is the one where the word has the lowest rank.
-
-The previous criteria of looking for words with the same writing and later associating them with a source language, is not perfect. One of the most common errors was finding words with the same writing, but with different meanings, for example mayor in English refers to the representative of the government in a locality, while in Spanish, mayor is an adjective to indicate that something is bigger or older.  Another recurring error was to not distinguish words with the same meaning but with different endings, for example, the word imagine is written imaginer in French and imaginar in Spanish. Finally, in some cases, the authentic source language is some other language for which there is no information in the data set, for example the word  natural comes from Greek, but there is no data from Greek language in the google books n-grams data set, consequently this word was associated with English as its source language.
-
-The above errors were detected by individually analyzing each of the migrant words and their corresponding source and receiving languages. One way to have cleaner data is by consulting an expert in each language, who review the words and decide which ones were classified properly, however, this is not practical since if there were more languages ​​in the database, it would be necessary to consult an expert for each language.
+% }}}
+\section*{Metodology} % {{{
 
 
-% Place figure captions after the first paragraph in which they are cited.
-%\begin{figure}[!h]
-%\caption{{\bf Bold the figure title.}
-%Figure caption text here, please use this space for the figure panel descriptions instead of using subfigure commands. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
-%\label{fig1}
-%\end{figure}
+For the development of this work,  we used the Google Books Ngram data set.
+This dataset is made up of listing for each year and for each language of
+publication the most used “n-grams”\cpnote{Dos cosas, la primera es que en latex 
+las comillas son delicadas. Checate por ahi la documentacion. La sengunda es que 
+creo qeu nos toca ser consistentes con la forma en que ponemos ngrams. En la frase anterior
+y nen ls siguiente son diferentes}. The "$n$-grams" are the words or set of
+words that make up the text of a book, where the number $n$ indicates the number
+of words that make up the gram, being a 1-gram an individual word, a 2-gram a
+phrase composed of two 1-gram, 3-gram the set of three 1-gram and so on.
 
+From this data set, the lists of the five thousand most used 1-grams each year
+between 1740 and 2009 were extracted for the English, French, German, Italian
+and Spanish languages. In each list, the words are ranked according to their
+frequency of appearance, where the most frequent words have the lowest ranks.
+\cpnote{Creo qe se tienen que unir los parrafos y decir de done salen esaos
+ngrams, que son de libros escaneados}
+
+To determine the presence of one language in another, an algorithm was
+developed to find the words that are common between at least two languages,
+these must be the same in writing, letter by letter. These words were defined
+as \textbf{migrant words}. \cpnote{Normalmente las palabras claves las pongo 
+en italica. toca ver como le hace en el journal que elijamos.}
+
+A migrant word is associated with a \textbf{source language} and a
+\textbf{receiving language}, where the source language is the one where the
+word appeared for the first time within the 5000 most used words,
+while the receiving language is the one where the word is also present, being a
+different set from the source language. \cpnote{Creo qe el recieving language tambien tiene
+que entrar en el top, no?} \cpnote{No recuerdo porque usamos ese numero (5000). Tocará 
+medio comentarlo} To determine the source language, we
+established that this will be the language where the word appeared for the
+first time within the five thousand most used words; in the case of a migrant
+word has appeared in the same year in two or more languages, the source is the
+one where the word has the lowest rank.
+
+\cpnote{Creo qe toca hablar un poco de queu se limpiaron los datos, y de que se quitaron algunas cosas, que se cambio la capitalización}
+
+The previous criteria of looking for words with the same writing and later
+associating them with a source language, is not perfect. One of the most common
+errors was finding words with the same writing, but with different meanings.
+For example,  \textit{mayor} in English refers to the representative of the government in
+a locality, while in Spanish, \cpnote{mayor} is an adjective to indicate that something
+is bigger or older.  Another recurring error was to not distinguish words with
+the same meaning but with different endings. For example, the word \textit{imagine} is
+written \textit{imaginer} in French and \textit{imaginar} in Spanish. \cpnote{decir 
+que entonces nuestro algoritno no la detecta.} Finally, in some cases, the
+authentic source language is some other language for which there is no
+information in the data set, for example the word  natural comes from Greek,
+but there is no data from Greek language in the google books n-grams data set,
+consequently this word was associated with English as its source language.
+
+The above errors were detected by individually analyzing each of the migrant
+words and their corresponding source and receiving languages. One way to have
+cleaner data is by consulting an expert in each language, who review the words
+and decide which ones were classified properly, however, this is not practical
+since if there were more languages \cpnote{aca hay unos caracteres raros} ​​in the database, it would be
+necessary to consult an expert for each language.
+
+\cpnote{Decir que se estimo el tamaño del problema y que se menciona mas adelante}
+% }}}
+\section*{New words} % {{{
 % Results and Discussion can be combined.
-\section*{New words}
-
+%  Intro {{{
 The purpose of our work is to find a method to quantify the influence that one language has had on another, however there is no a generalized process that shows how much influence the things have. We built a first method to quantify the influence that one language has on another, this consisted of analyzing the times when a migrant word with a certain source language appears for the first time in the receiving language, finding relationships between those times and the words involved on the move. Migrant words with the same source language and that appear for the first time in the receiving language were referred to as \textbf{new migrant words}.
 
 The previous process was carried out in three different ways, the first by taking a source language \textit{A} and counting the new migrant words in the different receiving languages ​​for each decade, this shown in which languages \textit{A}​ has been influential; the second way was by taking language \textit{A} as the receiving language, and counting how many new migrant words of different source languages are present in each decade, this shown the languages that have been influential on \textit{A}; finally, by taking a language \textit{A} and a language \textit{B}, and counting how many new migrant words from \textit{A} are in \textit{B}, and how many from \textit{B} are in \textit{A}, this shown the influence between \textit{A} and \textit{B}.
@@ -308,10 +360,11 @@ The previous process was carried out in three different ways, the first by takin
 A complementary part of interpreting the influence between languages ​​is to recognize the causes that originate the migrations of words. These were inferred after analyzing the meaning of the new migrant words in a given year of migration. According to~\cite{semantic} a semantic field is a set of associated words that share part of their meaning. Then, from classifying the migrant words within a semantic field, the cause or event that originated the migrations might be found, since the migrations occur in the same year (or in the years around) where the event occurred.
 
 The fact of looking for relationships between the migrant words and their meaning, we decided to omit the functional words from the results, these words are those that help to structure a message according to the grammar of the language, such as articles, prepositions and conjunctions. In this way, all new migrant words are content words, that is, those that carry the information and meaning of the message.
+% }}}
+\subsection*{Analysis of new migrant words} % {{{
+\cpnote{Croe que solo tenemos una subseccion. No se si se justifique}
 
-\subsection*{Analysis of new migrant words}
-
-In order to quantify how many new words have migrated between the English, French, German, Italian and Spanish languages, Fig~\ref{fig.NMW_OR} shows, for each decade of the 20th century, the behavior of each language, being the source language or the receiving language of new words, representing how one language has influenced others and also how it has been influenced. Throughout the 20th century, the English language has contributed almost three times as many words as it has received, where its greatest apogee occured in the  1940s, during which World War II occurred; and in the first decade of 2000, where access to technology was feasible for larger sectors of the population, after the development of globalization.
+In order to quantify how many new words have migrated between the English, French, German, Italian and Spanish languages, Fig~\ref{fig.NMW_OR} shows, for each decade of the 20th century, the behavior of each language, being the source language or the receiving language of new words, representing how one language has influenced others and also how it has been influenced. Throughout the 20th century, the English language has contributed almost three times as many words as it has received, where its greatest apogee occurred in the  1940s, during which World War II occurred; and in the first decade of 2000, where access to technology was feasible for larger sectors of the population, after the development of globalization.
 
 \begin{figure}[!h]
 	\begin{adjustwidth}{-1.2in}{0in}
@@ -369,7 +422,7 @@ In the case of the French language, its influence as a source language increased
 
 For German as the source language, the largest number of words migrated to other languages ​​between the 1920s and 1940s. The role of Germany in the warlike conflicts of the 20th century, led to the migrations of the semantic field of war in these decades. Another important semantic field that characterizes words with German words, is the important surnames of German-speaking characters who excelled in certain academic areas, such as psychology, philosophy and music; this field shows an influence of the cultural type not only of the German language, but also of the German-speaking academy.
 
-In Italian, the semantic field that characterizes its migrant words  is again the World War II, showing an increase of the Italian languague between 1920 and 1940. In addition to the words of the semantic field of World War II, in Spanish also migrated words related to political ideologies that were relevant in the aftermath of World War II.
+In Italian, the semantic field that characterizes its migrant words  is again the World War II, showing an increase of the Italian language between 1920 and 1940. In addition to the words of the semantic field of World War II, in Spanish also migrated words related to political ideologies that were relevant in the aftermath of World War II.
 
 %\begin{equation}\label{key}\end{equation} 
 
@@ -380,10 +433,11 @@ Among the multiple combinations of source language and recipient language, the m
 
 
 %In the multiple combinations of source language and recipient language, the most common semantic fields are of a historical nature, highlighting the one referring to the Second World War, where words referring to it migrated in all languages. In addition, it was possible to show that languages ​​have been influential in different areas, English in technology, economics, politics and globalization; French and Italian in war and political ideologies, German in addition to war in academic areas, and Spanish in medicine.
-
-\section*{Accumulated words}
-
-The previous results of classifying migrant words according to a semantic field, shows which areas have been influential for there to be a movement of words among languages, nevertheless there is still no answer neither on which language has been more influential over another, nor how the influence ocurred.
+% }}}
+% }}}
+\section*{Accumulated words} % {{{
+% Intro {{{
+The previous results of classifying migrant words according to a semantic field, shows which areas have been influential for there to be a movement of words among languages, nevertheless there is still no answer neither on which language has been more influential over another, nor how the influence occurred.
 
 We define as accumulated migrant words those words with source language $A$ that had already appeared in a receiving language $B$, and for a given year they do so again. The difference between the new migrant words and the accumulated migrant words, is that they will only be new in the first year of appearance, later on they will become accumulated.
 
@@ -395,7 +449,7 @@ With the accumulated migrant words, we construct a method to obtain a measurable
 \sum_{k=1}^{5000} f(k).
 \end{equation}
 
-Later in the list of words, we distinguish and add the frecuency $f(j)$  of those with rank $j$ that are accumulated migrants and that come from the source language $A$
+Later in the list of words, we distinguish and add the frequency $f(j)$  of those with rank $j$ that are accumulated migrants and that come from the source language $A$
 
 \begin{equation}
 \label{ec.fpres}
@@ -414,8 +468,9 @@ It is called as the \textbf{Use} $\underset{ \text{\tiny A} \to \text{\tiny B} }
 This new quantity is the one that will quantify the influence of $A$ on $B$. It will be said that language $A$ has influenced language $B$ more if within a time interval $\Delta t$, the use of $A$ in $B$ increases; this will mean that the accumulated words have increased their frequency.
 
 Finally, to quantify the change in use  $\Delta U$ within a time interval $\Delta t$, the term ratio of words per year (wpy) will be used, obtained by dividing $\Delta U$ by $\Delta t$.
-
-\subsection*{The use among languages}
+% }}}
+\subsection*{The use among languages} % {{{
+\cpnote{De nuevo, hay solo una subseccion. Ver que hongo}
 
 We obtained with the previous method, the accumulated migrant words among all the possible combinations from a source language to a receiving language, in the 269 years (1740-2009) of the dataset. Then in each combination we applied the equation~\ref{ec.fuso} to realize the use ​​in the years between 1900 and 2009. To simplify the reading we establish s set of abbreviations to distinguish the languages, EN for English, FR for French, GE for German, IT for the Italian and SP for Spanish. In addition, to name some combination of source  and receiving languages, two abbreviations will be used, the first being the source language of the accumulated migrant words, and the second the receiving language of them, for example EN-GE, means the migrant words from English that are present in the German.
 
@@ -432,47 +487,48 @@ The Fig~\ref{fig.UT_art} shows the use of a source language, in all receiving la
 		\label{fig.UT_art}
 	\end{adjustwidth}
 \end{figure}
-
-\subsubsection*{English}
+% }}}
+\subsubsection*{English} % {{{
 
 The use of English in French, Italian and Spanish began to increase after 1930, while in German it was until 1990. We associate the cause of these increases with the emergence of the United States as a world power, after finishing the WWII and  impose its economic model as well as the development of science and technology. The accumulated migrant words that are present in all receiving  languages ​are \textit{capital}, \textit{dollar}, \textit{invesment}, \textit{relations}, \textit{market}, \textit{company}, \textit{development}, \textit{financial},  \textit{institutions}, \textit{internet}, \textit{windows} and \textit{software}. Those can again be associated with semantic fields such as economics, technology, and globalization.
 
-
-\subsubsection*{French}
+% }}}
+\subsubsection*{French} % {{{
 
 The increase in the influence of French in the other languages occurred in English between 1920 and 1970, in German between 1900 and 2009, and in Spanish between 1970 and 1995. In these years the words that increased its frequency are from the semantic fields of religion such as \textit{dieu} , \textit{évêque}, \textit{dime}, \textit{religion}, \textit{saint} and \textit{église} (iglesia); while \textit{reine}, \textit{forteresse}, \textit{napoleon}, \textit{guerre}, \textit{imperiale}, \textit{bastille}, \textit{royal} and \textit{bourgeois} are from French Revolution.
 
 In Italian between 1950 and 1970, in addition to the above words,\textit{raisins}, \textit{vin}, \textit{vignoble} y \textit{recolte} were found, the common meaning of which is the wine industry, a common industry in France and Italy.
 
-
-\subsubsection*{German}
+% }}}
+\subsubsection*{German} % {{{
 
 Spanish between 1935 and 1940 was the language where German had the greatest increase among all receiving languages; followed by the French between 1930 and 1945; in both  the words that are present are the surnames of German-speaking characters who excelled in academic areas, such as \textit{marx}, \textit{Freud}, \textit{heidegger}, \textit{nietzsche}, \textit{hegel}, \textit{engels} and \textit{mozart}.
 
 In English and Italian, the biggest change was between 1960 and 2009, where the use of German decreased. In this period the words that lost influence are referred to the World War II, among them \textit{berlin}, \textit{marx}, \textit{hitler}, \textit{lenin}, \textit{testen}  and \textit{reich}.
-
- \subsubsection*{Italian}
+% }}}
+\subsubsection*{Italian} % {{{
  
  
 The influence of Italian came mainly from two semantic fields, the WWII 
 with \textit{mussolini}, \textit{fascismo}, \textit{battaglia}, \textit{regime}, \textit{sociale} and \textit{liberale}; and the religion with \textit{santo}, \textit{suora} (monja) and \textit{cattedrale}. These semantic fields are responsbale for the increase in English between 19630 and 1940, in German between 1950 and 1995, and in Spanish between 1930 and 1960.
  
 In French, Italian has the lowest influence, where the aforementioned words began to be less frequent between 1940 and 1960.
-
-\subsubsection*{Spanish}
+% }}}
+\subsubsection*{Spanish} % {{{
 
 The influence of Spanish in English between 1920 and 1970, was due tu historical and cultural facts, since countries in Latin American as  \textit{mexico}, \textit{panama}, \textit{chile}, \textit{cuba}, \textit{peru}, \textit{colombia}, \textit{argentina} and its capital \textit{buenos} \textit{aires};  and states in the United States  where a large part of the Spanish-speaking population is concentrated as \textit{california} and \textit{florida}, were increased their frequency.
 
 In German after WWII, and in French between 1930 and 1955, the mainly words involved in that increse are, \textit{terapia}, \textit{anemia}, \textit{lepra}, \textit{tumor}, \textit{syphilis}, \textit{virus} and \textit{renal}.
 
-
-\section*{Rank diversity}
+% }}}
+% }}}
+\section*{Rank diversity} % {{{
 
 Since the accumulated migrant words are organized by year, and at the same time in each year the words are ordered in ascending order in rank, then over time, the same rank can be occupied by different words. One way to quantify how many different elements can occupy the same rank within the same corpus is through rank diversity $d(k)$.
 
 Rank diversity has been used in datasets of the most used words in six Indo-European languages, and in sports and game classifications. Although in each case the criteria for establishing a ranking are different, in both there is a common result: for the same set of data that have had different rankings over time, it is true that the lowest ranks are always occupied by fewer elements, thereby as the range increases, the number of elements that occupy it also does them.
 
-After applying the rank diversity in each source language and receiving language pair, the diversity values resemble a logarithmic curve, as can be seen in Fig~\ref{fig.DR_art}. We proposed the curve $d(k) =  \alpha \ln(k) + \beta.$ to fit the rank diversity where the parameters $\alpha$ and $\beta$ were obteined with a linear regression. With the corresponding linear regression of each language pair, the reliability of the fit with the coefficient of determination $R^{2}$ was verified. If $ a_ {k} $ represents the value of the adjustment equation when evaluating it in the range $ k $, $ d_ {k} $ is the diversity obtained for the same range and $ \ bar {d} $ is the average of all values ​​of the diversity, then $R^{2}$ is expressed as:
+After applying the rank diversity in each source language and receiving language pair, the diversity values resemble a logarithmic curve, as can be seen in Fig~\ref{fig.DR_art}. We proposed the curve $d(k) =  \alpha \ln(k) + \beta.$ to fit the rank diversity where the parameters $\alpha$ and $\beta$ were obtained with a linear regression. With the corresponding linear regression of each language pair, the reliability of the fit with the coefficient of determination $R^{2}$ was verified. If $ a_ {k} $ represents the value of the adjustment equation when evaluating it in the range $ k $, $ d_ {k} $ is the diversity obtained for the same range and $ \ bar {d} $ is the average of all values ​​of the diversity, then $R^{2}$ is expressed as:
 \begin{equation}
 R^{2} = 1 - \sum_{k = 1} \frac{ \left( \,d_{k} - a_{k} \,\right)^{2}  }{ \left( \, d_{k} - \bar{d} \,\right)^{2} }.	
 \label{ec.r2_diversidad}
@@ -493,14 +549,18 @@ Fig~\ref{fig.DR_art} also shows the graph of equation $d(k) = 0.16\ln(k) - 0.17$
 
 %PLOS does not support heading levels beyond the 3rd (no 4th level headings).
 
-
-\section*{Supporting information}
-
-
-\section*{Acknowledgments}
+% }}}
+\section*{Seccion con robustez} % {{{
+% }}}
+\section*{Supporting information} % {{{
+% }}}
+\section*{Acknowledgments} % {{{
 
 \nolinenumbers
 
+Support by projects CONACyT 285754 and UNAM-PAPIIT IG101421 is acknowledged. 
+% }}}
+\begin{thebibliography}{10} % {{{
 % Either type in your references using
 % \begin{thebibliography}{}
 % \bibitem{}
@@ -514,7 +574,6 @@ Fig~\ref{fig.DR_art} also shows the graph of equation $d(k) = 0.16\ln(k) - 0.17$
 % here. See http://journals.plos.org/plosone/s/latex for 
 % step-by-step instructions.
 % 
-\begin{thebibliography}{10}
 
 \bibitem{bib1}
 Conant GC, Wolfe KH.
@@ -534,9 +593,6 @@ Magwire MM, Bayer F, Webster CL, Cao C, Jiggins FM.
   infection through a transposon insertion followed by a {D}uplication}.
 \newblock PLoS Genet. 2011 Oct;7(10):e1002337.
 
-\end{thebibliography}
-
-
-
+\end{thebibliography} % }}}
 \end{document}
 
