@@ -550,8 +550,24 @@ Fig~\ref{fig.DR_art} also shows the graph of equation $d(k) = 0.16\ln(k) - 0.17$
 %PLOS does not support heading levels beyond the 3rd (no 4th level headings).
 
 % }}}
-\section*{Seccion con robustez} % {{{
+\section*{Robustness} % {{{
 % }}}
+
+The method of the use of one language in another, showed that the words of certain semantic fields decrease their rank if the use tends to increase. Nevertheless, the inverse case cannot be concluded, that is, we do not know if the use of a language increases as a consequence of a group of words decreasing its rank, nor do we know how stable is the use among languages ​​if certain words were not taken; since within the accumulated words of one language in another, only a few belong to a specific semantic field.
+
+To check the stability of the use among languages and the importance of omitting certain elements, we constructed a method to interpret the robustness of the corpus. This consisted of taking the original set (the one obtained in the previous section) of the accumulated words of a pair of source language and receiving language, and of this, eliminating a certain group of words, in order to obtain a reduced set; in both,  equation~\ref{ec.fuso} is used to obtain the use between the years 1900 and 2009.
+
+The next thing is to determine how similar the use of both sets are, we normalized the values of both sets, after dividing them by the average value of each one; We defined as the \textbf{conversion factor} $F_{c}$ as the result of dividing the average of the reduced use by the average of the original use. After normalization, for each year $t$, we obtain the distance between each value of original use $u_{t}$ and its corresponding value in reduced use $r_{t}$; the average of them gets the \textbf{average distance} $\left\langle D \right\rangle$, which will be the one that quantifies the similarity of the results, indicating a greater similarity if it is close to zero.
+\begin{equation}
+\left\langle D \right\rangle  = \frac{1}{N}\sum_{t=1}^{N} \left| u_{t} - r_{t} \right|  .
+\label{ec.Davg}
+\end{equation}
+
+\subsection*{Elimination characteristics}
+
+%just multiply the original use by the conversion factor to obtain the reduced use. 
+
+
 \section*{Supporting information} % {{{
 % }}}
 \section*{Acknowledgments} % {{{
