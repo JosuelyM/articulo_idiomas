@@ -607,7 +607,9 @@ The method of the use of one language in another, showed that the words of certa
 
 To check the stability of the use among languages and the importance of omitting certain elements, we constructed a method to interpret the robustness of the corpus. This consisted of taking the original set (the one obtained in the previous section) of the accumulated words of a pair of source language and receiving language, and of this, eliminating a certain group of words, in order to obtain a reduced set; in both,  equation~\ref{ec.fuso} is used to obtain the use between the years 1900 and 2009.
 
-The next thing is to determine how similar the use of both sets are, we normalized the values of both sets, after dividing them by the average value of each one; We defined as the \textbf{conversion factor} $F_{c}$ as the result of dividing the average of the reduced use by the average of the original use. After normalization, for each year $t$, we obtain the distance between each value of original use $u_{t}$ and its corresponding value in reduced use $r_{t}$; the average of them gets the \textbf{average distance} $\left\langle D \right\rangle$, which will be the one that quantifies the similarity of the results, indicating a greater similarity if it is close to zero.
+The next thing is to determine how similar the use of both sets are, we normalized the values of both sets, after dividing them by the average value of each one; then for each year $t$ we obtain the distance between each value of original use $u_{t}$ and its corresponding value in reduced use $r_{t}$; the average of them gets the \textbf{average distance} $\left\langle D \right\rangle$, which will be the one that quantifies the similarity of the results, indicating a greater similarity if it is close to zero.
+
+%We defined as the \textbf{conversion factor} $F_{c}$ as the result of dividing the average of the reduced use by the average of the original use. After normalization, for each year $t$, we obtain the distance between each value of original use $u_{t}$ and its corresponding value in reduced use $r_{t}$; the average of them gets the \textbf{average distance} $\left\langle D \right\rangle$, which will be the one that quantifies the similarity of the results, indicating a greater similarity if it is close to zero.
 \begin{equation}
 \left\langle D \right\rangle  = \frac{1}{N}\sum_{t=1}^{N} \left| u_{t} - r_{t} \right|  .
 \label{ec.Davg}
@@ -615,8 +617,48 @@ The next thing is to determine how similar the use of both sets are, we normaliz
 
 \subsection*{Elimination characteristics}
 
+To answer how stable the sets are if we altering them, we first verify that in each year the accumulated migrant wors between two languages, obey Zipf's law $f~1/k$ if they are order ascending by their rank Fig~\ref{fig.ZL_receiving}; from this it is understandable to deduce that the use between languages would be more affected if the words with the lowest ranks are eliminated, since the sum of the frequencies of this group is greater than the sum of the frequencies of the words with the highest ranks.
+
+\begin{figure}[!h]
+	\begin{adjustwidth}{-2.5cm}{1cm}
+		\centering
+		\includegraphics[scale=.38]{ZL_receptor.png}
+		\caption{{\bf Zipf's law of the accumulated migrant words, grouped by receiving language.} }
+		\label{fig.ZL_receiving}
+	\end{adjustwidth}
+\end{figure}
+
+
+Another way to tell the previous deduction, is thinking that if the sum of frequencies is the same in two sets, where the first is made up of words with low ranks, and the second by words with high ranks, the second set would have to have more items than the first. With these ideas, in each source language and receiving language pair, we carry out two types of elimination, in the first we begin to eliminate the words with the lowest ranks and little by little increasing the portion of words eliminated $R_{p}$ (from 1$\%$ to a 99$\%$) until the words with the highest ranks are
+were covered Fig~\ref{fig.RP_low}; the second way was the opposite case, beginning to eliminate a small portion of those worsd with highest ranks and gradually increasing it until cover the lower ranks Fig~\ref{fig.RP_high}. In both cases, each time the eliminated portion was increased, the average difference was calculated to observe the similarity.
+
+
+\begin{figure}[!h]
+	\begin{adjustwidth}{-2.5cm}{1cm}
+		\centering
+		\includegraphics[scale=.38]{Rp_bajos.png}
+		\caption{{\bf Portion of eliminated words with lows ranks.} }
+		\label{fig.RP_low}
+	\end{adjustwidth}
+\end{figure}
+
+
+\begin{figure}[!h]
+	\begin{adjustwidth}{-2.5cm}{1cm}
+		\centering
+		\includegraphics[scale=.38]{Rp_altos.png}
+		\caption{{\bf Portion of eliminated words with high ranks.} }
+		\label{fig.RP_high}
+	\end{adjustwidth}
+\end{figure}
+
+After observing both figures, it is appropriate to say that for the similarity of the use between languages are altered, a greater number of words with high ranks are needed than words with low ranks, in terms of robustness, the sets are more stable if altering them are eliminated those words with the highest ranks, that is, those with the lowest frequencies.
+
+This result, despite showing the stability of the sets when eliminating words from them, can be counterproductive with the results of the previous sections, since in those we try to find relationships based on the meaning of the words, and in case of an elimination such relationships would be lost if the words involved have high ranks.
+
 %just multiply the original use by the conversion factor to obtain the reduced use. 
 
+\clearpage
 
 \section*{Supporting information} % {{{
 % }}}
@@ -625,6 +667,7 @@ The next thing is to determine how similar the use of both sets are, we normaliz
 \nolinenumbers
 
 Support by projects CONACyT 285754 and UNAM-PAPIIT IG101421 is acknowledged. 
+
 % }}}
 \begin{thebibliography}{10} % {{{
 % Either type in your references using
