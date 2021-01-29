@@ -72,6 +72,7 @@
 \usepackage{tcolorbox}
 \usepackage{colortbl}
 \usepackage[draft,inline,nomargin]{fixme} \fxsetup{theme=color}
+
 \FXRegisterAuthor{cp}{acp}{\color{blue}CP}
 
 \definecolor{C1-EN}{RGB}{0,132,170}
@@ -159,16 +160,18 @@
 \newline
 % Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
 \\
-\cpnote{Discutir los autores: Josue, CarlosG, FLores, CarlosP, quizá sergio? Fernanda? }
-Name1 Surname \textsuperscript{1,2\Yinyang},
-Name2 Surname \textsuperscript{2\Yinyang},
-Name3 Surname \textsuperscript{2,3\textcurrency},
-Name4 Surname \textsuperscript{2},
-Name5 Surname \textsuperscript{2\ddag},
-Name6 Surname \textsuperscript{2\ddag},
-Name7 Surname \textsuperscript{1,2,3*},
-with the Lorem Ipsum Consortium\textsuperscript{\textpilcrow}
-\\
+\cpnote{Discutir los autores: Josue, CarlosG, FLores, CarlosP, quizá sergio? Fernanda? } 
+
+Josué Ely Molina  \textsuperscript{1,2} %\textsuperscript{1,2\Yinyang},
+Carlos Pineda     \textsuperscript{1,2}    % \textsuperscript{2\Yinyang},
+Jorge Flores      \dag \textsuperscript{2,3} %\textcurrency},
+Carlos Gershenson \textsuperscript{2},
+%Name5 Surname \textsuperscript{2\ddag},
+%Name6 Surname \textsuperscript{2\ddag},
+%Name7 Surname \textsuperscript{1,2,3*},
+
+%with the Lorem Ipsum Consortium\textsuperscript{\textpilcrow}
+%\\
 \bigskip
 \textbf{1} Affiliation Dept/Program/Center, Institution Name, City, State, Country
 \\
@@ -233,8 +236,8 @@ are ranked by their frequency of appearance,  where the lower ranks belong to
 the most frequent words,  then the frequency  f  of any word and its rank  k
 are related by a power law of the form f~1/k. The previous expression is known
 as  Zipf’s law, and it has not only been tested on language datasets,  Morales
-et al.~\cite{Morales} have also proved on sports and games data,  and
-Cristelli et al.~\cite{cristelli} on the gross domestic product of several
+et al.~\cite{Morales_epj} have also proved on sports and games data,  and
+Cristelli et al.~\cite{Cristelli_zipfgdp} on the gross domestic product of several
 countries,  wealth of American citizens,  and population of cities.
  
 Although Zip’s law has opened several statistical studies in linguistics,
@@ -254,13 +257,13 @@ issues related to the internet, a word without translation in Spanish\cpnote{Ojo
 This trending is not only affecting \cpnote{has not only affected} Spanish,  but also other languages that are
 being influenced by topics where English is the main and common language for
 communication. However, in different periods of time, the flow of words came
-from other languages. D’Amore~\cite{damore} discusses with linguistic rigor the
+from other languages. D’Amore~\cite{Damore_influencia_mutua} discusses with linguistic rigor the
 flow of words between English and Spanish,  showing historical  and cultural
 causes that allowed such flow; in addition to mentioning the influence of
 Arabic in Spanish and French in English. \cpnote{Cuentanos un poco mas de esta
 referencia}
  
-In this work, we use the Google Books N-gram~\cite{ngram} dataset of the most
+In this work, we use the Google Books N-gram~\cite{ngramv} dataset of the most
 frequent words in books published in  English, French, German, Italian and
 Spanish languages.  With that dataset,  we develop an algorithm that identifies
 the words of one language  and that are being used by others\cpnote{Creo qeu es importante
@@ -379,7 +382,7 @@ new migrant words from \textit{A} are in \textit{B}, and how many from
 A complementary part of interpreting the influence between languages
 ​​is to recognize the causes that originate the migrations of words.
 These were inferred after analyzing the meaning of the new migrant words in a
-given year of migration. According to~\cite{semantic} a semantic field is a set
+given year of migration. According to~\cite{semantic_oxford} a semantic field is a set
 of associated words that share part of their meaning. Then, from classifying
 the migrant words within a semantic field, the cause or event that originated
 the migrations might be found, since the migrations occur in the same year (or
@@ -668,7 +671,11 @@ This result, despite showing the stability of the sets when eliminating words fr
 
 Support by projects CONACyT 285754 and UNAM-PAPIIT IG101421 is acknowledged. 
 
-% }}}
+\bibliographystyle{plos2015}
+
+\bibliography{referencias} 
+
+
 \begin{thebibliography}{10} % {{{
 % Either type in your references using
 % \begin{thebibliography}{}
@@ -684,23 +691,23 @@ Support by projects CONACyT 285754 and UNAM-PAPIIT IG101421 is acknowledged.
 % step-by-step instructions.
 % 
 
-\bibitem{bib1}
-Conant GC, Wolfe KH.
-\newblock {{T}urning a hobby into a job: how duplicated genes find new
-  functions}.
-\newblock Nat Rev Genet. 2008 Dec;9(12):938--950.
+%\bibitem{bib1}
+%Conant GC, Wolfe KH.
+%\newblock {{T}urning a hobby into a job: how duplicated genes find new
+%  functions}.
+%\newblock Nat Rev Genet. 2008 Dec;9(12):938--950.
 
-\bibitem{bib2}
-Ohno S.
-\newblock Evolution by gene duplication.
-\newblock London: George Alien \& Unwin Ltd. Berlin, Heidelberg and New York:
-  Springer-Verlag.; 1970.
+%\bibitem{bib2}
+%Ohno S.
+%\newblock Evolution by gene duplication.
+%\newblock London: George Alien \& Unwin Ltd. Berlin, Heidelberg and New York:
+%  Springer-Verlag.; 1970.
 
-\bibitem{bib3}
-Magwire MM, Bayer F, Webster CL, Cao C, Jiggins FM.
-\newblock {{S}uccessive increases in the resistance of {D}rosophila to viral
-  infection through a transposon insertion followed by a {D}uplication}.
-\newblock PLoS Genet. 2011 Oct;7(10):e1002337.
+%\bibitem{bib3}
+%Magwire MM, Bayer F, Webster CL, Cao C, Jiggins FM.
+%\newblock {{S}uccessive increases in the resistance of {D}rosophila to viral
+%  infection through a transposon insertion followed by a {D}uplication}.
+%\newblock PLoS Genet. 2011 Oct;7(10):e1002337.
 
 \end{thebibliography} % }}}
 \end{document}
