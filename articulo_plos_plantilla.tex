@@ -649,9 +649,24 @@ In German after WWII, and in French between 1930 and 1955, the mainly words invo
 % }}}
 \section*{Rank diversity} % {{{
 
-Since the accumulated migrant words are organized by year, and at the same time in each year the words are ordered in ascending order in rank, then over time, the same rank can be occupied by different words. One way to quantify how many different elements can occupy the same rank within the same corpus is through rank diversity $d(k)$.
+\cpnote{Why are we interested in rank diversity that has not been understood in the 
+previous sections?}
+Since the accumulated migrant words are organized by year, and at the same time
+in each year the words are ordered in ascending order in rank, then over time,
+the same rank can be occupied by different words. One way to quantify how many
+different elements can occupy the same rank within the same corpus is through
+rank diversity $d(k)$ \cpnote{this last sentence belongs to a paragraph introducing rank
+diversity. I think that we must start saying the idea that we want to quantify. That, 
+in a paragraph. Then another paragraph that really introduces the measure, which I think
+is still laking. Maybe a single paragraph that contains both ideas.}.
 
-Rank diversity has been used in datasets of the most used words in six Indo-European languages, and in sports and game classifications. Although in each case the criteria for establishing a ranking are different, in both there is a common result: for the same set of data that have had different rankings over time, it is true that the lowest ranks are always occupied by fewer elements, thereby as the range increases, the number of elements that occupy it also does them.
+Rank diversity has been used in datasets of the most used words in six
+Indo-European languages, and in sports and game classifications. Although in
+each case the criteria for establishing a ranking are different, in both there
+is a common result: for the same set of data that have had different rankings
+over time, it is true that the lowest ranks are always occupied by fewer
+elements, thereby as the range increases, the number of elements that occupy it
+also does them.
 
 After applying the rank diversity in each source language and receiving language pair, the diversity values resemble a logarithmic curve, as can be seen in Fig~\ref{fig.DR_art}. We proposed the curve $d(k) =  \alpha \ln(k) + \beta.$ to fit the rank diversity where the parameters $\alpha$ and $\beta$ were obtained with a linear regression. With the corresponding linear regression of each language pair, the reliability of the fit with the coefficient of determination $R^{2}$ was verified. If $ a_ {k} $ represents the value of the adjustment equation when evaluating it in the range $ k $, $ d_ {k} $ is the diversity obtained for the same range and $ \ bar {d} $ is the average of all values of the diversity, then $R^{2}$ is expressed as:
 \begin{equation}
