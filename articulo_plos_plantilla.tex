@@ -73,8 +73,11 @@
 \usepackage{colortbl}
 \usepackage[draft,inline,nomargin]{fixme} \fxsetup{theme=color}
 
+
+\FXRegisterAuthor{jm}{jmm}{\color{purple}Josue}
 \FXRegisterAuthor{cp}{acp}{\color{blue}CP}
 \FXRegisterAuthor{cg}{cgg}{\color{red}CG}
+
 
 \definecolor{C1-EN}{RGB}{0,132,170}
 \definecolor{C1-FR}{RGB}{255,117,0}
@@ -256,12 +259,12 @@ a este problema mediante el lengauje}.
 Currently in the Spanish language, there are words from the English language
 that do not have a translation or that sometimes displace those that already
 exist in Spanish.  For example, for native Spanish speakers it is common to
-hear the word \textit{marketing} instead of \textit{mercadeo}  when dealing
+hear the word \textit{marketing} instead of its translation\textit{mercadeo}   when dealing
 with economic or
 business issues; also the word \textit{online} has replaced \textit{en línea}, when referring to
-issues related to the internet, a word without translation in Spanish\cpnote{Ojo, ver si en la RAE no están estas palabras}.
+issues related to the internet, a word without translation in Spanish\cpnote{Ojo, ver si en la RAE no están estas palabras}\jmnote{ya cheque estas palabras, intenet si tiene una definicion en la RAE, pero la acepta como uan palabra del ingles}.
  
-This trending is not only affecting \cpnote{has not only affected} Spanish,  but also other languages that are
+This trending has not only affected \cpnote{has not only affected} Spanish,  but also other languages that are
 being influenced by topics where English is the main and common language for
 communication. However, in different periods of time, the flow of words came
 from other languages. D’Amore~\cite{Damore_influencia_mutua} discusses with linguistic rigor the
@@ -302,71 +305,60 @@ diversity curve also increases as a logarithmic.
 
 For the development of this work,  we used the Google Books Ngram data set.
 This dataset is made up of listing for each year and for each language of
-publication the most used “n-grams”\cpnote{Dos cosas, la primera es que en latex 
+publication the most used ``$n$-grams'' in the books of Google Books. 
+
+ \cpnote{Dos cosas, la primera es que en latex 
 las comillas son delicadas. Checate por ahi la documentacion. La sengunda es que 
 creo qeu nos toca ser consistentes con la forma en que ponemos ngrams. En la frase anterior
-y nen ls siguiente son diferentes}. The "$n$-grams" are the words or set of
-words that make up the text of a book, where the number $n$ indicates the number
-of words that make up the gram, being a 1-gram an individual word, a 2-gram a
-phrase composed of two 1-gram, 3-gram the set of three 1-gram and so on.
+y nen ls siguiente son diferentes}. \jmnote{listo, para n grams  queda mejor la n con signo de pesos}The ``$n$-grams'' are the words or set of
+words that make up the text of a book, where the number $n$ indicates the number of words that make up the gram, being a 1-gram an individual word, a 2-gram a phrase composed of two 1-gram, 3-gram the set of three 1-gram and so on.
 
 From this data set, the lists of the five thousand most used 1-grams each year
 between 1740 and 2009 were extracted for the English, French, German, Italian
 and Spanish languages. In each list, the words are ranked according to their
 frequency of appearance, where the most frequent words have the lowest ranks.
+
 \cpnote{Creo qe se tienen que unir los parrafos y decir de done salen esaos
 ngrams, que son de libros escaneados}
 
 To determine the presence of one language in another, an algorithm was
 developed to find the words that are common between at least two languages,
-these must be the same in writing, letter by letter. These words were defined
-as \textbf{migrant words}. \cpnote{Normalmente las palabras claves las pongo 
-en italica. toca ver como le hace en el journal que elijamos.}
+these must be the same in writing, letter by letter. These words were defined as \textbf{migrant words}. \cpnote{Normalmente las palabras claves las pongo en italica. toca ver como le hace en el journal que elijamos.}
 
 A migrant word is associated with a \textbf{source language} and a
 \textbf{receiving language}, where the source language is the one where the
-word appeared for the first time within the 5000 most used words,
+word appeared for the first time within the most used words,
 while the receiving language is the one where the word is also present, being a
-different set from the source language. \cpnote{Creo qe el recieving language tambien tiene
+different set from the source language. In both sets, we are considering the five thousand most used words, since all the lists of the six languages (between 1740 and 2009), have at least this amount.\cpnote{Creo qe el recieving language tambien tiene
 que entrar en el top, no?} \cpnote{No recuerdo porque usamos ese numero (5000). Tocará 
-medio comentarlo} To determine the source language, we
-established that this will be the language where the word appeared for the
-first time within the five thousand most used words; in the case of a migrant
-word has appeared in the same year in two or more languages, the source is the
-one where the word has the lowest rank.
+medio comentarlo}\jmnote{ya lo comente, se tomaron las 5 mil ya que cada lista entre 1740-2009 tiene esta cantidad} 
 
+The main criteria to clean the data, consisted to eliminate the funcional words, that is articles, pronouns, propositions and conjunctions, since these serve to give a structure to the message;  then we consider content words as nouns, adjectives and adverbs, which are responsible for the information in the message. Although the names of people, countries and cities are considered functional words, we did not eliminate them, since for some languages these words show a cultural trend that we have decided to take into account.
+
+To determine the source language, we established that this will be the language where the word appeared for the first time within the five thousand most used words; in the case of a migrant word has appeared in the same year in two or more languages, the source is the one where the word has the lowest rank.
+
+
+
+\jmnote{lo de elimnar las mayusculas, en las listas de palabras  ya vienen asi.}
 \cpnote{Creo qe toca hablar un poco de queu se limpiaron los datos, y de que se quitaron algunas cosas, que se cambio la capitalización}
 
 The previous criteria of looking for words with the same writing and later
-associating them with a source language, is not perfect. One of the most common
-errors was finding words with the same writing, but with different meanings.
-For example,  \textit{mayor} in English refers to the representative of the government in
-a locality, while in Spanish, \cpnote{mayor} is an adjective to indicate that something
-is bigger or older.  Another recurring error was to not distinguish words with
-the same meaning but with different endings. For example, the word \textit{imagine} is
-written \textit{imaginer} in French and \textit{imaginar} in Spanish. \cpnote{decir 
-que entonces nuestro algoritno no la detecta.} Finally, in some cases, the
-authentic source language is some other language for which there is no
-information in the data set, for example the word  natural comes from Greek,
-but there is no data from Greek language in the google books n-grams data set,
-consequently this word was associated with English as its source language.
+associating them with a source language, is not perfect there are some cases that our method did not detect and were established as mistakes. One of the most common errors was finding words with the same writing, but with different meanings. For example,  \textit{mayor} in English refers to the representative of the government in a locality, while in Spanish, \cpnote{mayor} mayor is an adjective to indicate that something
+is bigger or older.  Another recurring error was to not distinguish words with the same meaning but with different endings. For example, the word \textit{imagine} is written \textit{imaginer} in French and \textit{imaginar} in Spanish.
 
-The above errors were detected by individually analyzing each of the migrant
-words and their corresponding source and receiving languages. One way to have
-cleaner data is by consulting an expert in each language, who review the words
-and decide which ones were classified properly, however, this is not practical
-since if there were more languages in the database, it would be
-necessary to consult an expert for each language.
+\cpnote{decir que entonces nuestro algoritno no la detecta.} Finally, in some cases, the authentic source language is some other language for which there is no information in the data set, for example the word  natural comes from Greek, but there is no data from Greek language in the google books $n$-grams data set, consequently this word was associated with English as its source language.
+
+The above errors were detected by individually analyzing each of the migrant words and their corresponding source and receiving languages. One way to have cleaner data is by consulting an expert in each language, who review the words and decide which ones were classified properly, however, this is not practical since if there were more languages in the database, it would be necessary to consult an expert for each language. Notwithstanding of this requirement to  regulate errors, we established a method to determine the importance (weight) of these errors in the results, that will show in the following sections. 
 
 \cpnote{Decir que se estimo el tamaño del problema y que se menciona mas adelante}
+\jmnote{listo}
 % }}}
 \section*{New words} % {{{
 % Results and Discussion can be combined.
 %  Intro {{{
 The purpose of our work is to find a method to quantify the influence that one
 language has had on another, however there is no a generalized process that
-shows how much influence the things have\cpnote{Esta frase es muy importante, pero 
-no estoy del todo de acuerdo con ella. Platicar con Josue y con CarlosG}. We built a first method to quantify
+shows how much influence the things have\cpnote{Esta frase es muy importante, pero no estoy del todo de acuerdo con ella. Platicar con Josue y con CarlosG}. We built a first method to quantify \jmnote{platicar con carlos}
 the influence that one language has on another, this consisted of analyzing the
 times when a migrant word with a certain source language appears for the first
 time in the receiving language, finding relationships between those times and
@@ -374,29 +366,23 @@ the words involved on the move. Migrant words with the same source language and
 that appear for the first time in the receiving language were referred to as
 \textbf{new migrant words}. 
 
-The previous process was carried out in three different ways, the first by
-taking a source language \textit{A} and counting the new migrant words in the
-different receiving languages for each decade, this shown in which
-languages \textit{A} has been influential \cpnote{Mala redacción}; the second way was by taking
-language \textit{A} as the receiving language, and counting how many new
-migrant words of different source languages are present in each decade, this
-shown the languages that have been influential on \textit{A}; finally, by
-taking a language \textit{A} and a language \textit{B}, and counting how many
-new migrant words from \textit{A} are in \textit{B}, and how many from
-\textit{B} are in \textit{A}, this shown the influence between \textit{A} and
-\textit{B}.
+The previous process was carried out in two different ways, the first by
+taking a source language \textit{A} and counting the new migrant words in the different receiving languages for each decade. The second consisted in taking the language \textit{A} as the receiving language, and counting how many new migrant words of different source languages are present in each decade. The below procedure will show how \textit{A} influence others, and how the others influece it.
+\cpnote{Mala redacción}
+\jmnote{listo}
+
+
+%this shown in which languages \textit{A} has been influential \cpnote{Mala redacción}; the second way was by taking language \textit{A} as the receiving language, and counting how many new migrant words of different source languages are present in each decade, this shown the languages that have been influential on \textit{A}; finally, by taking a language \textit{A} and a language \textit{B}, and counting how many new migrant words from \textit{A} are in \textit{B}, and how many from \textit{B} are in \textit{A}, this shown the influence between \textit{A} and \textit{B}.
 
 A complementary part of interpreting the influence between languages
 is to recognize the causes that originate the migrations of words.
-These were inferred after analyzing the meaning of the new migrant words in a
-given year of migration. According to~\cite{semantic_oxford} a semantic field is a set
-of associated words that share part of their meaning. Then, from classifying
-the migrant words within a semantic field, the cause or event that originated
-the migrations might be found, since the migrations occur in the same year (or
-in the years around) where the event occurred.\cpnote{redaccion como rara. Quizá meteria
-la definicion de semantica entre comas o algo asi menor. Quizá mencionar que 
-ese concepto es el más util para agrupar las palabras.}
+These were inferred after analyzing the meaning of each new migrant word in a given year of migration. According to~\cite{semantic_oxford} a semantic field is a set of associated words that share part of their meaning. Therefore, if we cluster the new migrant words  by semantic fields, we would be able to establish a possible cause of the movement by analyzing the historical and cultural events that ocurred  in the same year (or in the years around) of the migrations. This cluster is practical, since words  and the possible event will be realted by their meaning. 
 
+%The migrant words within a semantic field, the cause or event that originated the migrations might be found, since the migrations occur in the same year (or in the years around) where the event occurred.
+\cpnote{redaccion como rara. Quizá meteria la definicion de semantica entre comas o algo asi menor. Quizá mencionar que  ese concepto es el más util para agrupar las palabras.}
+\jmnote{1° correccion}
+
+\jmnote{eel sig parrafo mejor lo eliminamos, ya que esto contaria en la aprte de limpieza de datos, platicar con carlos}
 The fact of looking for relationships between the migrant words and their
 meaning, we decided to omit the functional words from the results, these words
 are those that help to structure a message according to the grammar of the
@@ -543,7 +529,27 @@ opinas, Jouse?}
 % }}}
 \section*{Accumulated words} % {{{
 % Intro {{{
+
+
 \cpnote{Dale una iterada a esta intro, porfa. Por lo menos hasta la linea 243}
+\jmnote{Rescribi esta seccion,  deje el parrafo 'malo' como referencia}
+
+The previous results show that words travel from one language to another in groups belonging to a common semantic field. Nevertheless, we cannot associate them with a number that interprets how much influence has one language on another.
+
+To obtain such a number, we will focus on migrant words in the years after the first year they migrated, observing how their frequency varies over time. For example, a migrant word will begin to be influential if its frequency increases over time. Since we are dealing with groups of words, we define as accumulated migrant words, those words with source language $A$ that already appeared in a´ receiving language $B$, and for a given year they do so again.
+
+If we take the list of the most used words of $B$ in a year $t$ (the words are ranked according to their frequency), we add the frequencies of the accumulated migrant words of $A$ that have a rank $j$; we normalize the this quantity by dividing it by the frequency of the five thousand words that make up the list.
+\begin{equation}
+\label{ec.fuso}
+\underset{ \text{\tiny A} \to  \text{\tiny B} }{U}(t) = \frac{\sum_{j} f(j)}{\sum_{k=1}^{5000} f(k)}.
+%\frac{ \underset{ \text{\tiny A} \to  \text{\tiny B} }{P}(t)}{\underset{\text{\tiny B}}{F}(t) }.
+\end{equation}
+
+We define this new value as the \textbf{Use} $\underset{ \text{\tiny A} \to \text{\tiny B} }{U}(t)$ of $A$ in $B$ , and it is the measure that quantifies the influence. It will then be said that the influence of $A$ has increased on $B$, if in an interval of time $\Delta t$ the use of $A$ on $B$ increases. Finally, to quantify the change in use within a time interval, the term ratio of words per year (wpy) will be used, obtained by dividing $\Delta U$  by  $\Delta t$.
+
+
+\noindent\rule{10cm}{0.4pt}
+
 The previous results of classifying migrant words according to a semantic
 field, shows which areas have been influential for there to be a movement of
 words among languages\cpnote{Mas bien algo como 
@@ -586,7 +592,7 @@ la anterior.}
 It is called as the \textbf{Use} $\underset{ \text{\tiny A} \to \text{\tiny B} }{U}(t)$ of $A$ in $B$ to the result of normalizing the previous quantity after dividing it by the frequency of the five thousand most used words, given by \ref{ec.ftot}.
 
 \begin{equation}
-\label{ec.fuso}
+\label{ec.fuso1}
 \underset{ \text{\tiny A} \to  \text{\tiny B} }{U}(t) = \frac{\sum_{j} f(j)}{\sum_{k=1}^{5000} f(k)}.
 %\frac{ \underset{ \text{\tiny A} \to  \text{\tiny B} }{P}(t)}{\underset{\text{\tiny B}}{F}(t) }.
 \end{equation}
@@ -594,6 +600,9 @@ This new quantity is the one that will quantify the influence of $A$ on $B$. It 
 
 Finally, to quantify the change in use  $\Delta U$ within a time interval $\Delta t$, the term ratio of words per year (wpy) will be used, obtained by dividing $\Delta U$ by $\Delta t$.
 % }}}
+\noindent\rule{10cm}{0.4pt}
+
+
 \subsection*{The use among languages} % {{{
 \cpnote{De nuevo, hay solo una subseccion. Ver que hongo}
 
