@@ -54,6 +54,7 @@
 \usepackage{caption}
 \usepackage{multirow}
 \usepackage{booktabs}
+\usepackage{pdfpages}
 \usepackage{tcolorbox}
 \usepackage{colortbl}
 \usepackage[draft,inline,nomargin]{fixme} \fxsetup{theme=color}
@@ -394,7 +395,7 @@ meaning of the message.
 \cpnote{Croe que solo tenemos una subseccion. No se si se justifique}
 
 In order to quantify how many new words have migrated between the English,
-French, German, Italian and Spanish languages, Fig~\ref{fig.NMW_OR} shows, for
+French, German, Italian and Spanish languages, Fig~\ref{fig.NMW_A} shows, for
 each decade of the 20th century, the behavior of each language, being the
 source language or the receiving language of new words, representing how one
 language has influenced others and also how it has been influenced. Throughout
@@ -404,22 +405,30 @@ many words as it has received, where its greatest apogee occurred in the
 where access to technology was feasible for larger sectors of the population,
 after the development of globalization.
 \cpnote{Creo qe toca tener tablas para poder justificar esas cosas.}
+\jmnote{agregre la tabla en un pdf, por si nececita cambios  al final agregarla al tex}
 
-
-\begin{figure}[!h]
+\begin{figure}[!h] % {{{
 	\begin{adjustwidth}{-1.2in}{0in}
-	\includegraphics[scale=.35]{NW_OR.png}
-	\caption{{\bf Languages as sources and receivers of new words.} 
-\cpnote{Josué, toca primer describir el grafico y luego analizarlo. Te 
-falta la descripción.}
-During
-the 20th century, only English language has been the language that has migrated
-more words than it has received. French, German, Italian and Spanish have
-received more words during the second half of the century, after the end of
-World War II.\cgnote{estandarizar ejes $y$???}}
-	\label{fig.NMW_OR}
+		\includegraphics[scale=.35]{NW_A.png}
+		\caption{{\bf New migrant words that migrate from one source language to the different receiving languages.} Among language such as sources (dotted plot) and receivers (bar plot) of new words, only English language has been the language that has migrated more words than it has received. Consequently, the largest proportion of migrant words in the other languages ​​come from English. French, German, Italian and Spanish have received more words during the second half of the century, after the end of World War II.	
+		\cpnote{Explicar la curva punteada, poner los colores aparete, digamos en una leyenda como un sexto grafico un poco, y describir mejor y analizar tantito (una frase).}
+		\jmnote{listo}
+		}
+		\label{fig.NMW_A}
 	\end{adjustwidth}
-\end{figure}
+\end{figure} % }}}
+
+\includepdf[pages=-]{Table_NMW.pdf}
+
+%\begin{figure}[!h]
+%	\begin{adjustwidth}{-1.2in}{0in}
+%	\includegraphics[scale=.35]{NW_OR.png}
+%	\caption{{\bf Languages as sources and receivers of new words.} 
+%\cpnote{Josué, toca primer describir el grafico y luego analizarlo. Te falta la descripción.}
+%During the 20th century, only English language has been the language that has migrated more words than it has received. French, German, Italian and Spanish have received more words during the second half of the century, after the end of World War II.\cgnote{estandarizar ejes $y$???}}
+%	\label{fig.NMW_OR}
+%	\end{adjustwidth}
+%\end{figure}
 
 It is also notable that the French and German languages were mainly
 languages influenced by others, since they received more words than
@@ -451,22 +460,7 @@ de donde vienen las palabras. Siento que toca justificar o mencionar que esas pa
 vienen agrupadas, y que es conveniente analizar los paquetes. Quizá no veo el flujo del
 articulo, tu lo sabras mejor, Josué (acabo de comenzar a reeditar hace dos parrafos}
 
-\begin{figure}[!h] % {{{
-	\begin{adjustwidth}{-1.2in}{0in}
-		\includegraphics[scale=.35]{NW_A.png}
-		\caption{{\bf New migrant words that migrate from one source
-language to the different receiving languages}
-	   (English \textcolor{C1-EN}{\rule{0.25cm}{0.25cm}}, 
-		French  \textcolor{C1-FR}{\rule{0.25cm}{0.25cm}}, 
-		German  \textcolor{C1-GE}{\rule{0.25cm}{0.25cm}}, 
-		Italian \textcolor{C1-IT}{\rule{0.25cm}{0.25cm}}, and
-		Spanish \textcolor{C1-SP}{\rule{0.25cm}{0.25cm}}). \cpnote{Explicar la 
-curva punteada, poner los colores aparete, digamos en una leyenda como un sexto
-grafico un poco, y describir mejor y analizar tantito (una frase).}
-		}
-		\label{fig.NMW_A}
-	\end{adjustwidth}
-\end{figure} % }}}
+
 
 
 % % Place tables after the first paragraph in which they are cited.
@@ -615,7 +609,7 @@ The Fig~\ref{fig.UT_art} shows the use of a source language, in all receiving la
 \begin{figure}[!h]
 	\begin{adjustwidth}{-6cm}{1cm}
 		\centering
-		\includegraphics[scale=0.28]{UT_2.png}
+		\includegraphics[scale=0.38]{USO_A.png}
 		\caption{{\bf The Use among languages.} All language pairs.....}
 		\label{fig.UT_art}
 	\end{adjustwidth}
