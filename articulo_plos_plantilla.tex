@@ -240,52 +240,58 @@ form $f~1/k$.
 
 
  
-%In recent years, the field of linguistics has been benefited from the development of more sophisticated computational tools, helping to process a greater amount of data in less time and allowing the study of linguistics  from a statistical perspective.  This statistical study began with the works of George Zipf~\cite{Zipf}, in them Zipf argues that if  the words used in a text are ranked by their frequency of appearance,  where the lower ranks belong to the most frequent words,  then the frequency  f  of any word and its rank  k are related by a power law of the form f~1/k. The previous expression is known as  Zipf’s law, and it has not only been tested on language datasets,  Morales et al.~\cite{Morales_epj} have also proved on sports and games data,  and Cristelli et al.~\cite{Cristelli_zipfgdp} on the gross domestic product of several countries,  wealth of American citizens,  and population of cities.
+%In recent years, the field of linguistics has been benefited from the
+%development of more sophisticated computational tools, helping to process a
+%greater amount of data in less time and allowing the study of linguistics
+%from a statistical perspective.  This statistical study began with the works
+%of George Zipf~\cite{Zipf}, in them Zipf argues that if  the words used in a
+%text are ranked by their frequency of appearance,  where the lower ranks
+%belong to the most frequent words,  then the frequency  f  of any word and its
+%rank  k are related by a power law of the form f~1/k. The previous expression
+%is known as  Zipf’s law, and it has not only been tested on language datasets,
+%Morales et al.~\cite{Morales_epj} have also proved on sports and games data,
+%and Cristelli et al.~\cite{Cristelli_zipfgdp} on the gross domestic product of
+%several countries,  wealth of American citizens,  and population of cities.
  
 Zipf's law has been mostly used to study the structures of language,
 nonetheless, not enough studies have been done to understand the historical and
 cultural features that language provides. One way to begin such a study is by
 noting that the languages themselves are mixed, since within the vocabulary of
-a language, words from the language itself and from other languages
-are mixed.
+a language, from other languages are continuously added.
  
-%Although Zip’s law has opened several statistical studies in linguistics, nowadays few studies have been done about how within the vocabulary of a language, words from the language itself and from other languages are mixed
-\cpnote{Creo que podemos aca hablar mas de un mixing de cultura. Irnos de cosas generales a cosas particulares. Ahora, gracias a google ngram podemos aproximarnos a este problema mediante el lengauje}.
-\jmnote{modifique un poco este parrafo,  considero que el mixing del lneguaje y la cultura esta tratado en los sig parrafos}
+% %Although Zip’s law has opened several statistical studies in linguistics, nowadays few studies have been done about how within the vocabulary of a language, words from the language itself and from other languages are mixed
+% \cpnote{Creo que podemos aca hablar mas de un mixing de cultura. Irnos de cosas generales a cosas particulares. Ahora, gracias a google ngram podemos aproximarnos a este problema mediante el lengauje}.
+% \jmnote{modifique un poco este parrafo,  considero que el mixing del lneguaje y la cultura esta tratado en los sig parrafos}
 
-Currently in the Spanish language, there are words from the English language
+Currently in the Spanish language, there are words from English 
 that do not have a translation or that sometimes displace those that already
 exist in Spanish.  For example, for native Spanish speakers it is common to
 hear the word \textit{marketing} instead of its translation \textit{mercadeo}
 when dealing with economic or business issues; also the word \textit{online}
 has replaced \textit{en línea}, when referring to issues related to the
-internet, a word without translation in Spanish\cpnote{Ojo, ver si en la RAE no
-están estas palabras}\jmnote{ya cheque estas palabras, intenet si tiene una
-definicion en la RAE, pero la acepta como uan palabra del ingles}.
+internet, a word officially adopted in Spanish.
  
-This trending has not only affected \cpnote{has not only affected} Spanish,  but also other languages that are
+This trending has not only affected Spanish,  but also other languages that are
 being influenced by topics where English is the main and common language for
 communication. However, in different periods of time, the flow of words came
 from other languages. D’Amore~\cite{Damore_influencia_mutua} discusses with linguistic rigor the
 flow of words between English and Spanish,  showing historical  and cultural
 causes that allowed such flow; in addition to mentioning the influence of
-Arabic in Spanish and French in English. \cpnote{Cuentanos un poco mas de esta
-referencia}
-\jmnote{platicar con carlos esta referencia}
+Arabic in Spanish and French in English. \cpnote{Hay mas referencias, o es un 
+caso singular?}
  
 In this work, we use the Google Books N-gram~\cite{ngramv} dataset of the most
 frequent words in books published in  English, French, German, Italian and
 Spanish languages.  With that dataset,  we develop an algorithm that identifies
-the words of one language  and that are being used by others\cpnote{Creo qeu es importante
-decir que las que se usan literal}. Once these words
+the words of one language  and that are being used exactly with the same 
+spelling by others. Once these words
 have been classified, we construct two models to quantify  the influence that
 one language has had on another during the 20th century. The first model, we
 count the number of new words that a language received from another, while in
 the second method, we develop the concept of the use of one language in
 another,  from quantifying the relative frequency of  the words of a language
 that are being used in another language. In both we identify historical, social
-and cultural causes that are responsible for the flow of words and the
-constantly use of them.
+and cultural causes that are responsible for the flow of words.
  
 Next, we use the concept of rank diversity,  that shows the number of words
 occupying a certain rank across the time. This study shows that  regardless of
@@ -307,11 +313,10 @@ For the development of this work,  we used the Google Books Ngram data set.
 This dataset is made up of listing for each year and for each language of
 publication the most used ``$n$-grams'' in the books of Google Books. 
 
- \cpnote{Dos cosas, la primera es que en latex 
-las comillas son delicadas. Checate por ahi la documentacion. La sengunda es que 
-creo qeu nos toca ser consistentes con la forma en que ponemos ngrams. En la frase anterior
-y nen ls siguiente son diferentes}. \jmnote{listo, para n grams  queda mejor la n con signo de pesos}The ``$n$-grams'' are the words or set of
-words that make up the text of a book, where the number $n$ indicates the number of words that make up the gram, being a 1-gram an individual word, a 2-gram a phrase composed of two 1-gram, 3-gram the set of three 1-gram and so on.
+The ``$n$-grams'' are the words or set of words that make up the text of a
+book, where the number $n$ indicates the number of words that make up the gram,
+being a 1-gram an individual word, a 2-gram a phrase composed of two 1-gram,
+3-gram the set of three 1-gram and so on.
 
 From this data set, the lists of the five thousand most used 1-grams each year
 between 1740 and 2009 were extracted for the English, French, German, Italian
