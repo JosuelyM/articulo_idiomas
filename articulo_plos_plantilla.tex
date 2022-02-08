@@ -133,6 +133,8 @@
 \newcommand{\lorem}{{\bf LOREM}}
 \newcommand{\ipsum}{{\bf IPSUM}}
 
+%\FXRegisterAuthor{cg}{cgg}{\color{red}CG}
+
 %% END MACROS SECTION
 
 % }}}
@@ -143,7 +145,7 @@
 	% Title must be 250 characters or less.
 	\begin{flushleft}
 		{\Large
-			\textbf\newline{Statistical analysis of 1-grams flow among Indo-European languages} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
+			\textbf\newline{Statistical analysis of 1-gram flow among Indo-European languages \cgnote{Statistical analysis of word flow among Indo-European languages}} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
 		}
 		\newline
 		% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
@@ -304,6 +306,8 @@
 	diversity curve also increases as a logarithmic. 
 	
 	\cpnote{Obvio aca toca poner algunos caveats y discutir la seccion de la estabilidad}
+	
+	\cgnote{Uno de los caveats es que como hacemos comparaciones automatizadas de cadenas (llam\'emosle ``blind big data''), nuestras comparaciones son puramente de palabras completas, ya no digamos sem\'anticas. Por ejemplo, estamos limitados para estudiar influencia de y hacia ruso, simplemente porque tiene otro alfabeto. Hay otras transformaciones que no detectamos, e.g. en espa\~nol se agrega `e' antes de `sp' (especial/special). Y tambi\'en hay casos donde la influencia puede ser de otros idiomas, e.g. Lat\'in, aunque en otros casos se puede detectar por d\'onde lleg\'o la influencia (e.g. sushi?). Otra limitante es que nos enfocamos en palabras de uso frecuente. S\'olo decir que los estudios comparativos de ``insightful small data'', donde humanos identifican manualmente flujos de palabras seguir\'an siendo \'utiles y necesarios. }
 	
 	%\begin{eqnarray}
 	%\label{eq:schemeP}
