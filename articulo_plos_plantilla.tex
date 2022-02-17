@@ -139,238 +139,256 @@
 
 % }}}
 \begin{document}
-	% Autores, titulo y otros {{{
-	\vspace*{0.2in}
+% Autores, titulo y otros {{{
+\vspace*{0.2in}
+
+% Title must be 250 characters or less.
+\begin{flushleft}
+	{\Large
+		\textbf\newline{Statistical analysis of 1-gram flow among Indo-European languages \cgnote{Statistical analysis of word flow among Indo-European languages}} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
+	}
+	\newline
+	% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
+	% \\
+	% \cpnote{Discutir los autores: Josue, CarlosG, FLores, CarlosP, quizá sergio? Fernanda? } 
 	
-	% Title must be 250 characters or less.
-	\begin{flushleft}
-		{\Large
-			\textbf\newline{Statistical analysis of 1-gram flow among Indo-European languages \cgnote{Statistical analysis of word flow among Indo-European languages}} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
-		}
-		\newline
-		% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
-		% \\
-		% \cpnote{Discutir los autores: Josue, CarlosG, FLores, CarlosP, quizá sergio? Fernanda? } 
-		
-		Josué Ely Molina  \ddag\textsuperscript{1,2}, %\textsuperscript{1,2\Yinyang},
-		Jorge Flores      \dag \textsuperscript{2}, %\textcurrency},
-		Carlos Gershenson \textsuperscript{3,4},
-		Sergio Sanchez    \textsuperscript{5},
-		Carlos Pineda     \ddag\textsuperscript{2,*}    % \textsuperscript{2\Yinyang},
-		%Name5 Surname \textsuperscript{2\ddag},
-		%Name6 Surname \textsuperscript{2\ddag},
-		%Name7 Surname \textsuperscript{1,2,3*},
-		
-		%with the Lorem Ipsum Consortium\textsuperscript{\textpilcrow}
-		
-		\newcommand{\unam}{Universidad Nacional Aut\'{o}noma de
-			M\'{e}xico, Mexico City, 01000, Mexico}
-		% \address[1]{Instituto de F\'{\i}sica, \unam}
-		% \address[2]{Centro de Ciencias de la Complejidad, \unam}
-		% \address[4]{ Instituto de Investigaciones en Matem\'{a}ticas Aplicadas y Sistemas, \unam }
-		% \address[6]{
-		% 
-		% }
-		% 
-		
-		%\\
-		\bigskip
-		\textbf{1} Facultad de Ciencias, \unam \\
-		\textbf{2} Instituto de F\'{\i}sica, \unam \\
-		\textbf{3} Instituto de Investigaciones en Matem\'{a}ticas Aplicadas y Sistemas, \unam \\
-		\textbf{4} Centro de Ciencias de la Complejidad, \unam \\
-		\textbf{5} 
-		Maestr\'{\i}a en Ciencias de la Complejidad, 
-		Universidad Aut\'{o}noma de la Ciudad de M\'{e}xico,
-		Mexico City, Mexico
-		\\
-		\bigskip
-		
-		% Insert additional author notes using the symbols described below. Insert symbol callouts after author names as necessary.
-		% 
-		% Remove or comment out the author notes below if they aren't used.
-		%
-		% Primary Equal Contribution Note
-		% \Yinyang These authors contributed equally to this work.
-		
-		% Additional Equal Contribution Note
-		% Also use this double-dagger symbol for special authorship notes, such as senior authorship.
-		\ddag These authors also contributed equally to this work.
-		
-		% Current address notes
-		% \textcurrency Current Address: Dept/Program/Center, Institution Name, City, State, Country % change symbol to "\textcurrency a" if more than one current address note
-		% \textcurrency b Insert second current address 
-		% \textcurrency c Insert third current address
-		
-		% Deceased author note
-		\dag Deceased
-		
-		% Group/Consortium Author Note
-		% \textpilcrow Membership list can be found in the Acknowledgments section.
-		
-		% Use the asterisk to denote corresponding authorship and provide email address in note below.
-		* carlospgmat03@gmail.com
-		
-	\end{flushleft}
-	% Please keep the abstract below 300 words
-	% }}}
-	\section*{Abstract} % {{{
-	\cpnote{Por hacer al final}
-	% }}}
+	Josué Ely Molina  \ddag\textsuperscript{1,2}, %\textsuperscript{1,2\Yinyang},
+	Jorge Flores      \dag \textsuperscript{2}, %\textcurrency},
+	Carlos Gershenson \textsuperscript{3,4},
+	Sergio Sanchez    \textsuperscript{5},
+	Carlos Pineda     \ddag\textsuperscript{2,*}    % \textsuperscript{2\Yinyang},
+	%Name5 Surname \textsuperscript{2\ddag},
+	%Name6 Surname \textsuperscript{2\ddag},
+	%Name7 Surname \textsuperscript{1,2,3*},
 	
-	\linenumbers
-	% Use "Eq" instead of "Equation" for equation citations.
-	% For figure citations, please use "Fig" instead of "Figure".
-	\section*{Introduction} % {{{
+	%with the Lorem Ipsum Consortium\textsuperscript{\textpilcrow}
 	
-	% \cpnote{No me gusta el inicio de la intro. Como que sugiere que hacemos el 
-	% estudio porque podemos. Creo qe toca pensar mejor la justificacion y abrir 
-	% en esa direccion. Me gusta mucho mas el segundo parrafo y quizá quisiera iniciar
-	% de esa manera.}
-	% \jmnote{Modifique el primer parrafo, el parrafo viejo quedo en el text comentado}
+	\newcommand{\unam}{Universidad Nacional Aut\'{o}noma de
+		M\'{e}xico, Mexico City, 01000, Mexico}
+	% \address[1]{Instituto de F\'{\i}sica, \unam}
+	% \address[2]{Centro de Ciencias de la Complejidad, \unam}
+	% \address[4]{ Instituto de Investigaciones en Matem\'{a}ticas Aplicadas y Sistemas, \unam }
+	% \address[6]{
+	% 
+	% }
+	% 
 	
-	\cpnote{Aun no hay una justiicación de por que estudiamos lo que estudiamos. Si quieres
-		lo platicamos con CarlosG la siguiente vez que nos veamos. Mientras piensa un poco y 
-		si quieres platicar conmigo, lo podemos hacer.}
-	In recent years, the emergence and development of computational tools has
-	benefited various statistical studies to understand certain characteristics of
-	the human population. For example, we are able to predict the growth rate of a
-	city, the number of people who have watched a movie, the user traffic on a web
-	page, and even the way we use words in written language. The previous examples
-	are cases of the Zipf's law, formulated by George Zipf in 1940~\cite{Zipf} upon
-	discovering that if  the words used in a text are ranked by their frequency of
-	appearance, where the lower ranks belong to the most frequent words,  then the
-	frequency  $f$  of any word and its rank  $k$ are related by a power law of the
-	form $f~1/k$.
+	%\\
+	\bigskip
+	\textbf{1} Facultad de Ciencias, \unam \\
+	\textbf{2} Instituto de F\'{\i}sica, \unam \\
+	\textbf{3} Instituto de Investigaciones en Matem\'{a}ticas Aplicadas y Sistemas, \unam \\
+	\textbf{4} Centro de Ciencias de la Complejidad, \unam \\
+	\textbf{5} 
+	Maestr\'{\i}a en Ciencias de la Complejidad, 
+	Universidad Aut\'{o}noma de la Ciudad de M\'{e}xico,
+	Mexico City, Mexico
+	\\
+	\bigskip
 	
+	% Insert additional author notes using the symbols described below. Insert symbol callouts after author names as necessary.
+	% 
+	% Remove or comment out the author notes below if they aren't used.
+	%
+	% Primary Equal Contribution Note
+	% \Yinyang These authors contributed equally to this work.
 	
+	% Additional Equal Contribution Note
+	% Also use this double-dagger symbol for special authorship notes, such as senior authorship.
+	\ddag These authors also contributed equally to this work.
 	
+	% Current address notes
+	% \textcurrency Current Address: Dept/Program/Center, Institution Name, City, State, Country % change symbol to "\textcurrency a" if more than one current address note
+	% \textcurrency b Insert second current address 
+	% \textcurrency c Insert third current address
 	
-	%In recent years, the field of linguistics has been benefited from the
-	%development of more sophisticated computational tools, helping to process a
-	%greater amount of data in less time and allowing the study of linguistics
-	%from a statistical perspective.  This statistical study began with the works
-	%of George Zipf~\cite{Zipf}, in them Zipf argues that if  the words used in a
-	%text are ranked by their frequency of appearance,  where the lower ranks
-	%belong to the most frequent words,  then the frequency  f  of any word and its
-	%rank  k are related by a power law of the form f~1/k. The previous expression
-	%is known as  Zipf’s law, and it has not only been tested on language datasets,
-	%Morales et al.~\cite{Morales_epj} have also proved on sports and games data,
-	%and Cristelli et al.~\cite{Cristelli_zipfgdp} on the gross domestic product of
-	%several countries,  wealth of American citizens,  and population of cities.
+	% Deceased author note
+	\dag Deceased
 	
-	Zipf's law has been mostly used to study the structures of language,
-	nonetheless, not enough studies have been done to understand the historical and
-	cultural features that language provides. One way to begin such a study is by
-	noting that the languages themselves are mixed, since within the vocabulary of
-	a language, from other languages are continuously added.
+	% Group/Consortium Author Note
+	% \textpilcrow Membership list can be found in the Acknowledgments section.
 	
-	% %Although Zip’s law has opened several statistical studies in linguistics, nowadays few studies have been done about how within the vocabulary of a language, words from the language itself and from other languages are mixed
-	% \cpnote{Creo que podemos aca hablar mas de un mixing de cultura. Irnos de cosas generales a cosas particulares. Ahora, gracias a google ngram podemos aproximarnos a este problema mediante el lengauje}.
-	% \jmnote{modifique un poco este parrafo,  considero que el mixing del lneguaje y la cultura esta tratado en los sig parrafos}
+	% Use the asterisk to denote corresponding authorship and provide email address in note below.
+	* carlospgmat03@gmail.com
 	
-	Currently in the Spanish language, there are words from English 
-	that do not have a translation or that sometimes displace those that already
-	exist in Spanish.  For example, for native Spanish speakers it is common to
-	hear the word \textit{marketing} instead of its translation \textit{mercadeo}
-	when dealing with economic or business issues; also the word \textit{online}
-	has replaced \textit{en línea}, when referring to issues related to the
-	internet, a word officially adopted in Spanish.
-	
-	This trending has not only affected Spanish,  but also other languages that are
-	being influenced by topics where English is the main and common language for
-	communication. However, in different periods of time, the flow of words came
-	from other languages. D’Amore~\cite{Damore_influencia_mutua} discusses with linguistic rigor the
-	flow of words between English and Spanish,  showing historical  and cultural
-	causes that allowed such flow; in addition to mentioning the influence of
-	Arabic in Spanish and French in English. \cpnote{Hay mas referencias, o es un 
-		caso singular?}
-	
-	In this work, we use the Google Books N-gram~\cite{ngramv} dataset of the most
-	frequent words in books published in  English, French, German, Italian and
-	Spanish languages.  With that dataset,  we develop an algorithm that identifies
-	the words of one language  and that are being used exactly with the same 
-	spelling by others. Once these words
-	have been classified, we construct two models to quantify  the influence that
-	one language has had on another during the 20th century. The first model, we
-	count the number of new words that a language received from another, while in
-	the second method, we develop the concept of the use of one language in
-	another,  from quantifying the relative frequency of  the words of a language
-	that are being used in another language. In both we identify historical, social
-	and cultural causes that are responsible for the flow of words.
-	
-	Next, we use the concept of rank diversity,  that shows the number of words
-	occupying a certain rank across the time. This study shows that  regardless of
-	who is the language the flow comes from or who language receives them,  the
-	lower ranks are always occupied by fewer  words, and as the rank increases the
-	diversity curve also increases as a logarithmic. 
-	
-	\cpnote{Obvio aca toca poner algunos caveats y discutir la seccion de la estabilidad}
-	
-	\cgnote{Uno de los caveats es que como hacemos comparaciones automatizadas de cadenas (llam\'emosle ``blind big data''), nuestras comparaciones son puramente de palabras completas, ya no digamos sem\'anticas. Por ejemplo, estamos limitados para estudiar influencia de y hacia ruso, simplemente porque tiene otro alfabeto. Hay otras transformaciones que no detectamos, e.g. en espa\~nol se agrega `e' antes de `sp' (especial/special). Y tambi\'en hay casos donde la influencia puede ser de otros idiomas, e.g. Lat\'in, aunque en otros casos se puede detectar por d\'onde lleg\'o la influencia (e.g. sushi?). Otra limitante es que nos enfocamos en palabras de uso frecuente. S\'olo decir que los estudios comparativos de ``insightful small data'', donde humanos identifican manualmente flujos de palabras seguir\'an siendo \'utiles y necesarios. }
-	
-	%\begin{eqnarray}
-	%\label{eq:schemeP}
-	%	\mathrm{P_Y} = \underbrace{H(Y_n) - H(Y_n|\mathbf{V}^{Y}_{n})}_{S_Y} + \underbrace{H(Y_n|\mathbf{V}^{Y}_{n})- H(Y_n|\mathbf{V}^{X,Y}_{n})}_{T_{X\rightarrow Y}},
-	%\end{eqnarray}
-	% }}}
-	\section*{Metodology} % {{{
-	
-	
-	For the development of this work,  we used the Google Books Ngram data set.
-	This dataset is made up of listing for each year and for each language of
-	publication the most used ``$n$-grams'' in the books of Google Books. 
-	
-	The ``$n$-grams'' are the words or set of words that make up the text of a
-	book, where the number $n$ indicates the number of words that make up the gram,
-	being a 1-gram an individual word, a 2-gram a phrase composed of two 1-gram,
-	3-gram the set of three 1-gram and so on.
-	
-	From this data set, the lists of the five thousand most used 1-grams each year
-	between 1740 and 2009 were extracted for the English, French, German, Italian
-	and Spanish languages. In each list, the words are ranked according to their
-	frequency of appearance, where the most frequent words have the lowest ranks.
-	
-	\cpnote{Creo qe se tienen que unir los parrafos y decir de done salen esaos
-		ngrams, que son de libros escaneados}
-	
-	To determine the presence of one language in another, an algorithm was
-	developed to find the words that are common between at least two languages,
-	these must be the same in writing, letter by letter. These words were defined as \textbf{migrant words}. \cpnote{Normalmente las palabras claves las pongo en italica. toca ver como le hace en el journal que elijamos.}
-	
-	A migrant word is associated with a \textbf{source language} and a
-	\textbf{receiving language}, where the source language is the one where the
-	word appeared for the first time within the most used words,
-	while the receiving language is the one where the word is also present, being a
-	different set from the source language. In both sets, we are considering the five thousand most used words, since all the lists of the six languages (between 1740 and 2009), have at least this amount.\cpnote{Creo qe el recieving language tambien tiene
-		que entrar en el top, no?} \cpnote{No recuerdo porque usamos ese numero (5000). Tocará 
-		medio comentarlo}\jmnote{ya lo comente, se tomaron las 5 mil ya que cada lista entre 1740-2009 tiene esta cantidad} 
-	
-	The main criteria to clean the data, consisted to eliminate the funcional words, that is articles, pronouns, propositions and conjunctions, since these serve to give a structure to the message;  then we consider content words as nouns, adjectives and adverbs, which are responsible for the information in the message. Although the names of people, countries and cities are considered functional words, we did not eliminate them, since for some languages these words show a cultural trend that we have decided to take into account.
-	
-	To determine the source language, we established that this will be the language where the word appeared for the first time within the five thousand most used words; in the case of a migrant word has appeared in the same year in two or more languages, the source is the one where the word has the lowest rank.
-	
-	
-	
-	\jmnote{lo de elimnar las mayusculas, en las listas de palabras  ya vienen asi.}
-	\cpnote{Creo qe toca hablar un poco de queu se limpiaron los datos, y de que se quitaron algunas cosas, que se cambio la capitalización}
-	
-	The previous criteria of looking for words with the same writing and later
-	associating them with a source language, is not perfect there are some cases that our method did not detect and were established as mistakes. One of the most common errors was finding words with the same writing, but with different meanings. For example,  \textit{mayor} in English refers to the representative of the government in a locality, while in Spanish, \cpnote{mayor} mayor is an adjective to indicate that something
-	is bigger or older.  Another recurring error was to not distinguish words with the same meaning but with different endings. For example, the word \textit{imagine} is written \textit{imaginer} in French and \textit{imaginar} in Spanish.
-	
-	\cpnote{decir que entonces nuestro algoritno no la detecta.} Finally, in some cases, the authentic source language is some other language for which there is no information in the data set, for example the word  natural comes from Greek, but there is no data from Greek language in the google books $n$-grams data set, consequently this word was associated with English as its source language.
-	
-	The above errors were detected by individually analyzing each of the migrant words and their corresponding source and receiving languages. One way to have cleaner data is by consulting an expert in each language, who review the words and decide which ones were classified properly, however, this is not practical since if there were more languages in the database, it would be necessary to consult an expert for each language. Notwithstanding of this requirement to  regulate errors, we established a method to determine the importance (weight) of these errors in the results, that will show in the following sections. 
-	
-	\cpnote{Decir que se estimo el tamaño del problema y que se menciona mas adelante}
-	\jmnote{listo}
-	% }}}
+\end{flushleft}
+% Please keep the abstract below 300 words
+% }}}
+\section*{Abstract} % {{{
+\cpnote{Por hacer al final}
+% }}}
+
+\linenumbers
+% Use "Eq" instead of "Equation" for equation citations.
+% For figure citations, please use "Fig" instead of "Figure".
+\section*{Introduction} % {{{
+
+% \cpnote{No me gusta el inicio de la intro. Como que sugiere que hacemos el 
+% estudio porque podemos. Creo qe toca pensar mejor la justificacion y abrir 
+% en esa direccion. Me gusta mucho mas el segundo parrafo y quizá quisiera iniciar
+% de esa manera.}
+% \jmnote{Modifique el primer parrafo, el parrafo viejo quedo en el text comentado}
+
+\cpnote{Aun no hay una justiicación de por que estudiamos lo que estudiamos. Si quieres
+	lo platicamos con CarlosG la siguiente vez que nos veamos. Mientras piensa un poco y 
+	si quieres platicar conmigo, lo podemos hacer.}
+In recent years, the emergence and development of computational tools has
+benefited various statistical studies to understand certain characteristics of
+the human population. For example, we are able to predict the growth rate of a
+city, the number of people who have watched a movie, the user traffic on a web
+page, and even the way we use words in written language. The previous examples
+are cases of the Zipf's law, formulated by George Zipf in 1940~\cite{Zipf} upon
+discovering that if  the words used in a text are ranked by their frequency of
+appearance, where the lower ranks belong to the most frequent words,  then the
+frequency  $f$  of any word and its rank  $k$ are related by a power law of the
+form $f~1/k$.
+
+
+
+
+%In recent years, the field of linguistics has been benefited from the
+%development of more sophisticated computational tools, helping to process a
+%greater amount of data in less time and allowing the study of linguistics
+%from a statistical perspective.  This statistical study began with the works
+%of George Zipf~\cite{Zipf}, in them Zipf argues that if  the words used in a
+%text are ranked by their frequency of appearance,  where the lower ranks
+%belong to the most frequent words,  then the frequency  f  of any word and its
+%rank  k are related by a power law of the form f~1/k. The previous expression
+%is known as  Zipf’s law, and it has not only been tested on language datasets,
+%Morales et al.~\cite{Morales_epj} have also proved on sports and games data,
+%and Cristelli et al.~\cite{Cristelli_zipfgdp} on the gross domestic product of
+%several countries,  wealth of American citizens,  and population of cities.
+
+Zipf's law has been mostly used to study the structures of language,
+nonetheless, not enough studies have been done to understand the historical and
+cultural features that language provides. One way to begin such a study is by
+noting that the languages themselves are mixed, since within the vocabulary of
+a language, from other languages are continuously added.
+
+% %Although Zip’s law has opened several statistical studies in linguistics, nowadays few studies have been done about how within the vocabulary of a language, words from the language itself and from other languages are mixed
+% \cpnote{Creo que podemos aca hablar mas de un mixing de cultura. Irnos de cosas generales a cosas particulares. Ahora, gracias a google ngram podemos aproximarnos a este problema mediante el lengauje}.
+% \jmnote{modifique un poco este parrafo,  considero que el mixing del lneguaje y la cultura esta tratado en los sig parrafos}
+
+Currently in the Spanish language, there are words from English 
+that do not have a translation or that sometimes displace those that already
+exist in Spanish.  For example, for native Spanish speakers it is common to
+hear the word \textit{marketing} instead of its translation \textit{mercadeo}
+when dealing with economic or business issues; also the word \textit{online}
+has replaced \textit{en línea}, when referring to issues related to the
+internet, a word officially adopted in Spanish.
+
+This trending has not only affected Spanish,  but also other languages that are
+being influenced by topics where English is the main and common language for
+communication. However, in different periods of time, the flow of words came
+from other languages. D’Amore~\cite{Damore_influencia_mutua} discusses with linguistic rigor the
+flow of words between English and Spanish,  showing historical  and cultural
+causes that allowed such flow; in addition to mentioning the influence of
+Arabic in Spanish and French in English. \cpnote{Hay mas referencias, o es un 
+	caso singular?}
+
+In this work, we use the Google Books N-gram~\cite{ngramv} dataset of the most
+frequent words in books published in  English, French, German, Italian and
+Spanish languages.  With that dataset,  we develop an algorithm that identifies
+the words of one language  and that are being used exactly with the same 
+spelling by others. Once these words
+have been classified, we construct two models to quantify  the influence that
+one language has had on another during the 20th century. The first model, we
+count the number of new words that a language received from another, while in
+the second method, we develop the concept of the use of one language in
+another,  from quantifying the relative frequency of  the words of a language
+that are being used in another language. In both we identify historical, social
+and cultural causes that are responsible for the flow of words.
+
+Next, we use the concept of rank diversity,  that shows the number of words
+occupying a certain rank across the time. This study shows that  regardless of
+who is the language the flow comes from or who language receives them,  the
+lower ranks are always occupied by fewer  words, and as the rank increases the
+diversity curve also increases as a logarithmic. 
+
+\cpnote{Obvio aca toca poner algunos caveats y discutir la seccion de la estabilidad}
+
+\cgnote{Uno de los caveats es que como hacemos comparaciones automatizadas de cadenas (llam\'emosle ``blind big data''), nuestras comparaciones son puramente de palabras completas, ya no digamos sem\'anticas. Por ejemplo, estamos limitados para estudiar influencia de y hacia ruso, simplemente porque tiene otro alfabeto. Hay otras transformaciones que no detectamos, e.g. en espa\~nol se agrega `e' antes de `sp' (especial/special). Y tambi\'en hay casos donde la influencia puede ser de otros idiomas, e.g. Lat\'in, aunque en otros casos se puede detectar por d\'onde lleg\'o la influencia (e.g. sushi?). Otra limitante es que nos enfocamos en palabras de uso frecuente. S\'olo decir que los estudios comparativos de ``insightful small data'', donde humanos identifican manualmente flujos de palabras seguir\'an siendo \'utiles y necesarios. }
+
+%\begin{eqnarray}
+%\label{eq:schemeP}
+%	\mathrm{P_Y} = \underbrace{H(Y_n) - H(Y_n|\mathbf{V}^{Y}_{n})}_{S_Y} + \underbrace{H(Y_n|\mathbf{V}^{Y}_{n})- H(Y_n|\mathbf{V}^{X,Y}_{n})}_{T_{X\rightarrow Y}},
+%\end{eqnarray}
+% }}}
+\section*{Metodology} % {{{
+
+For the development of this work,  we used the Google Books Ngram data set~\cite{ngramv}.
+This dataset contains the usage frequency, for each year and language, of
+the most used ``$n$-grams'' in the books of Google Books. 
+``$n$-grams'' are the words or set of words that make up the text of a
+book, where the number $n$ indicates the number of words that make up the gram,
+being a 1-gram an individual word, a 2-gram a phrase composed of two 1-gram,
+3-gram the set of three 1-gram and so on.
+We removed certain words that did not contributed to the analysis. 
+We eliminated articles, pronouns, propositions and conjunctions (all 
+of which are functional words), since these
+serve to give a structure to the message;  then we consider content words as
+nouns, adjectives and adverbs, which are responsible for the information in the
+message. Although the names of people, countries and cities are also considered
+functional words, we did not eliminate them, since for some languages these
+words show a cultural trend that we have decided to take into account. \cpnote{Preguntar
+a josue donde vio qeu los proper nouns son functional words}
+From this data set, and after cleaning the data, the lists of the five thousand
+most used 1-grams each year
+between 1740 and 2009 were extracted for the English, French, German, Italian
+and Spanish languages.
+We are performing this cut as all the lists of the six languages (between 1740
+and 2009), have at least this amount of 1-grams.
+In each list, the words are ranked according to their
+frequency of appearance, where the most frequent words have the lowest ranks.
+
+% \cpnote{Creo qe se tienen que unir los parrafos y decir de done salen esaos
+% 	ngrams, que son de libros escaneados}
+% 
+
+To determine the presence of one language in another, an algorithm was
+developed to find the words that are common between at least two languages,
+these must have exactly the same spelling. These words were defined
+as \textit{migrant words}. 
+A migrant word is associated with a \textit{source language} and a
+\textit{receiving language}, where the source language is the one where the
+word appeared for the first time within the most used words,
+while the receiving language is the one where the word is also present, being a
+different set from the source language. 
+To determine the source language, we established that this will be the language
+where the word appeared for the first time within the five thousand most used
+words; in the case of a migrant word has appeared in the same year in two or
+more languages, the source is the one where the word has the lowest rank.
+
+
+The previous criteria of looking for words with the same writing and later
+associating them with a source language, is not perfect there are some cases
+that our method did not detect and were established as mistakes. One of the
+most common errors was finding words with the same writing, but with different
+meanings. For example,  \textit{mayor} in English refers to the representative
+of the government in a locality, while in Spanish, mayor is an
+adjective to indicate that something is bigger or older.  Another recurring
+error was to not distinguish words with the same meaning but with different
+endings. For example, the word \textit{imagine} is written \textit{imaginer} in
+French and \textit{imaginar} in Spanish.  Finally, in some cases, the authentic
+source language is some other language for which there is no information in the
+data set, for example the word  natural comes from Greek, but there is no data
+from Greek language in the google books $n$-grams data set, consequently this
+word was associated with English as its source language.
+
+The above errors were detected by individually analyzing each of the migrant
+words and their corresponding source and receiving languages. One way to have
+cleaner data is by consulting an expert in each language, who review the words
+and decide which ones were classified properly, however, this is not practical
+since if there were more languages in the database, it would be necessary to
+consult an expert for each language. Notwithstanding of this requirement to
+regulate errors, we established a method to determine the importance (weight)
+of these errors in the results, that will show in the following sections. 
+% }}}
 	\section*{New words} % {{{
 	% Results and Discussion can be combined.
 	%  Intro {{{
 	 
-	The purpose of this work is to establish the influence that one language has on another. A first method to quantify such influence is by counting the \textbf{new migrant words}, these are words that appear for the first time in a receiving language and that come from an unique  source language.
+	The purpose of this work is to establish the influence that one language has on another. A first method to quantify such influence is by counting the \textit{new migrant words}, these are words that appear for the first time in a receiving language and that come from an unique  source language.
 	
 	Counting new migrant words can be in two ways. First, taking a language as the receiving language, then for each decade, how many new migrant words from the other source languages have appeared are counted. The second way is to take one language as the source language for the new migrant words, and count how many of them have appeared in the other receiving languages.
 	
@@ -559,7 +577,7 @@
 	%\frac{ \underset{ \text{\tiny A} \to  \text{\tiny B} }{P}(t)}{\underset{\text{\tiny B}}{F}(t) }.
 	\end{equation}
 	
-	We define this new value as the \textbf{Use} $\underset{ \text{\tiny A} \to \text{\tiny B} }{U}(t)$ of $A$ in $B$ , and it is the measure that quantifies the influence. It will then be said that the influence of $A$ has increased on $B$, if in an interval of time $\Delta t$ the use of $A$ on $B$ increases. Finally, to quantify the change in use within a time interval, the term ratio of words per year (wpy) will be used, obtained by dividing $\Delta U$  by  $\Delta t$.
+	We define this new value as the \textit{Use} $\underset{ \text{\tiny A} \to \text{\tiny B} }{U}(t)$ of $A$ in $B$ , and it is the measure that quantifies the influence. It will then be said that the influence of $A$ has increased on $B$, if in an interval of time $\Delta t$ the use of $A$ on $B$ increases. Finally, to quantify the change in use within a time interval, the term ratio of words per year (wpy) will be used, obtained by dividing $\Delta U$  by  $\Delta t$.
 	
 	
 	\noindent\rule{10cm}{0.4pt}
@@ -603,7 +621,7 @@
 	\sum_{j} f(j).
 	\end{equation}
 	
-	It is called as the \textbf{Use} $\underset{ \text{\tiny A} \to \text{\tiny B} }{U}(t)$ of $A$ in $B$ to the result of normalizing the previous quantity after dividing it by the frequency of the five thousand most used words, given by \ref{ec.ftot}.
+	It is called as the \textit{Use} $\underset{ \text{\tiny A} \to \text{\tiny B} }{U}(t)$ of $A$ in $B$ to the result of normalizing the previous quantity after dividing it by the frequency of the five thousand most used words, given by \ref{ec.ftot}.
 	
 	\begin{equation}
 	\label{ec.fuso1}
@@ -719,7 +737,7 @@
 	
 	To check the stability of the use among languages and the importance of omitting certain elements, we constructed a method to interpret the robustness of the corpus. This consisted of taking the original set (the one obtained in the previous section) of the accumulated words of a pair of source language and receiving language, and of this, eliminating a certain group of words, in order to obtain a reduced set; in both,  equation~\ref{ec.fuso} is used to obtain the use between the years 1900 and 2009.
 	
-	The next thing is to determine how similar the use of both sets are, we normalized the values of both sets, after dividing them by the average value of each one; then for each year $t$ we obtain the distance between each value of original use $u_{t}$ and its corresponding value in reduced use $r_{t}$; the average of them gets the \textbf{average distance} $\left\langle D \right\rangle$, which will be the one that quantifies the similarity of the results, indicating a greater similarity if it is close to zero.
+	The next thing is to determine how similar the use of both sets are, we normalized the values of both sets, after dividing them by the average value of each one; then for each year $t$ we obtain the distance between each value of original use $u_{t}$ and its corresponding value in reduced use $r_{t}$; the average of them gets the \textit{average distance} $\left\langle D \right\rangle$, which will be the one that quantifies the similarity of the results, indicating a greater similarity if it is close to zero.
 	
 	%We defined as the \textbf{conversion factor} $F_{c}$ as the result of dividing the average of the reduced use by the average of the original use. After normalization, for each year $t$, we obtain the distance between each value of original use $u_{t}$ and its corresponding value in reduced use $r_{t}$; the average of them gets the \textbf{average distance} $\left\langle D \right\rangle$, which will be the one that quantifies the similarity of the results, indicating a greater similarity if it is close to zero.
 	\begin{equation}
