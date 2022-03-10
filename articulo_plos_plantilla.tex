@@ -48,6 +48,8 @@
 \usepackage{microtype}
 \DisableLigatures[f]{encoding = *, family = * }
 
+\newcommand{\eref}[1]{Eq.~(\ref{#1})}
+\newcommand{\Eref}[1]{Eq.~(\ref{#1})}
 \newcommand{\fref}[1]{Fig.~\ref{#1}}
 \newcommand{\Fref}[1]{Fig.~\ref{#1}}
 % color can be used to apply background shading to table cells only
@@ -530,157 +532,145 @@ estas cosas. Sería un buen punto para agregar.}
 
 % }}}
 \section*{Accumulated words} % {{{
-% Intro {{{
-\cpnote{Dale una iterada a esta intro, porfa. Por lo menos hasta la linea 243}
-\jmnote{Rescribi esta seccion,  deje el parrafo 'malo' como referencia}
-
-\noindent\rule{10cm}{0.4pt}
+% Intro y definicion {{{
 
 The previous results show that words travel from one language to another in
-groups belonging to a common semantic field. Nevertheless, we cannot associate
-them with a number that interprets how much influence has one language on
-another.
+groups belonging to a common semantic field. Nevertheless, we still cannot
+associate them with a number that quantifies how much influence has one
+language on another.
 
 To obtain such a number, we will focus on migrant words in the years after the
 first year they migrated, observing how their frequency varies over time. For
 example, a migrant word will begin to be influential if its frequency increases
 over time. Since we are dealing with groups of words, we define as accumulated
-migrant words, those words with source language $A$ that already appeared in a´
+migrant words, those words with source language $A$ that already appeared in a
 receiving language $B$, and for a given year they do so again.
 
-If we take the list of the most used words of $B$ in a year $t$ (the words are
-ranked according to their frequency), we add the frequencies of the accumulated
-migrant words of $A$ that have a rank $j$; we normalize the this quantity by
+Let us define $J_{AB}$ as the rankings of the set of words in $B$ that migrated
+from $A$ and define also the frequency $f(j)$ of a word with ranking $j$. We now
+add the frequencies of the accumulated
+migrant words of $A$ to $B$ at a year $t$ and normalize the this quantity by
 dividing it by the frequency of the five thousand words that make up the list.
 \begin{equation}
 \label{ec.fuso}
-\underset{ \text{\tiny A} \to  \text{\tiny B} }{U}(t) = \frac{\sum_{j} f(j)}{\sum_{k=1}^{5000} f(k)}.
+\underset{ \text{\tiny A} \to  \text{\tiny B} }{U}(t) = \frac{\sum_{j}
+f(j)}{\sum_{k=1}^{5000} f(k)}.
 \end{equation}
 
-We define this new value as the \textit{Use} $\underset{ \text{\tiny A} \to
-\text{\tiny B} }{U}(t)$ of $A$ in $B$ , and it is the measure that quantifies
-the influence. It will then be said that the influence of $A$ has increased on
+
+% take the list of the most used words of $B$ in a year $t$, we add the
+% frequencies of the accumulated
+% migrant words of $A$ that have a rank $j$; we normalize the this quantity by
+% dividing it by the frequency of the five thousand words that make up the list.
+% \begin{equation}
+% \label{ec.fuso}
+% \underset{ \text{\tiny A} \to  \text{\tiny B} }{U}(t) = \frac{\sum_{j} f(j)}{\sum_{k=1}^{5000} f(k)}.
+% \end{equation}
+
+% If we take the list of the most used words of $B$ in a year $t$ (the words are
+% ranked according to their frequency), we add the frequencies of the accumulated
+% migrant words of $A$ that have a rank $j$; we normalize the this quantity by
+% dividing it by the frequency of the five thousand words that make up the list.
+% \begin{equation}
+% \label{ec.fuso}
+% \underset{ \text{\tiny A} \to  \text{\tiny B} }{U}(t) = \frac{\sum_{j} f(j)}{\sum_{k=1}^{5000} f(k)}.
+% \end{equation}
+% 
+We define this new value as the \textit{use} of $A$ in $B$, and interpret is value
+as a measure of influence. It will then be said that the influence of $A$ has increased on
 $B$, if in an interval of time $\Delta t$ the use of $A$ on $B$ increases.
 Finally, to quantify the change in use within a time interval, the term ratio
 of words per year (wpy) will be used, obtained by dividing $\Delta U$  by
 $\Delta t$.
 
+We obtained the accumulated migrant words for all
+possible combinations of source and receiving languages from
+1740 to 2009. 
+Afterwards, we calculated the use, \eref{ec.fuso},  for each pair of languages between 1900 and
+2009, so as to have a time period (1740-1899) to build a large enough dataset 
+to have meaningful migrant words. 
 
-\noindent\rule{10cm}{0.4pt}
 
-The previous results of classifying migrant words according to a semantic
-field, shows which areas have been influential for there to be a movement of
-words among languages\cpnote{Mas bien algo como The previous results show that
-words travel from one language to another in groups belonging to a common
-semantic field.}. Nevertheless, there is still no answer neither on which
-language has been more influential over another, nor how the influence
-occurred\cpnote{A que te refieres con eso ultimo de ``how the influence
-occurred''}.
+% 
+% Then in each combination we applied
+% the equation~\ref{ec.fuso} to realize the use in the years between 1900 and
+% 2009. 
+To simplify the notation in the plots we establish a set of abbreviations to
+distinguish the languages: EN for English, FR for French, GE for German, IT for
+the Italian and SP for Spanish. In addition, to name some combination of source
+and receiving languages, two abbreviations will be used, the first being the
+source language of the accumulated migrant words, and the second the receiving
+language of them, for example EN-GE, means the migrant words from English that
+are present in the German.
 
-\cpnote{Comenzar por una motiviación o necesidad de la definición. Algo mas
-suave.} We define as accumulated migrant words those words with source language
-$A$ that had already appeared in a receiving language $B$, and for a given year
-they do so again\cpnote{Demasiado choro. Al grano mejor.}. The difference
-between the new migrant words and the accumulated migrant words, is that they
-will only be new in the first year of appearance, later on they will become
-accumulated.
+% We obtained with the previous method, the accumulated migrant words among all
+% the possible combinations from a source language to a receiving language, in
+% the 269 years (1740-2009) of the dataset. Then in each combination we applied
+% the equation~\ref{ec.fuso} to realize the use in the years between 1900 and
+% 2009. To simplify the reading we establish s set of abbreviations to
+% distinguish the languages, EN for English, FR for French, GE for German, IT for
+% the Italian and SP for Spanish. In addition, to name some combination of source
+% and receiving languages, two abbreviations will be used, the first being the
+% source language of the accumulated migrant words, and the second the receiving
+% language of them, for example EN-GE, means the migrant words from English that
+% are present in the German.
 
-With the accumulated migrant words, we construct a function to quantify the
-influence of one language on another. The procedure to achieve such quantity
-begins with taking from a year $t$ the list of the five thousand most used
-words of the recipient language $B$\cpnote{Demasiado choro. Al grano mejor.}.
-Once this is done, we add the frequency $f(k)$ of the five thousand most used
-words of the receiving language $B$ in year $t$, where $k$ is the rank of each
-word
-\begin{equation}
-\label{ec.ftot}
-%\underset{\text{\tiny B}}{F}(t) = 
-\sum_{k=1}^{5000} f(k).
-\end{equation}
+The migrant accumulated words between pairs of language were ordered by the
+year in which they appeared and in descending order in their frequency.
+Therefore the first place in the ranking is occupied by the most frequent word
+in that year, the second for the second most frequent, and so on.
 
-Later in the list of words, we distinguish and add the frequency $f(j)$  of
-those with rank $j$ that are accumulated migrants and that come from the source
-language $A$ \cpnote{No entiendo para nada esta frase. Ni como se distinge de
-la anterior.}
-\begin{equation}
-\label{ec.fpres}
-%P^{y}_{\text{A} \to \text{B}} = \sum_{j} f(j)
-%\underset{ \text{\tiny A} \to  \text{\tiny B} }{P}(t) = 
-\sum_{j} f(j).
-\end{equation}
+Fig~\ref{fig.UT_art} shows the use of a source language, in all receiving
+languages, as the use in each case may have a different scale, the data were
+normalized by dividing them by their average value, this with the intention of
+observing in which time interval the use was more affected (increase or
+decrease more than in the others), since this will indicate that accumulated
+words were more or less influential. 
 
-It is called as the \textit{Use} $\underset{ \text{\tiny A} \to \text{\tiny B}
-}{U}(t)$ of $A$ in $B$ to the result of normalizing the previous quantity after
-dividing it by the frequency of the five thousand most used words, given by
-\ref{ec.ftot}.
 
-\begin{equation}
-\label{ec.fuso1}
-\underset{ \text{\tiny A} \to  \text{\tiny B} }{U}(t) = \frac{\sum_{j} f(j)}{\sum_{k=1}^{5000} f(k)}.
-%\frac{ \underset{ \text{\tiny A} \to  \text{\tiny B} }{P}(t)}{\underset{\text{\tiny B}}{F}(t) }.
-\end{equation}
-This new quantity is the one that will quantify the influence of $A$ on $B$. It
-will be said that language $A$ has influenced language $B$ more if within a
-time interval $\Delta t$, the use of $A$ in $B$ increases; this will mean that
-the accumulated words have increased their frequency.
-
-Finally, to quantify the change in use  $\Delta U$ within a time interval
-$\Delta t$, the term ratio of words per year (wpy) will be used, obtained by
-dividing $\Delta U$ by $\Delta t$.
+\begin{figure}[!h]
+	\begin{adjustwidth}{-6cm}{1cm}
+		\centering
+		\includegraphics[scale=0.38]{USO_A.png}
+		\caption{{\bf The Use among languages.} All language pairs.....}
+		\label{fig.UT_art}
+	\end{adjustwidth}
+\end{figure}
 % }}}
-	\subsection*{The use among languages} % {{{
-	\cpnote{De nuevo, hay solo una subseccion. Ver que hongo}
-	
-	We obtained with the previous method, the accumulated migrant words among all the possible combinations from a source language to a receiving language, in the 269 years (1740-2009) of the dataset. Then in each combination we applied the equation~\ref{ec.fuso} to realize the use in the years between 1900 and 2009. To simplify the reading we establish s set of abbreviations to distinguish the languages, EN for English, FR for French, GE for German, IT for the Italian and SP for Spanish. In addition, to name some combination of source  and receiving languages, two abbreviations will be used, the first being the source language of the accumulated migrant words, and the second the receiving language of them, for example EN-GE, means the migrant words from English that are present in the German.
-	
-	The migrant accumulated words between pairs of language were ordered by the year in which they appeared and in descending order in their frequency, therefore the first place in the ranking is occupied by the most frequent word in that year, the second for the second most frequent, and so on.
-	
-	The Fig~\ref{fig.UT_art} shows the use of a source language, in all receiving languages, as the use in each case may have a different scale, the data were normalized by dividing them by their average value, this with the intention of observing in which time interval the use was more affected (increase or decrease more than in the others), since this will indicate that accumulated words were more or less influential. 
-	
-	
-	\begin{figure}[!h]
-		\begin{adjustwidth}{-6cm}{1cm}
-			\centering
-			\includegraphics[scale=0.38]{USO_A.png}
-			\caption{{\bf The Use among languages.} All language pairs.....}
-			\label{fig.UT_art}
-		\end{adjustwidth}
-	\end{figure}
-	% }}}
-	\subsubsection*{English} % {{{
-	
-	The use of English in French, Italian and Spanish began to increase after 1930, while in German it was until 1990. We associate the cause of these increases with the emergence of the United States as a world power, after finishing the WWII and  impose its economic model as well as the development of science and technology. The accumulated migrant words that are present in all receiving  languages are \textit{capital}, \textit{dollar}, \textit{invesment}, \textit{relations}, \textit{market}, \textit{company}, \textit{development}, \textit{financial},  \textit{institutions}, \textit{internet}, \textit{windows} and \textit{software}. Those can again be associated with semantic fields such as economics, technology, and globalization.
-	
-	% }}}
-	\subsubsection*{French} % {{{
-	
-	The increase in the influence of French in the other languages occurred in English between 1920 and 1970, in German between 1900 and 2009, and in Spanish between 1970 and 1995. In these years the words that increased its frequency are from the semantic fields of religion such as \textit{dieu} , \textit{évêque}, \textit{dime}, \textit{religion}, \textit{saint} and \textit{église} (iglesia); while \textit{reine}, \textit{forteresse}, \textit{napoleon}, \textit{guerre}, \textit{imperiale}, \textit{bastille}, \textit{royal} and \textit{bourgeois} are from French Revolution.
-	
-	In Italian between 1950 and 1970, in addition to the above words,\textit{raisins}, \textit{vin}, \textit{vignoble} y \textit{recolte} were found, the common meaning of which is the wine industry, a common industry in France and Italy.
-	
-	% }}}
-	\subsubsection*{German} % {{{
-	
-	Spanish between 1935 and 1940 was the language where German had the greatest increase among all receiving languages; followed by the French between 1930 and 1945; in both  the words that are present are the surnames of German-speaking characters who excelled in academic areas, such as \textit{marx}, \textit{Freud}, \textit{heidegger}, \textit{nietzsche}, \textit{hegel}, \textit{engels} and \textit{mozart}.
-	
-	In English and Italian, the biggest change was between 1960 and 2009, where the use of German decreased. In this period the words that lost influence are referred to the World War II, among them \textit{berlin}, \textit{marx}, \textit{hitler}, \textit{lenin}, \textit{testen}  and \textit{reich}.
-	% }}}
-	\subsubsection*{Italian} % {{{
-	
-	
-	The influence of Italian came mainly from two semantic fields, the WWII 
-	with \textit{mussolini}, \textit{fascismo}, \textit{battaglia}, \textit{regime}, \textit{sociale} and \textit{liberale}; and the religion with \textit{santo}, \textit{suora} (monja) and \textit{cattedrale}. These semantic fields are responsbale for the increase in English between 19630 and 1940, in German between 1950 and 1995, and in Spanish between 1930 and 1960.
-	
-	In French, Italian has the lowest influence, where the aforementioned words began to be less frequent between 1940 and 1960.
-	% }}}
-	\subsubsection*{Spanish} % {{{
-	
-	The influence of Spanish in English between 1920 and 1970, was due tu historical and cultural facts, since countries in Latin American as  \textit{mexico}, \textit{panama}, \textit{chile}, \textit{cuba}, \textit{peru}, \textit{colombia}, \textit{argentina} and its capital \textit{buenos} \textit{aires};  and states in the United States  where a large part of the Spanish-speaking population is concentrated as \textit{california} and \textit{florida}, were increased their frequency.
-	
-	In German after WWII, and in French between 1930 and 1955, the mainly words involved in that increse are, \textit{terapia}, \textit{anemia}, \textit{lepra}, \textit{tumor}, \textit{syphilis}, \textit{virus} and \textit{renal}.
-	
-	% }}}
-	% }}}
+\subsubsection*{English} % {{{
+
+The use of English in French, Italian and Spanish began to increase after 1930, while in German it was until 1990. We associate the cause of these increases with the emergence of the United States as a world power, after finishing the WWII and  impose its economic model as well as the development of science and technology. The accumulated migrant words that are present in all receiving  languages are \textit{capital}, \textit{dollar}, \textit{invesment}, \textit{relations}, \textit{market}, \textit{company}, \textit{development}, \textit{financial},  \textit{institutions}, \textit{internet}, \textit{windows} and \textit{software}. Those can again be associated with semantic fields such as economics, technology, and globalization.
+
+% }}}
+\subsubsection*{French} % {{{
+
+The increase in the influence of French in the other languages occurred in English between 1920 and 1970, in German between 1900 and 2009, and in Spanish between 1970 and 1995. In these years the words that increased its frequency are from the semantic fields of religion such as \textit{dieu} , \textit{évêque}, \textit{dime}, \textit{religion}, \textit{saint} and \textit{église} (iglesia); while \textit{reine}, \textit{forteresse}, \textit{napoleon}, \textit{guerre}, \textit{imperiale}, \textit{bastille}, \textit{royal} and \textit{bourgeois} are from French Revolution.
+
+In Italian between 1950 and 1970, in addition to the above words,\textit{raisins}, \textit{vin}, \textit{vignoble} y \textit{recolte} were found, the common meaning of which is the wine industry, a common industry in France and Italy.
+
+% }}}
+\subsubsection*{German} % {{{
+
+Spanish between 1935 and 1940 was the language where German had the greatest increase among all receiving languages; followed by the French between 1930 and 1945; in both  the words that are present are the surnames of German-speaking characters who excelled in academic areas, such as \textit{marx}, \textit{Freud}, \textit{heidegger}, \textit{nietzsche}, \textit{hegel}, \textit{engels} and \textit{mozart}.
+
+In English and Italian, the biggest change was between 1960 and 2009, where the use of German decreased. In this period the words that lost influence are referred to the World War II, among them \textit{berlin}, \textit{marx}, \textit{hitler}, \textit{lenin}, \textit{testen}  and \textit{reich}.
+% }}}
+\subsubsection*{Italian} % {{{
+
+
+The influence of Italian came mainly from two semantic fields, the WWII 
+with \textit{mussolini}, \textit{fascismo}, \textit{battaglia}, \textit{regime}, \textit{sociale} and \textit{liberale}; and the religion with \textit{santo}, \textit{suora} (monja) and \textit{cattedrale}. These semantic fields are responsbale for the increase in English between 19630 and 1940, in German between 1950 and 1995, and in Spanish between 1930 and 1960.
+
+In French, Italian has the lowest influence, where the aforementioned words began to be less frequent between 1940 and 1960.
+% }}}
+\subsubsection*{Spanish} % {{{
+
+The influence of Spanish in English between 1920 and 1970, was due tu historical and cultural facts, since countries in Latin American as  \textit{mexico}, \textit{panama}, \textit{chile}, \textit{cuba}, \textit{peru}, \textit{colombia}, \textit{argentina} and its capital \textit{buenos} \textit{aires};  and states in the United States  where a large part of the Spanish-speaking population is concentrated as \textit{california} and \textit{florida}, were increased their frequency.
+
+In German after WWII, and in French between 1930 and 1955, the mainly words involved in that increse are, \textit{terapia}, \textit{anemia}, \textit{lepra}, \textit{tumor}, \textit{syphilis}, \textit{virus} and \textit{renal}.
+
+% }}}
+% }}}
 \section*{Rank diversity} % {{{
 
 \cpnote{Why are we interested in rank diversity that has not been understood in the 
