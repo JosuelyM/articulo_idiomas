@@ -36,14 +36,14 @@ commutator_spins
 *.bbl
 *.blg
 *.brf
-*.pdf
+# *.pdf
 *.toc
 *.sh
 *.bat
 *.md
 *.gz
 *.aux
-
+articulo_plos_plantilla.pdf
 
 ## Intermediate documents:
 *.dvi
