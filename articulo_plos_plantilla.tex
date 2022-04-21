@@ -740,60 +740,80 @@ involved in that increse are, \textit{terapia}, \textit{anemia},
 % }}}
 \section*{Rank diversity} % {{{
 
-\cpnote{
-Decir que aca mencionamos antes como varia el volumn de la la influencia, pero
-aca nos preguntamos como varian las palabras en si.  Why are we
-interested in rank diversity that has not been understood in the previous
-sections?}
-Since the accumulated migrant words are organized by year, and at the same time
+In the previous sections, we quantified the influence of a language on another. However, 
+one can wonder about how the migrant words change in time. Are the most important words
+the same, or do they change? In fact, 
+since the accumulated migrant words are organized by year, and at the same time
 in each year the words are ordered in ascending order in rank, then over time,
-the same rank can be occupied by different words. One way to quantify how many
-different elements can occupy the same rank within the same corpus is through
-rank diversity $d(k)$ \cpnote{this last sentence belongs to a paragraph introducing rank
-	diversity. I think that we must start saying the idea that we want to quantify. That, 
-	in a paragraph. Then another paragraph that really introduces the measure, which I think
-	is still laking. Maybe a single paragraph that contains both ideas.}.
-
+the same rank can be occupied by different words. One way to quantify
+this change is through rank diversity $d(k)$~\cite{iplosone}. This quantity is
+defined as the number 
+of different elements that occupy rank  $k$ within the same data set, divided
+by the number of time slots considered.
+%  how many
+% different elements can occupy the same rank within the same corpus is through
+% rank diversity $d(k)$ \cpnote{this last sentence belongs to a paragraph introducing rank
+% 	diversity. I think that we must start saying the idea that we want to quantify. That, 
+% 	in a paragraph. Then another paragraph that really introduces the measure, which I think
+% 	is still laking. Maybe a single paragraph that contains both ideas.}.
+% \cpnote{
+% Decir que aca mencionamos antes como varia el volumn de la la influencia, pero
+% aca nos preguntamos como varian las palabras en si.  Why are we
+% interested in rank diversity that has not been understood in the previous
+% sections?}
+% Since the accumulated migrant words are organized by year, and at the same time
+% in each year the words are ordered in ascending order in rank, then over time,
+% the same rank can be occupied by different words. One way to quantify how many
+% different elements can occupy the same rank within the same corpus is through
+% rank diversity $d(k)$ \cpnote{this last sentence belongs to a paragraph introducing rank
+% 	diversity. I think that we must start saying the idea that we want to quantify. That, 
+% 	in a paragraph. Then another paragraph that really introduces the measure, which I think
+% 	is still laking. Maybe a single paragraph that contains both ideas.}.
 Rank diversity has been used in datasets of the most used words in six
-Indo-European languages, and in sports and game classifications \cpnote{Generalizar
-para incluir el articulo con Gerardo}. Although in
+Indo-European languages~\cite{iplosone}, in sports and game classifications \cite{Morales_epj}, 
+and in many other datasets~\cite{Iniguez2022}. 
+Although in
 each case the criteria for establishing a ranking are different, in both there
 is a common result: for the same set of data that have had different rankings
 over time, it is true that the lowest ranks are always occupied by fewer
 elements, thereby as the range increases, the number of elements that occupy it
 also does them.
 
-After calculating the rank diversity in each source and receiving
+\begin{figure} % {{{
+\begin{adjustwidth}{-2.5cm}{1cm}
+\centering
+\includegraphics[scale=.38]{DR_art.png}
+\caption{{\bf Rank diversity of accumulated migrant words among languages.} All
+language pairs show a logarithmic behavior regardless of the number of ranks
+where the rank diversity was applied. The reliability of the fit to a
+logarithmic curve of the 20 combinations is on average $R^{2}= 0.88 \pm 0.04$.
+\cpnote{Cambiar la figura cuando me ponga de acuerdo con josue quizá si ponemos
+tabla aca}
+}
+\label{fig.DR_art}
+\end{adjustwidth}
+\end{figure} % }}}
+After calculating the rank diversity for each source and receiving
 language pair, the diversity values resemble a logarithmic curve, as can be
 seen in Fig~\ref{fig.DR_art}. We proposed the curve $d(k) =  \alpha \ln(k) +
-\beta.$ to fit the rank diversity where the parameters $\alpha$ and $\beta$
-were obtained with a linear regression \cpnote{Sintetizar estas dos frases}.
-With the corresponding linear
-regression of each language pair, the reliability of the fit with the
-coefficient of determination $R^{2}$ was verified. If $ a_ {k} $ represents the
+\beta$ to fit the rank diversity; the parameters $\alpha$ and $\beta$
+are obtained with a linear regression (the reliability of the fit with the
+coefficient of determination $R^{2}$ was verified). If $ a_{k} $ represents the
 value of the adjustment equation when evaluating it in the range $ k $, $ d_
-{k} $ is the diversity obtained for the same range and $ \ bar {d} $ is the
-average of all values of the diversity, then $R^{2}$ is expressed as:
-\begin{equation}
-R^{2} = 1 - \sum_{k = 1} \frac{ \left( \,d_{k} - a_{k} \,\right)^{2}  }{ \left( \, d_{k} - \bar{d} \,\right)^{2} }.	
-\label{ec.r2_diversidad}
-\end{equation}
-
-\begin{figure}[!h]
-	\begin{adjustwidth}{-2.5cm}{1cm}
-		\centering
-		\includegraphics[scale=.38]{DR_art.png}
-		\caption{{\bf Rank diversity of accumulated migrant words among languages.} All language pairs show a logarithmic behavior regardless of the number of ranks where the rank diversity was applied. The reliability of the fit to a logarithmic curve of the 20 combinations is on average $R^{2}= 0.88 \pm 0.04$.\cgnote{hacer eje $x$ log}}
-		\label{fig.DR_art}
-	\end{adjustwidth}
-\end{figure}
-
-
-Fig~\ref{fig.DR_art} also shows the graph of equation $d(k) = 0.16\ln(k) - 0.17$, obtained after averaging the coefficients $\alpha$ and $beta$ for each language pair. It is observed that the behavior of diversity increases as the rank also increases, regardless of whether the corpus has few or many ranks (14 in German-Spanish, 290 in Spanish-Italian). With this, it can be concluded that, the migrant accumulated words in the middle and high ranks are the ones that tend to change their position the most within a ranking over time.
-
-
-%PLOS does not support heading levels beyond the 3rd (no 4th level headings).
-
+{k} $ is the diversity obtained for the same range and $\bar{d} $ is the
+average of all values of the diversity, then
+$R^{2}=1-\sum_{k=1}(d_k-a_k)^{2}/(d_k-\bar{d})^2$.	
+\cpnote{Creo qeu acá falta información. Si se calcularon, quizá se puede reportar. 
+O si no, para que lo decimos? Lo miso con las $R^2$, quizá ver si una tabla vale la pnena 
+poner. Discutir con Josue}
+Fig~\ref{fig.DR_art} also shows the plot of $d(k) = 0.16\ln(k) -
+0.17$, obtained after averaging the coefficients $\alpha$ and $\beta$
+corresponding to each language pair. It is observed that the behavior of
+diversity increases as the rank also increases, regardless of whether the
+corpus has few or many ranks (14 in German-Spanish, 290 in Spanish-Italian,
+etc). With this, it can be concluded that, the migrant accumulated words in the
+middle and high ranks are the ones that tend to change their position the most
+within a ranking over time.
 % }}}
 \section*{Robustness} % {{{
 
