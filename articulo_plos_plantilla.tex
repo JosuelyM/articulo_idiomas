@@ -784,45 +784,81 @@ also does them.
 \centering
 \includegraphics[scale=1]{images/Diversity.pdf}
 % \includegraphics[scale=.38]{DR_art.png}
-\caption{{\bf Rank diversity of accumulated migrant words among languages.} All
-language pairs show a logarithmic behavior regardless of the number of ranks
-where the rank diversity was applied. The reliability of the fit to a
-logarithmic curve of the 20 combinations is on average $R^{2}= 0.88 \pm 0.04$.
-\cpnote{Cambiar la figura cuando me ponga de acuerdo con josue quizá si ponemos
-tabla aca}
+\caption{{\bf Rank diversity of accumulated migrant words among languages.} 
+Diversity for all pairs of languages. Each pair is well fitted by the 
+sigmoid proposed in \eref{eq:sigmoid}, with fitting parameters $\mu$ and $\sigma$
+reported in the inset. As a reference, we show a global sigmoid (in black)
+obtain by fitting all data points. Its fiting parameters are also shown in the
+inset as a black dot. 
+% 
+% All
+% language pairs conform the sigmoid curve proposed in 
+% 
+% 
+%  show a logarithmic behavior regardless of the number of ranks
+% where the rank diversity was applied. The reliability of the fit to a
+% logarithmic curve of the 20 combinations is on average $R^{2}= 0.88 \pm 0.04$.
+% \cpnote{Cambiar la figura cuando me ponga de acuerdo con josue quizá si ponemos
+% tabla aca}
 }
 \label{fig.DR_art}
 % \end{adjustwidth}
 \end{figure} % }}}
 After calculating the rank diversity for each source and receiving
-language pair, the diversity values resemble a logarithmic curve, as can be
-seen in Fig~\ref{fig.DR_art}. We proposed the curve $d(k) =  \alpha \ln(k) +
-\beta$ to fit the rank diversity; the parameters $\alpha$ and $\beta$
-are obtained with a linear regression (the reliability of the fit with the
-coefficient of determination $R^{2}$ was verified). If $ a_{k} $ represents the
-value of the adjustment equation when evaluating it in the range $ k $, $ d_
-{k} $ is the diversity obtained for the same range and $\bar{d} $ is the
-average of all values of the diversity, then
-$R^{2}=1-\sum_{k=1}(d_k-a_k)^{2}/(d_k-\bar{d})^2$.	
-\cpnote{Creo qeu acá falta información. Si se calcularon, quizá se puede reportar. 
-O si no, para que lo decimos? Lo miso con las $R^2$, quizá ver si una tabla vale la pnena 
-poner. Discutir con Josue}
-Fig~\ref{fig.DR_art} also shows the plot of $d(k) = 0.16\ln(k) -
-0.17$, obtained after averaging the coefficients $\alpha$ and $\beta$
-corresponding to each language pair. It is observed that the behavior of
+language pair, the diversity values resemble a sigmoid curve, as can be
+seen in Fig~\ref{fig.DR_art}. The proposed the curve is the
+cumulative of a Gaussian centered at $\mu$ and with 
+deviation $\sigma$, i.e.  
+\begin{equation}
+\Phi_{\mu,\sigma}(\log_{10} k)=\frac{1}{\sigma\sqrt{2\pi}}
+   \int_{-\infty}^{\log_{10}k}\exp\left(-\frac{(y-\mu)^2}{2\sigma^2}\right) {\rm d} y,
+   \label{eq:sigmoid}
+\end{equation}
+The parameters $\mu$ and $\sigma$
+are obtained with a linear regression. 
+% If $ a_{k} $ represents the
+% value of the adjustment equation when evaluating it in the range $ k $, $ d_
+% {k} $ is the diversity obtained for the same range and $\bar{d} $ is the
+% average of all values of the diversity, then
+% $R^{2}=1-\sum_{k=1}(d_k-a_k)^{2}/(d_k-\bar{d})^2$.	
+% \cpnote{Creo qeu acá falta información. Si se calcularon, quizá se puede reportar. 
+% O si no, para que lo decimos? Lo miso con las $R^2$, quizá ver si una tabla vale la pnena 
+% poner. Discutir con Josue}
+% Fig~\ref{fig.DR_art} also shows the plot of $d(k) = 0.16\ln(k) -
+% 0.17$, obtained after averaging the coefficients $\alpha$ and $\beta$
+% corresponding to each language pair. 
+It is observed that the behavior of
 diversity increases as the rank also increases, regardless of whether the
-corpus has few or many ranks (14 in German-Spanish, 290 in Spanish-Italian,
+corpus has few or many ranks ($14$ in German-Spanish, $290$ in Spanish-Italian,
 etc). With this, it can be concluded that, the migrant accumulated words in the
 middle and high ranks are the ones that tend to change their position the most
 within a ranking over time.
 % }}}
 \section*{Robustness} % {{{
 
-The method of the use of one language in another, showed that the words of certain semantic fields decrease their rank if the use tends to increase. Nevertheless, the inverse case cannot be concluded, that is, we do not know if the use of a language increases as a consequence of a group of words decreasing its rank, nor do we know how stable is the use among languages if certain words were not taken; since within the accumulated words of one language in another, only a few belong to a specific semantic field.
+The method of the use of one language in another, showed that the words of
+certain semantic fields decrease their rank if the use tends to increase.
+Nevertheless, the inverse case cannot be concluded, that is, we do not know if
+the use of a language increases as a consequence of a group of words decreasing
+its rank, nor do we know how stable is the use among languages if certain words
+were not taken; since within the accumulated words of one language in another,
+only a few belong to a specific semantic field.
 
-To check the stability of the use among languages and the importance of omitting certain elements, we constructed a method to interpret the robustness of the corpus. This consisted of taking the original set (the one obtained in the previous section) of the accumulated words of a pair of source language and receiving language, and of this, eliminating a certain group of words, in order to obtain a reduced set; in both,  equation~\ref{ec.fuso} is used to obtain the use between the years 1900 and 2009.
+To check the stability of the use among languages and the importance of
+omitting certain elements, we constructed a method to interpret the robustness
+of the corpus. This consisted of taking the original set (the one obtained in
+the previous section) of the accumulated words of a pair of source language and
+receiving language, and of this, eliminating a certain group of words, in order
+to obtain a reduced set; in both,  equation~\ref{ec.fuso} is used to obtain the
+use between the years 1900 and 2009.
 
-The next thing is to determine how similar the use of both sets are, we normalized the values of both sets, after dividing them by the average value of each one; then for each year $t$ we obtain the distance between each value of original use $u_{t}$ and its corresponding value in reduced use $r_{t}$; the average of them gets the \textit{average distance} $\left\langle D \right\rangle$, which will be the one that quantifies the similarity of the results, indicating a greater similarity if it is close to zero.
+The next thing is to determine how similar the use of both sets are, we
+normalized the values of both sets, after dividing them by the average value of
+each one; then for each year $t$ we obtain the distance between each value of
+original use $u_{t}$ and its corresponding value in reduced use $r_{t}$; the
+average of them gets the \textit{average distance} $\left\langle D
+\right\rangle$, which will be the one that quantifies the similarity of the
+results, indicating a greater similarity if it is close to zero.
 
 %We defined as the \textbf{conversion factor} $F_{c}$ as the result of dividing the average of the reduced use by the average of the original use. After normalization, for each year $t$, we obtain the distance between each value of original use $u_{t}$ and its corresponding value in reduced use $r_{t}$; the average of them gets the \textbf{average distance} $\left\langle D \right\rangle$, which will be the one that quantifies the similarity of the results, indicating a greater similarity if it is close to zero.
 \begin{equation}
@@ -832,8 +868,13 @@ The next thing is to determine how similar the use of both sets are, we normaliz
 
 \subsection*{Elimination characteristics}
 
-To answer how stable the sets are if we altering them, we first verify that in each year the accumulated migrant wors between two languages, obey Zipf's law $f~1/k$ if they are order ascending by their rank Fig~\ref{fig.ZL_receiving}; from this it is understandable to deduce that the use between languages would be more affected if the words with the lowest ranks are eliminated, since the sum of the frequencies of this group is greater than the sum of the frequencies of the words with the highest ranks.
-
+To answer how stable the sets are if we altering them, we first verify that in
+each year the accumulated migrant words between two languages, obey Zipf's law
+$f~1/k$ if they are order ascending by their rank Fig~\ref{fig.ZL_receiving};
+from this it is understandable to deduce that the use between languages would
+be more affected if the words with the lowest ranks are eliminated, since the
+sum of the frequencies of this group is greater than the sum of the frequencies
+of the words with the highest ranks.
 \begin{figure}[!h]
 	\begin{adjustwidth}{-2.5cm}{1cm}
 		\centering
