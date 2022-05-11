@@ -848,29 +848,35 @@ within a ranking over time.
 
 % }}}
 \section*{Robustness} % {{{
-\cpnote{Ver porque ley de zipf esta aca}
+The method we used to build the set of migrant words relied on words having {\it
+exactly} the same spelling when going from one language to another. We know 
+that that is not always the case. Some words change their spelling. For example
+the word {\it parquear} in Spanish comes from to the verb {\it to park} in
+English. 
 
-To check the stability of the use among languages and the importance of
-omitting certain elements, we constructed a method to interpret the robustness
-of the corpus. This consisted of taking the original set (the one obtained in
-the previous section) of the accumulated words of a pair of source language and
-receiving language, and of this, eliminating a certain group of words, in order
+
+To check the stability of the results presented and the importance of
+omitting certain words, we proceeded as follows. 
+Take the original set (the one obtained in the previous section) of the
+accumulated words of a pair of source language and
+receiving language, and from this set, eliminate a certain group of words, in order
 to obtain a reduced set; in both,  equation~\ref{ec.fuso} is used to obtain the
+modified
 use between the years 1900 and 2009.
-
-The next thing is to determine how similar the use of both sets are, we
+The next thing is to determine how similar the use of both sets are. We
 normalized the values of both sets, after dividing them by the average value of
 each one; then for each year $t$ we obtain the distance between each value of
-original use $u_{t}$ and its corresponding value in reduced use $r_{t}$; the
+original use $u_{t}$ and its corresponding value in reduced use $r_{t}$. The
 average of them gets the \textit{average distance} $\left\langle D
 \right\rangle$, which will be the one that quantifies the similarity of the
-results, indicating a greater similarity if it is close to zero.
-
-%We defined as the \textbf{conversion factor} $F_{c}$ as the result of dividing the average of the reduced use by the average of the original use. After normalization, for each year $t$, we obtain the distance between each value of original use $u_{t}$ and its corresponding value in reduced use $r_{t}$; the average of them gets the \textbf{average distance} $\left\langle D \right\rangle$, which will be the one that quantifies the similarity of the results, indicating a greater similarity if it is close to zero.
+results, indicating a greater similarity if it is close to zero. This 
+distance is defined as 
 \begin{equation}
-\left\langle D \right\rangle  = \frac{1}{N}\sum_{t=1}^{N} \left| u_{t} - r_{t} \right|  .
+\left\langle D \right\rangle  = \frac{1}{N}\sum_{t=1}^{N} \left| u_{t} - \tilde u_{t} \right|  
 \label{ec.Davg}
 \end{equation}
+where $u(t)$ is the original normalized usage and $\tilde u(t)$ is the reduced,
+normalized usage.
 
 \subsection*{Elimination characteristics}
 
@@ -891,8 +897,19 @@ of the words with the highest ranks.
 \end{figure}
 
 
-Another way to tell the previous deduction, is thinking that if the sum of frequencies is the same in two sets, where the first is made up of words with low ranks, and the second by words with high ranks, the second set would have to have more items than the first. With these ideas, in each source language and receiving language pair, we carry out two types of elimination, in the first we begin to eliminate the words with the lowest ranks and little by little increasing the portion of words eliminated $R_{p}$ (from 1$\%$ to a 99$\%$) until the words with the highest ranks are
-were covered Fig~\ref{fig.RP_low}; the second way was the opposite case, beginning to eliminate a small portion of those worsd with highest ranks and gradually increasing it until cover the lower ranks Fig~\ref{fig.RP_high}. In both cases, each time the eliminated portion was increased, the average difference was calculated to observe the similarity.
+Another way to tell the previous deduction, is thinking that if the sum of
+frequencies is the same in two sets, where the first is made up of words with
+low ranks, and the second by words with high ranks, the second set would have
+to have more items than the first. With these ideas, in each source language
+and receiving language pair, we carry out two types of elimination, in the
+first we begin to eliminate the words with the lowest ranks and little by
+little increasing the portion of words eliminated $R_{p}$ (from 1$\%$ to a
+99$\%$) until the words with the highest ranks are were covered
+Fig~\ref{fig.RP_low}; the second way was the opposite case, beginning to
+eliminate a small portion of those words with highest ranks and gradually
+increasing it until cover the lower ranks Fig~\ref{fig.RP_high}. In both cases,
+each time the eliminated portion was increased, the average difference was
+calculated to observe the similarity.
 
 
 \begin{figure}[!h]
@@ -920,6 +937,9 @@ This result, despite showing the stability of the sets when eliminating words fr
 
 %just multiply the original use by the conversion factor to obtain the reduced use. 
 
+% }}}
+\section*{Conclusiones} % {{{
+\cpnote{Vas CarlosG}
 % }}}
 \section*{Supporting information} % {{{
 % }}}
