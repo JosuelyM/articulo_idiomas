@@ -538,6 +538,27 @@ areas; finally Spanish after economic crises in Latin American
 countries~\cite{crisis_chile}. \cpnote{CarlosG, de nuevo, tu eres bueno para describir
 estas cosas. Sería un buen punto para agregar.}
 
+Other interesting feature that we observed is that migrant words still 
+fulfill Zipf's law. In Fig~\ref{fig.ZL_receiving} we present all language pairs, 
+grouped by receiving language and we observe, 
+within statistical fluctuations, an asymptotic power-law decay with exponent
+close to one.
+% To answer how stable the sets are if we altering them, we first verify that in
+% each year the accumulated migrant words between two languages, obey Zipf's law
+% $f~1/k$ if they are order ascending by their rank Fig~\ref{fig.ZL_receiving};
+\begin{figure}[!h]
+	\begin{adjustwidth}{-2.5cm}{1cm}
+		\centering
+		\includegraphics[scale=.38]{ZL_receptor.png}
+		\caption{{\bf Zipf's law of the accumulated migrant words,
+grouped by receiving language.\cpnote{cambiar la figura}} We display a frequency-rank 
+plot for all language pairs, \cpnote{Josue, esto es por año, es decir, calculas la 
+frecuencia total, o en un año, o como?} DAR MAS DETALLES CUANDO SE TENGAN DETALLES 
+Y LA FIGURA FINAL  }
+		\label{fig.ZL_receiving}
+	\end{adjustwidth}
+\end{figure}
+
 % }}}
 \section*{Accumulated words} % {{{
 % Intro y definicion {{{
@@ -855,22 +876,19 @@ the word {\it parquear} in Spanish comes from to the verb {\it to park} in
 English. 
 
 
-To check the stability of the results presented and the importance of
-omitting certain words, we proceeded as follows. 
-Take the original set (the one obtained in the previous section) of the
-accumulated words of a pair of source language and
-receiving language, and from this set, eliminate a certain group of words, in order
-to obtain a reduced set; in both,  equation~\ref{ec.fuso} is used to obtain the
-modified
-use between the years 1900 and 2009.
-The next thing is to determine how similar the use of both sets are. We
-normalized the values of both sets, after dividing them by the average value of
-each one; then for each year $t$ we obtain the distance between each value of
-original use $u_{t}$ and its corresponding value in reduced use $r_{t}$. The
-average of them gets the \textit{average distance} $\left\langle D
-\right\rangle$, which will be the one that quantifies the similarity of the
-results, indicating a greater similarity if it is close to zero. This 
-distance is defined as 
+To check the stability of the results presented and the importance of omitting
+certain words, we proceeded as follows.  Take the original set (the one
+obtained in the previous section) of the accumulated words of a pair of source
+language and receiving language, and from this set, eliminate a certain group
+of words, in order to obtain a reduced set; in both,  equation~\ref{ec.fuso} is
+used to obtain the modified use between the years 1900 and 2009.  The next
+thing is to determine how similar the use of both sets are. We normalized the
+values of both sets, after dividing them by the average value of each one; then
+for each year $t$ we obtain the distance between each value of original use
+$u_{t}$ and its corresponding value in reduced use $r_{t}$. The average of them
+gets the \textit{average distance} $\left\langle D \right\rangle$, which will
+be the one that quantifies the similarity of the results, indicating a greater
+similarity if it is close to zero. This distance is defined as 
 \begin{equation}
 \left\langle D \right\rangle  = \frac{1}{N}\sum_{t=1}^{N} \left| u_{t} - \tilde u_{t} \right|  
 \label{ec.Davg}
@@ -878,23 +896,16 @@ distance is defined as
 where $u(t)$ is the original normalized usage and $\tilde u(t)$ is the reduced,
 normalized usage.
 
-\subsection*{Elimination characteristics}
+% \subsection*{Elimination characteristics}
 
-To answer how stable the sets are if we altering them, we first verify that in
-each year the accumulated migrant words between two languages, obey Zipf's law
-$f~1/k$ if they are order ascending by their rank Fig~\ref{fig.ZL_receiving};
-from this it is understandable to deduce that the use between languages would
-be more affected if the words with the lowest ranks are eliminated, since the
-sum of the frequencies of this group is greater than the sum of the frequencies
-of the words with the highest ranks.
-\begin{figure}[!h]
-	\begin{adjustwidth}{-2.5cm}{1cm}
-		\centering
-		\includegraphics[scale=.38]{ZL_receptor.png}
-		\caption{{\bf Zipf's law of the accumulated migrant words, grouped by receiving language.\cgnote{m\'as que Zipf's law, distribuci\'on de frecuencias, se podr\'ia hacer ajuste con Zipf e indicar exponente.}} }
-		\label{fig.ZL_receiving}
-	\end{adjustwidth}
-\end{figure}
+
+
+\cpnote{Aca recorte. Toca tener cuidado con la forma como se conecta con el párrafo 
+que referencia Zipf}
+Recalling that migrant words have frequency inversely proportional to the rank,
+it is clear that there are some words more important than others. 
+Thus care must be taken when one removes a fixed proportion of words, or 
+a fixed frequency, as it can make a big difference. 
 
 
 Another way to tell the previous deduction, is thinking that if the sum of
@@ -931,9 +942,17 @@ calculated to observe the similarity.
 	\end{adjustwidth}
 \end{figure}
 
-After observing both figures, it is appropriate to say that for the similarity of the use between languages are altered, a greater number of words with high ranks are needed than words with low ranks, in terms of robustness, the sets are more stable if altering them are eliminated those words with the highest ranks, that is, those with the lowest frequencies.
+After observing both figures, it is appropriate to say that for the similarity
+of the use between languages are altered, a greater number of words with high
+ranks are needed than words with low ranks, in terms of robustness, the sets
+are more stable if altering them are eliminated those words with the highest
+ranks, that is, those with the lowest frequencies.
 
-This result, despite showing the stability of the sets when eliminating words from them, can be counterproductive with the results of the previous sections, since in those we try to find relationships based on the meaning of the words, and in case of an elimination such relationships would be lost if the words involved have high ranks.
+This result, despite showing the stability of the sets when eliminating words
+from them, can be counterproductive \cpnote{WTF} with the results of the
+previous sections, since in those we try to find relationships based on the
+meaning of the words, and in case of an elimination such relationships would be
+lost if the words involved have high ranks.
 
 %just multiply the original use by the conversion factor to obtain the reduced use. 
 
