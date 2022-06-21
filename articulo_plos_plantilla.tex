@@ -221,7 +221,6 @@
 \section*{Abstract} % {{{
 \cpnote{Por hacer al final}
 % }}}
-
 \linenumbers
 % Use "Eq" instead of "Equation" for equation citations.
 % For figure citations, please use "Fig" instead of "Figure".
@@ -564,20 +563,6 @@ time, Zipf's law is observed. }
 	\end{adjustwidth}
 \end{figure}
 
-
-% \begin{figure}[!h]
-% 	\begin{adjustwidth}{-2.5cm}{1cm}
-% 		\centering
-% 		\includegraphics[scale=.38]{ZL_receptor.png}
-% 		\caption{{\bf Zipf's law of the accumulated migrant words,
-% grouped by receiving language.\cpnote{cambiar la figura}} We display a frequency-rank 
-% plot for all language pairs, \cpnote{Josue, esto es por año, es decir, calculas la 
-% frecuencia total, o en un año, o como?} DAR MAS DETALLES CUANDO SE TENGAN DETALLES 
-% Y LA FIGURA FINAL  }
-% 		\label{fig.ZL_receiving}
-% 	\end{adjustwidth}
-% \end{figure}
-
 % }}}
 \section*{Accumulated words} % {{{
 % Intro y definicion {{{
@@ -598,32 +583,12 @@ Let us define $J_{AB}$ as the rankings of the set of words in $B$ that migrated
 from $A$ and define also the frequency $f(j)$ of a word with ranking $j$. We now
 add the frequencies of the accumulated
 migrant words of $A$ to $B$ at a year $t$ and normalize the this quantity by
-dividing it by the frequency of the five thousand words that make up the list.
+dividing it by the frequency of the five thousand words that make up the list:
 \begin{equation}
 \label{ec.fuso}
 \underset{ \text{\tiny A} \to  \text{\tiny B} }{U}(t) = \frac{\sum_{j}
 f(j)}{\sum_{k=1}^{5000} f(k)}.
 \end{equation}
-
-
-% take the list of the most used words of $B$ in a year $t$, we add the
-% frequencies of the accumulated
-% migrant words of $A$ that have a rank $j$; we normalize the this quantity by
-% dividing it by the frequency of the five thousand words that make up the list.
-% \begin{equation}
-% \label{ec.fuso}
-% \underset{ \text{\tiny A} \to  \text{\tiny B} }{U}(t) = \frac{\sum_{j} f(j)}{\sum_{k=1}^{5000} f(k)}.
-% \end{equation}
-
-% If we take the list of the most used words of $B$ in a year $t$ (the words are
-% ranked according to their frequency), we add the frequencies of the accumulated
-% migrant words of $A$ that have a rank $j$; we normalize the this quantity by
-% dividing it by the frequency of the five thousand words that make up the list.
-% \begin{equation}
-% \label{ec.fuso}
-% \underset{ \text{\tiny A} \to  \text{\tiny B} }{U}(t) = \frac{\sum_{j} f(j)}{\sum_{k=1}^{5000} f(k)}.
-% \end{equation}
-% 
 We define this new value as the \textit{use} of $A$ in $B$, and interpret is value
 as a measure of influence. It will then be said that the influence of $A$ has increased on
 $B$, if in an interval of time $\Delta t$ the use of $A$ on $B$ increases.
@@ -643,12 +608,12 @@ grouped by source language.
 % Then in each combination we applied
 % the equation~\ref{ec.fuso} to realize the use in the years between 1900 and
 % 2009. 
-\cpnote{Preguntar a Josue donde va esto y poner en el lugar apropiado}
-In addition, to name some combination of source
-and receiving languages, two abbreviations will be used, the first being the
-source language of the accumulated migrant words, and the second the receiving
-language of them, for example EN-GE, means the migrant words from English that
-are present in the German.
+% \cpnote{Preguntar a Josue donde va esto y poner en el lugar apropiado}
+% In addition, to name some combination of source
+% and receiving languages, two abbreviations will be used, the first being the
+% source language of the accumulated migrant words, and the second the receiving
+% language of them, for example EN-GE, means the migrant words from English that
+% are present in the German.
 
 
 % To simplify the notation in the plots we establish a set of abbreviations to
@@ -920,26 +885,36 @@ normalized usage.
 
 
 Recalling that migrant words have frequency inversely proportional to the rank,
-it is clear that there are some words more important than others, see 
-\fref{fig.ZL_receiving}. 
-Thus care must be taken when one removes a fixed proportion of words, or 
-a fixed frequency, as it can make a big difference. 
-
-
-Another way to tell the previous deduction, is thinking that if the sum of
-frequencies is the same in two sets, where the first is made up of words with
-low ranks, and the second by words with high ranks, the second set would have
-to have more items than the first. With these ideas, in each source language
+it is clear that some words are more important than others, see
+\fref{fig.ZL_receiving}.  Thus care must be taken when one removes a fixed
+proportion of words, or a fixed frequency, as it can make a big difference. 
+One way to explore such aspect is to remove words from higher ranks
+or lower ranks. 
+% In particular, we consider two sets, 
+With these ideas, in each source language
 and receiving language pair, we carry out two types of elimination, in the
-first we begin to eliminate the words with the lowest ranks and little by
-little increasing the portion of words eliminated $R_{p}$ (from 1$\%$ to a
-99$\%$) until the words with the highest ranks are were covered
-Fig~\ref{fig.RP_low}; the second way was the opposite case, beginning to
-eliminate a small portion of those words with highest ranks and gradually
-increasing it until cover the lower ranks Fig~\ref{fig.RP_high}. In both cases,
+first we begin to eliminate the words with the lowest ranks gradually 
+increasing the proportion of words removed $R_{p}$ (from 1$\%$ to a
+99$\%$); in the opposite way, for the second case,  we begin by
+eliminating those words with highest ranks Fig~\ref{fig.RP}. In both cases,
 each time the eliminated portion was increased, the average difference was
 calculated to observe the similarity.
 
+% \cpnote{Aca voy}
+% Another way to tell the previous deduction, is thinking that if the sum of
+% frequencies is the same in two sets, where the first is made up of words with
+% low ranks, and the second by words with high ranks, the second set would have
+% to have more items than the first. With these ideas, in each source language
+% and receiving language pair, we carry out two types of elimination, in the
+% first we begin to eliminate the words with the lowest ranks and little by
+% little increasing the portion of words eliminated $R_{p}$ (from 1$\%$ to a
+% 99$\%$) until the words with the highest ranks are were covered
+% Fig~\ref{fig.RP_low}; the second way was the opposite case, beginning to
+% eliminate a small portion of those words with highest ranks and gradually
+% increasing it until cover the lower ranks Fig~\ref{fig.RP_high}. In both cases,
+% each time the eliminated portion was increased, the average difference was
+% calculated to observe the similarity.
+% 
 
 \begin{figure}[!h]
 	\begin{adjustwidth}{-2.5cm}{1cm}
@@ -947,14 +922,15 @@ calculated to observe the similarity.
 		\includegraphics{images/dsFinal}
 % 		\includegraphics[scale=.38]{Rp_bajos.png}
 		\caption{{Similarity of use when some words are eliminated.}
-We study the similarity of the shape of usage \eref{}, as measured by $\left\langle D \right\rangle $ (see \eref{}), when 
-some words are eliminated. The top plots correspond to the case in which the 
-lower rank words are being eliminated, whereas in the lower plots we start eliminating the
-higher rank words. 
+We study the similarity of the shape of usage \eref{ec.fuso}, as measured by
+$\left\langle D \right\rangle $ (see \eref{ec.Davg}), when some words are eliminated.
+The top plots correspond to the case in which the lower rank words are being
+eliminated, whereas in the lower plots we start eliminating the higher rank
+words. 
 % {\bf Portion of eliminated words with lows ranks.}{\bf Portion of eliminated
 % words with high ranks.} 
 }
-		\label{fig.RP_low}
+		\label{fig.RP}
 	\end{adjustwidth}
 \end{figure}
 
@@ -968,22 +944,37 @@ higher rank words.
 % 	\end{adjustwidth}
 % \end{figure}
 % 
-After observing both figures, it is appropriate to say that for the similarity
-of the use between languages are altered, a greater number of words with high
-ranks are needed than words with low ranks, in terms of robustness, the sets
-are more stable if altering them are eliminated those words with the highest
-ranks, that is, those with the lowest frequencies.
 
-\cpnote{Nota de Josue:
-Hola Crlos, ya revise el documento. La idea que tenia con ese párrafo es que en la seccion del Uso entre idiomas, se observó que habia grupo de palabras que aparecian en los años donde el uso  aumentaba, y la influencia de tales grupos podria aumentar el uso. 
-Como se han buscado relaciones entre las palabrtas y las cantidades, una premmisa esque el uso dependa de estos grupos de palabras, y si estos grupos no estan entonces el uso cambia. 
-Por eso en el parrafo decia que los resultados de robustez pueden ser contraproducentes ya que la estabiulidad del uso no depende de los grupos de palabras del mismo campo semantico, sino que la estabilidad ocurre sino se eliminan palabras con rangos bajos.
-}
-This result, despite showing the stability of the sets when eliminating words
-from them, can be counterproductive \cpnote{WTF} with the results of the
-previous sections, since in those we try to find relationships based on the
-meaning of the words, and in case of an elimination such relationships would be
-lost if the words involved have high ranks.
+In those figures we can observe how much the shape of the curves for usage changes, 
+with an increasing proportion of words eliminated. Clearly, when removing the 
+lower ranking words, the deformation is greater. However, we see that in 
+most cases,  removing the 60\% of the higher ranked words produces
+a deformation with $\langle D \rangle < 10\%$ (exceptions being 
+German influencing English, Italian influencing German and
+Spanish influencing German and Italian). 
+% 
+% 
+% 
+% After observing both figures, it is appropriate to say that for the similarity
+% of the use between languages are altered, a greater number of words with high
+% ranks are needed than words with low ranks, in terms of robustness, the sets
+% are more stable if altering them are eliminated those words with the highest
+% ranks, that is, those with the lowest frequencies.
+% 
+% \cpnote{Nota de Josue:
+% Hola Crlos, ya revise el documento. La idea que tenia con ese párrafo es que en la seccion del Uso entre idiomas, se observó que habia grupo de palabras que aparecian en los años donde el uso  aumentaba, y la influencia de tales grupos podria aumentar el uso. 
+% Como se han buscado relaciones entre las palabrtas y las cantidades, una premmisa esque el uso dependa de estos grupos de palabras, y si estos grupos no estan entonces el uso cambia. 
+% Por eso en el parrafo decia que los resultados de robustez pueden ser contraproducentes ya que la estabiulidad del uso no depende de los grupos de palabras del mismo campo semantico, sino que la estabilidad ocurre sino se eliminan palabras con rangos bajos.
+% }
+This result implies that care must be taken when doing this analysis with respect to 
+words that have low ranks. Thus, care must be taken when using this automated approach
+to yield quantitative statements, paying special attention to the most used words. 
+
+% , despite showing the stability of the sets when eliminating words
+% from them, can be counterproductive \cpnote{WTF} with the results of the
+% previous sections, since in those we try to find relationships based on the
+% meaning of the words, and in case of an elimination such relationships would be
+% lost if the words involved have high ranks.
 
 %just multiply the original use by the conversion factor to obtain the reduced use. 
 
