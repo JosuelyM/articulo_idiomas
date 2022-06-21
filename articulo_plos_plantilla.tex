@@ -149,7 +149,7 @@
 % Title must be 250 characters or less.
 \begin{flushleft}
 	{\Large
-		\textbf\newline{Statistical analysis of 1-gram flow among Indo-European languages \cgnote{Statistical analysis of word flow among Indo-European languages}} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
+		\textbf\newline{Statistical analysis of 1-gram flow among Indo-European languages \cgnote{Statistical analysis of word flow among six Indo-European languages}} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
 	}
 	\newline
 	% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
@@ -243,14 +243,14 @@
 	si quieres platicar conmigo, lo podemos hacer.}
 In recent years, the emergence and development of computational tools has
 benefited various statistical studies to understand certain characteristics of
-the human population. For example, we are able to predict the growth rate of a
+the human population. For example, we are able to predict with a high confidence the growth rate of a
 city, the number of people who have watched a movie, the user traffic on a web
 page, and even the way we use words in written language. The previous examples
 are cases of the Zipf's law, formulated by George Zipf in 1940~\cite{Zipf} upon
 discovering that if  the words used in a text are ranked by their frequency of
 appearance, where the lower ranks belong to the most frequent words,  then the
 frequency  $f$  of any word and its rank  $k$ are related by a power law of the
-form $f~1/k$.
+form $f\sim1/k$.
 
 
 
@@ -268,11 +268,11 @@ form $f~1/k$.
 %and Cristelli et al.~\cite{Cristelli_zipfgdp} on the gross domestic product of
 %several countries,  wealth of American citizens,  and population of cities.
 
-Zipf's law has been mostly used to study the structures of language,
-nonetheless, not enough studies have been done to understand the historical and
+Zipf's law has been mostly used to study the structures of language.
+Nonetheless, not enough studies have been done to understand the historical and
 cultural features that language provides. One way to begin such a study is by
 noting that the languages themselves are mixed, since within the vocabulary of
-a language, from other languages are continuously added.
+a language, words from other languages are continuously added.
 
 % %Although Zip’s law has opened several statistical studies in linguistics, nowadays few studies have been done about how within the vocabulary of a language, words from the language itself and from other languages are mixed
 % \cpnote{Creo que podemos aca hablar mas de un mixing de cultura. Irnos de cosas generales a cosas particulares. Ahora, gracias a google ngram podemos aproximarnos a este problema mediante el lengauje}.
@@ -280,41 +280,39 @@ a language, from other languages are continuously added.
 
 Currently in the Spanish language, there are words from English 
 that do not have a translation or that sometimes displace those that already
-exist in Spanish.  For example, for native Spanish speakers it is common to
+exist in Spanish.  For example, for native Spanish speakers in Mexico, it is common to
 hear the word \textit{marketing} instead of its translation \textit{mercadeo}
 when dealing with economic or business issues; also the word \textit{online}
 has replaced \textit{en línea}, when referring to issues related to the
 internet, a word officially adopted in Spanish.
 
-This trending has not only affected Spanish,  but also other languages that are
+This trend has not only affected Spanish,  but also other languages that are
 being influenced by topics where English is the main and common language for
 communication. However, in different periods of time, the flow of words came
 from other languages. D’Amore~\cite{Damore_influencia_mutua} discusses with linguistic rigor the
 flow of words between English and Spanish,  showing historical  and cultural
-causes that allowed such flow; in addition to mentioning the influence of
+causes that allowed such a flow; in addition to mentioning the previous influence of
 Arabic in Spanish and French in English. \cpnote{Hay mas referencias, o es un 
 	caso singular?}
 
-In this work, we use the Google Books N-gram~\cite{ngramv} dataset of the most
-frequent words in books published in  English, French, German, Italian and
-Spanish languages.  With that dataset,  we develop an algorithm that identifies
-the words of one language  and that are being used exactly with the same 
+In this work, we use the Google Books N-gram dataset~\cite{ngramv} of the most
+frequent words in books published in English, French, German, Italian, and
+Spanish. With this dataset,  we develop an algorithm that identifies
+the words of one language and that are being used exactly with the same 
 spelling by others. Once these words
-have been classified, we construct two models to quantify  the influence that
-one language has had on another during the 20th century. The first model, we
-count the number of new words that a language received from another, while in
-the second method, we develop the concept of the use of one language in
-another,  from quantifying the relative frequency of  the words of a language
-that are being used in another language. In both we identify historical, social
+have been classified, we construct two models to quantify the influence that
+one language has had on another during the 20th century. In the first model, we
+count the number of new words that a language received from another. In
+the second model, we develop the concept of the use of one language in
+another, from quantifying the relative frequency of  the words of a language
+that are being used in another language. In both models, we identify historical, social,
 and cultural causes that are responsible for the flow of words.
 
-Next, we use the concept of rank diversity,  that shows the number of words
+Next, we use the concept of rank diversity~\cite{iplosone},  that shows the number of words
 occupying a certain rank across the time. This study shows that  regardless of
-who is the language the flow comes from or who language receives them,  the
-lower ranks are always occupied by fewer  words, and as the rank increases the
-diversity curve also increases as a logarithmic. 
+the original or receiving language,  the lower ranks are always occupied by fewer words, and as the rank increases, the diversity curve also increases logarithmically. 
 
-\cpnote{Obvio aca toca poner algunos caveats y discutir la seccion de la estabilidad}
+\cpnote{Obvio aca toca poner algunos caveats y discutir la seccion de la estabilidad} \cgnote{o tal vez al final? digo, primero hay que presentar el m\'etodo y despu\'es explicar sus l\'imites}
 
 \cgnote{Uno de los caveats es que como hacemos comparaciones automatizadas de cadenas (llam\'emosle ``blind big data''), nuestras comparaciones son puramente de palabras completas, ya no digamos sem\'anticas. Por ejemplo, estamos limitados para estudiar influencia de y hacia ruso, simplemente porque tiene otro alfabeto. Hay otras transformaciones que no detectamos, e.g. en espa\~nol se agrega `e' antes de `sp' (especial/special). Y tambi\'en hay casos donde la influencia puede ser de otros idiomas, e.g. Lat\'in, aunque en otros casos se puede detectar por d\'onde lleg\'o la influencia (e.g. sushi?). Otra limitante es que nos enfocamos en palabras de uso frecuente. S\'olo decir que los estudios comparativos de ``insightful small data'', donde humanos identifican manualmente flujos de palabras seguir\'an siendo \'utiles y necesarios. }
 
@@ -451,7 +449,7 @@ Creo que podemos ver la figura, y platicar tantito a ver que mas podemos decir d
 NMW are consider for each language. Each panel contains one language. 
 The dotted line displays the number of NMW that originate in the 
 corresponding language, and the bars the NMW coming to that language, 
-separated by the origin of the different NMW. 
+separated by the origin of the different NMW. \cgnote{en ejes $x$ mejor poner 'Year', en eje $y$ no ser\'ia NMW?}
 % 
 % Among language
 % such as sources (dotted plot)
