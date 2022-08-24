@@ -149,7 +149,7 @@
 % Title must be 250 characters or less.
 \begin{flushleft}
 	{\Large
-		\textbf\newline{Statistical analysis of 1-gram flow among Indo-European languages \cgnote{Statistical analysis of word flow among six Indo-European languages}} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
+		\textbf\newline{Statistical analysis of 1-gram flow among Indo-European languages \cgnote{Statistical analysis of word flow among five Indo-European languages}} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
 	}
 	\newline
 	% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
@@ -220,6 +220,7 @@
 % }}}
 \section*{Abstract} % {{{
 \cpnote{Por hacer al final}
+\cgnote{usar el t\'ermino ``loanwords''}
 % }}}
 \linenumbers
 % Use "Eq" instead of "Equation" for equation citations.
@@ -278,13 +279,13 @@ a language, words from other languages are continuously added.
 % \cpnote{Creo que podemos aca hablar mas de un mixing de cultura. Irnos de cosas generales a cosas particulares. Ahora, gracias a google ngram podemos aproximarnos a este problema mediante el lengauje}.
 % \jmnote{modifique un poco este parrafo,  considero que el mixing del lneguaje y la cultura esta tratado en los sig parrafos}
 
-Currently in the Spanish language, there are words from English 
+Currently in the Spanish language, there are loanwords from English 
 that do not have a translation or that sometimes displace those that already
 exist in Spanish.  For example, for native Spanish speakers in Mexico, it is common to
 hear the word \textit{marketing} instead of its translation \textit{mercadeo}
 when dealing with economic or business issues; also the word \textit{online}
 has replaced \textit{en línea}, when referring to issues related to the
-internet, a word officially adopted in Spanish.
+\textit{Internet}, a word officially adopted in Spanish.
 
 This trend has not only affected Spanish,  but also other languages that are
 being influenced by topics where English is the main and common language for
@@ -293,7 +294,10 @@ from other languages. D’Amore~\cite{Damore_influencia_mutua} discusses with li
 flow of words between English and Spanish,  showing historical  and cultural
 causes that allowed such a flow; in addition to mentioning the previous influence of
 Arabic in Spanish and French in English. \cpnote{Hay mas referencias, o es un 
-	caso singular?}
+	caso singular?} \cgnote{Ser\'ia bueno agregar m\'as referencias en general, s\'olo hay 8}
+	\url{https://books.google.com/books?id=qhFREAAAQBAJ}
+	\url{https://books.google.com/books?id=HnKeVbwTwyYC}
+	\url{https://books.google.com/books?id=4W6JAgAAQBAJ}
 
 In this work, we use the Google Books N-gram dataset~\cite{ngramv} of the most
 frequent words in books published in English, French, German, Italian, and
@@ -302,7 +306,7 @@ the words of one language and that are being used exactly with the same
 spelling by others. Once these words
 have been classified, we construct two models to quantify the influence that
 one language has had on another during the 20th century. In the first model, we
-count the number of new words that a language received from another. In
+count the number of new loanwords that a language received from another. In
 the second model, we develop the concept of the use of one language in
 another, from quantifying the relative frequency of  the words of a language
 that are being used in another language. In both models, we identify historical, social,
@@ -310,7 +314,9 @@ and cultural causes that are responsible for the flow of words.
 
 Next, we use the concept of rank diversity~\cite{iplosone},  that shows the number of words
 occupying a certain rank across the time. This study shows that  regardless of
-the original or receiving language,  the lower ranks are always occupied by fewer words, and as the rank increases, the diversity curve also increases logarithmically. 
+the original or receiving language,  the lower ranks are always occupied by fewer words, and as the rank increases, the diversity curve also increases logarithmically. \cgnote{logarithmically or ``following a sigmoid curve''? what would be more precise?}
+
+\cgnote{In the next section, ***}
 
 \cpnote{Obvio aca toca poner algunos caveats y discutir la seccion de la estabilidad} \cgnote{o tal vez al final? digo, primero hay que presentar el m\'etodo y despu\'es explicar sus l\'imites}
 
@@ -323,27 +329,25 @@ the original or receiving language,  the lower ranks are always occupied by fewe
 % }}}
 \section*{Metodology} % {{{
 
-For the development of this work,  we used the Google Books Ngram data set~\cite{ngramv}.
+For the development of this work,  we used the Google Books $N$-gram dataset~\cite{ngramv}.
 This dataset contains the usage frequency, for each year and language, of
-the most used ``$n$-grams'' in the books of Google Books. 
-``$n$-grams'' are the words or set of words that make up the text of a
-book, where the number $n$ indicates the number of words that make up the gram,
-being a 1-gram an individual word, a 2-gram a phrase composed of two 1-gram,
-3-gram the set of three 1-gram and so on.
-We removed certain words that did not contributed to the analysis. 
-We eliminated articles, pronouns, propositions and conjunctions (all 
-of which are functional words), since these
-serve to give a structure to the message;  then we consider content words as
-nouns, adjectives and adverbs, which are responsible for the information in the
+the most used ``$N$-grams'' in Google Books. 
+$N$-grams are the words or set of words that make up the text of a
+book, where the number $N$ indicates the number of words that make up the gram,
+being a 1-gram an individual word, a 2-gram a pair of words,
+a 3-gram a sequence of three words, and so on.
+We removed certain words that did not contributed to the analysis: articles, pronouns, propositions and conjunctions (all  of which are functional words), since these
+serve to give a structure to the message;  then we consider content words such as
+nouns, main verbs, adjectives and adverbs, which are responsible for the information in the
 message. Although the names of people, countries and cities are also considered
 functional words, we did not eliminate them, since for some languages these
 words show a cultural trend that we have decided to take into account. \cpnote{Preguntar
-a josue donde vio qeu los proper nouns son functional words}
-From this data set, and after cleaning the data, the lists of the five thousand
+a josue donde vio qeu los proper nouns son functional words} \cgnote{auxiliary verbs tambi\'en son functional words: \url{https://www.teachingenglish.org.uk/article/content-words} }
+From this dataset, and after cleaning the data, the lists of the five thousand
 most used 1-grams each year
-between 1740 and 2009 were extracted for the English, French, German, Italian
+between 1740 and 2009 were extracted for the English, French, German, Italian,
 and Spanish languages.
-We are performing this cut as all the lists of the six languages (between 1740
+We are performing this cut as all the lists of the five languages (between 1740
 and 2009), have at least this amount of 1-grams.
 In each list, the words are ranked according to their
 frequency of appearance, where the most frequent words have the lowest ranks.
@@ -355,7 +359,7 @@ frequency of appearance, where the most frequent words have the lowest ranks.
 To determine the presence of one language in another, an algorithm was
 developed to find the words that are common between at least two languages,
 these must have exactly the same spelling. These words were defined
-as \textit{migrant words}. 
+as \textit{migrant words}. \cgnote{Me acabo de enterar que se usa el t\'ermino ``loanword''. Habr\'ia que checar si nuestras migrant words son iguales (y entonces usar loanwords), o cu\'al es su diferencia (y entonces explicar la diferencia).}
 A migrant word is associated with a \textit{source language} and a
 \textit{receiving language}, where the source language is the one where the
 word appeared for the first time within the most used words,
@@ -363,33 +367,31 @@ while the receiving language is the one where the word is also present, being a
 different set from the source language. 
 To determine the source language, we established that this will be the language
 where the word appeared for the first time within the five thousand most used
-words; in the case of a migrant word has appeared in the same year in two or
+words. If a migrant word has appeared in the same year in two or
 more languages, the source is the one where the word has the lowest rank.
 
 
-The previous criteria of looking for words with the same writing and later
-associating them with a source language, is not perfect there are some cases
+The previous criteria for searching words with the same spelling and later
+associating them with a source language is not perfect. There are some cases
 that our method did not detect and were established as mistakes. One of the
 most common errors was finding words with the same writing, but with different
-meanings. For example,  \textit{mayor} in English refers to the representative
-of the government in a locality, while in Spanish, mayor is an
-adjective to indicate that something is bigger or older.  Another recurring
-error was to not distinguish words with the same meaning but with different
-endings. For example, the word \textit{imagine} is written \textit{imaginer} in
+meanings (polysemy). For example,  \textit{mayor} in English refers to the representative
+of the government in a locality, while in Spanish, \textit{mayor} is an
+adjective to indicate that something is greater, bigger, or older.  Another recurring
+error was not distinguishing words with the same meaning but with slightly different spellings. For example, the word \textit{imagine} is written \textit{imaginer} in
 French and \textit{imaginar} in Spanish.  Finally, in some cases, the authentic
 source language is some other language for which there is no information in the
-data set, for example the word  natural comes from Greek, but there is no data
-from Greek language in the google books $n$-grams data set, consequently this
-word was associated with English as its source language.
+dataset, for example the word \textit{natural} comes from Greek, but there is no data
+from Greek in the Google Books $N$-grams dataset. Consequently, our algorithm associated this word with English as its source language.
 
 The above errors were detected by individually analyzing each of the migrant
 words and their corresponding source and receiving languages. One way to have
-cleaner data is by consulting an expert in each language, who review the words
-and decide which ones were classified properly, however, this is not practical
+cleaner data is by consulting an expert in each language, who reviews the words
+and decides which ones were classified properly. However, this is not practical
 since if there were more languages in the database, it would be necessary to
 consult an expert for each language. Notwithstanding of this requirement to
 regulate errors, we established a method to determine the importance (weight)
-of these errors in the results, that will show in the following sections. 
+of these errors in the results, that will be shown in the following sections. 
 % }}}
 \section*{New words} % {{{
 % Results and Discussion can be combined.
@@ -751,7 +753,7 @@ in each year the words are ordered in ascending order in rank, then over time,
 the same rank can be occupied by different words. One way to quantify
 this change is through rank diversity $d(k)$~\cite{iplosone}. This quantity is
 defined as the number 
-of different elements that occupy rank  $k$ within the same data set, divided
+of different elements that occupy rank  $k$ within the same dataset, divided
 by the number of time slots considered.
 %  how many
 % different elements can occupy the same rank within the same corpus is through
