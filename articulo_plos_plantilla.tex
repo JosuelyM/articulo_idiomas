@@ -180,6 +180,8 @@ Mexico City, Mexico
 % Please keep the abstract below 300 words
 \cpnote{Por hacer al final}
 \cgnote{usar el t\'ermino ``loanwords''}
+
+
 % }}}
 % \linenumbers
 % Use "Eq" instead of "Equation" for equation citations.
@@ -199,6 +201,7 @@ Mexico City, Mexico
 % \jmnote{Modifique el primer parrafo, el parrafo viejo quedo en el text comentado}
 
 \cgnote{Tenemos s\'olo 11 referencias, valdr\'ia la pena incluir m\'as. Se pueden obtener varias de nuestros art\'iculos previos. No digo citar por citar, pero s\'i por lo menos tener 20, mejor 30+.}
+\
 
 \cpnote{Aun no hay una justiicación de por que estudiamos lo que estudiamos. Si quieres
 	lo platicamos con CarlosG la siguiente vez que nos veamos. Mientras piensa un poco y 
@@ -271,9 +274,11 @@ and cultural causes that are responsible for the flow of words.
 Next, we use the concept of rank diversity~\cite{iplosone},  that shows the number of words
 occupying a certain rank across the time. This study shows that  regardless of
 the original or receiving language,  the lower ranks are always occupied by
-fewer words, and as the rank increases, the diversity curve also increases
-logarithmically. \cgnote{logarithmically or ``following a sigmoid curve''? what
+fewer words, and as the rank increases, the diversity curve also increase
+sfollowing a sigmoid curve. %logarithmically.
+ \cgnote{logarithmically or ``following a sigmoid curve''? what
 would be more precise?}
+\jmnote{Había puesto la curva logatirmica porque al principio fue el primer ajuste que hice. Corregí el texto ya que en el texto se menciona el ajuste a la sigmoide }
 
 \cgnote{In the next section, ***}
 
@@ -292,6 +297,9 @@ puede detectar por d\'onde lleg\'o la influencia (e.g. sushi?). Otra limitante
 es que nos enfocamos en palabras de uso frecuente. S\'olo decir que los
 estudios comparativos de ``insightful small data'', donde humanos identifican
 manualmente flujos de palabras seguir\'an siendo \'utiles y necesarios. }
+
+\jmnote{Una de las principales limitantes del meotodo para detectar la influcencia es que se necesita que los idiomas tengan el mismo alfabeto. Deel ejemplo de sushi, el metodo mostraria que "nacio" en alguno de los idiomas que tenemos digamos el idioma A y de ahi se fue al resto; la limitante es que A es el idioma que se uso para transmitir la palabra a los demás  pero el algoritmo identifica a A como el orige, para corregir todos los posibles casos como esté se tendrian que tener más bases de datos. }
+\
 
 %\begin{eqnarray}
 %\label{eq:schemeP}
@@ -332,6 +340,8 @@ To determine the presence of one language in another, an algorithm was
 developed to find the words that are common between at least two languages,
 these must have exactly the same spelling. These words were defined
 as \textit{migrant words}. \cgnote{Me acabo de enterar que se usa el t\'ermino ``loanword''. Habr\'ia que checar si nuestras migrant words son iguales (y entonces usar loanwords), o cu\'al es su diferencia (y entonces explicar la diferencia).}
+\jmnote{Ya invesigué eñ termino loanwords, es el equivalente a préstamos literarios. No estoy seguro si conviene cambiar el las migrant words por loanwords ya que nosotros buscamos palabras que sean iguales letra a letra sin meternos en otras caracteristicas de los prestamos linguisticos, por ejemplo los calcos que son palabras que se traducen "basketball/baloncesto", palabras con la misma raíz como "niño/niños/niña" que aluden al mismo concepto, o el ejemploq que mencionas de aquellas que por estar en un idioma u otro cambian ciertas letras "special/especial". Yo considero que si es bueno explicar estos detalles como una limitante del metodo y que ayudarian a tener resultados más solidos pero no llevar a los conceptos y definiciones que hicimos para que encajen con un termino que ya esta bien desarollado.}
+
 A migrant word is associated with a \textit{source language} and a
 \textit{receiving language}, where the source language is the one where the
 word appeared for the first time within the most used words,
@@ -514,6 +524,7 @@ fulfill Zipf's law. In Fig~\ref{fig.ZL_receiving} we present all language pairs,
 grouped by receiving language and we observe, 
 within statistical fluctuations, an asymptotic power-law decay with an exponent
 close to one. \cgnote{Se usa la frecuencia total de cada palabra migrante? para todos los años o para alguno en particular? Hay que explicar aqu\'i tambi\'en c\'omo se calcul\'o esa figura.}
+\jmnote{la figura2 esta hecha para un año en particular, busco en estos dias cual fue el año}
 % To answer how stable the sets are if we altering them, we first verify that in
 % each year the accumulated migrant words between two languages, obey Zipf's law
 % $f~1/k$ if they are order ascending by their rank Fig~\ref{fig.ZL_receiving};
@@ -712,6 +723,9 @@ In German after WWII, and in French between 1930 and 1955, the mainly words
 involved in that increse are, \textit{terapia}, \textit{anemia},
 \textit{lepra}, \textit{tumor}, \textit{syphilis}, \textit{virus} and
 \textit{renal}. \cpnote{CarlosG, Josue, Hay alguna explicacion a este fenomeno?}
+\jmnote{yo encontre casos muy particulares, en 1874 se decubrio el virus o bascteria que genera la enfermedad \url{https://www.ncbi.nlm.nih.gov/pubmed/365786}, y en 1930 el nobel de medicina fue por tratamiento de anemias. El que estas palabras aparecieran los demás idiomas lo interpeto como que tras estos sucesos cobraron otra vez relevancia y lograron entrar en las 5 mil más ussadas}
+
+
 
 % }}}
 % }}}
