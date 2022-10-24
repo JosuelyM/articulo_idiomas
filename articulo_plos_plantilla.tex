@@ -155,8 +155,8 @@
 \newline
 Josué Ely Molina  \ddag\textsuperscript{1,2}, %\textsuperscript{1,2\Yinyang},
 Jorge Flores      \dag \textsuperscript{2}, %\textcurrency},
-Carlos Gershenson \textsuperscript{3,4},
-Sergio Sanchez    \textsuperscript{5},
+Carlos Gershenson \textsuperscript{3,4,5},
+Sergio Sanchez    \textsuperscript{6},
 Carlos Pineda     \ddag\textsuperscript{2,*}    % \textsuperscript{2\Yinyang},
 % 
 \bigskip
@@ -165,7 +165,8 @@ Carlos Pineda     \ddag\textsuperscript{2,*}    % \textsuperscript{2\Yinyang},
 \textbf{2} Instituto de F\'{\i}sica, \unam \\
 \textbf{3} Instituto de Investigaciones en Matem\'{a}ticas Aplicadas y Sistemas, \unam \\
 \textbf{4} Centro de Ciencias de la Complejidad, \unam \\
-\textbf{5} 
+\textbf{5} Santa Fe Institute. 1399 Hyde Park Rd., Santa Fe, NM 87501, USA
+\textbf{6} 
 Maestr\'{\i}a en Ciencias de la Complejidad, 
 Universidad Aut\'{o}noma de la Ciudad de M\'{e}xico,
 Mexico City, Mexico
@@ -265,7 +266,7 @@ the words of one language and that are being used exactly with the same
 spelling by others. Once these words
 have been classified, we construct two models to quantify the influence that
 one language has had on another during the 20th century. In the first model, we
-count the number of new loanwords that a language received from another. In
+count the number of new words that a language received from another. In
 the second model, we develop the concept of the use of one language in
 another, from quantifying the relative frequency of  the words of a language
 that are being used in another language. In both models, we identify historical, social,
@@ -274,32 +275,12 @@ and cultural causes that are responsible for the flow of words.
 Next, we use the concept of rank diversity~\cite{iplosone},  that shows the number of words
 occupying a certain rank across the time. This study shows that  regardless of
 the original or receiving language,  the lower ranks are always occupied by
-fewer words, and as the rank increases, the diversity curve also increase
-sfollowing a sigmoid curve. %logarithmically.
- \cgnote{logarithmically or ``following a sigmoid curve''? what
-would be more precise?}
-\jmnote{Había puesto la curva logatirmica porque al principio fue el primer ajuste que hice. Corregí el texto ya que en el texto se menciona el ajuste a la sigmoide }
+fewer words, and as the rank increases, the diversity curve also increases following a sigmoid curve. 
 
 \cgnote{In the next section, ***}
 
-\cpnote{Obvio aca toca poner algunos caveats y discutir la seccion de la
-estabilidad} \cgnote{o tal vez al final? digo, primero hay que presentar el
-m\'etodo y despu\'es explicar sus l\'imites}
+%\cpnote{Obvio aca toca poner algunos caveats y discutir la seccion de la estabilidad} \cgnote{o tal vez al final? digo, primero hay que presentar el m\'etodo y despu\'es explicar sus l\'imites}
 
-\cgnote{Uno de los caveats es que como hacemos comparaciones automatizadas de
-cadenas (llam\'emosle ``blind big data''), nuestras comparaciones son puramente
-de palabras completas, ya no digamos sem\'anticas. Por ejemplo, estamos
-limitados para estudiar influencia de y hacia ruso, simplemente porque tiene
-otro alfabeto. Hay otras transformaciones que no detectamos, e.g. en espa\~nol
-se agrega `e' antes de `sp' (especial/special). Y tambi\'en hay casos donde la
-influencia puede ser de otros idiomas, e.g. Lat\'in, aunque en otros casos se
-puede detectar por d\'onde lleg\'o la influencia (e.g. sushi?). Otra limitante
-es que nos enfocamos en palabras de uso frecuente. S\'olo decir que los
-estudios comparativos de ``insightful small data'', donde humanos identifican
-manualmente flujos de palabras seguir\'an siendo \'utiles y necesarios. }
-
-\jmnote{Una de las principales limitantes del meotodo para detectar la influcencia es que se necesita que los idiomas tengan el mismo alfabeto. Deel ejemplo de sushi, el metodo mostraria que "nacio" en alguno de los idiomas que tenemos digamos el idioma A y de ahi se fue al resto; la limitante es que A es el idioma que se uso para transmitir la palabra a los demás  pero el algoritmo identifica a A como el orige, para corregir todos los posibles casos como esté se tendrian que tener más bases de datos. }
-\
 
 %\begin{eqnarray}
 %\label{eq:schemeP}
@@ -319,10 +300,7 @@ We removed certain words that did not contributed to the analysis: articles,
 pronouns, propositions, and conjunctions (all  of which are functional words),
 since these serve to give a structure to the message. Then, we consider content
 words such as nouns, main verbs, adjectives, and adverbs. 
-\st{Although the names of people, countries and
-cities are also considered functional words, we did not eliminate them, since
-for some languages these words show a cultural trend that we have decided to
-take into account. } \cgnote{no es cierto, todos los sustantivos son content words \url{https://en.wikipedia.org/wiki/Content_word} }
+%\st{Although the names of people, countries and cities are also considered functional words, we did not eliminate them, since for some languages these words show a cultural trend that we have decided to take into account. } \cgnote{no es cierto, todos los sustantivos son content words \url{https://en.wikipedia.org/wiki/Content_word} }
 From this dataset, and after cleaning the data, the lists of the five thousand
 most used 1-grams each year
 between 1740 and 2009 were extracted for the English, French, German, Italian,
@@ -339,8 +317,9 @@ frequency of appearance, where the most frequent words have the lowest ranks.
 To determine the presence of one language in another, an algorithm was
 developed to find the words that are common between at least two languages,
 these must have exactly the same spelling. These words were defined
-as \textit{migrant words}. \cgnote{Me acabo de enterar que se usa el t\'ermino ``loanword''. Habr\'ia que checar si nuestras migrant words son iguales (y entonces usar loanwords), o cu\'al es su diferencia (y entonces explicar la diferencia).}
-\jmnote{Ya invesigué eñ termino loanwords, es el equivalente a préstamos literarios. No estoy seguro si conviene cambiar el las migrant words por loanwords ya que nosotros buscamos palabras que sean iguales letra a letra sin meternos en otras caracteristicas de los prestamos linguisticos, por ejemplo los calcos que son palabras que se traducen "basketball/baloncesto", palabras con la misma raíz como "niño/niños/niña" que aluden al mismo concepto, o el ejemploq que mencionas de aquellas que por estar en un idioma u otro cambian ciertas letras "special/especial". Yo considero que si es bueno explicar estos detalles como una limitante del metodo y que ayudarian a tener resultados más solidos pero no llevar a los conceptos y definiciones que hicimos para que encajen con un termino que ya esta bien desarollado.}
+as \textit{migrant words}, which are a particular case of loanwords (with identical spelling).
+%\cgnote{Me acabo de enterar que se usa el t\'ermino ``loanword''. Habr\'ia que checar si nuestras migrant words son iguales (y entonces usar loanwords), o cu\'al es su diferencia (y entonces explicar la diferencia).}
+%\jmnote{Ya invesigué eñ termino loanwords, es el equivalente a préstamos literarios. No estoy seguro si conviene cambiar el las migrant words por loanwords ya que nosotros buscamos palabras que sean iguales letra a letra sin meternos en otras caracteristicas de los prestamos linguisticos, por ejemplo los calcos que son palabras que se traducen "basketball/baloncesto", palabras con la misma raíz como "niño/niños/niña" que aluden al mismo concepto, o el ejemploq que mencionas de aquellas que por estar en un idioma u otro cambian ciertas letras "special/especial". Yo considero que si es bueno explicar estos detalles como una limitante del metodo y que ayudarian a tener resultados más solidos pero no llevar a los conceptos y definiciones que hicimos para que encajen con un termino que ya esta bien desarollado.}
 
 A migrant word is associated with a \textit{source language} and a
 \textit{receiving language}, where the source language is the one where the
@@ -523,8 +502,8 @@ Another interesting feature that we observed is that migrant words also
 fulfill Zipf's law. In Fig~\ref{fig.ZL_receiving} we present all language pairs, 
 grouped by receiving language and we observe, 
 within statistical fluctuations, an asymptotic power-law decay with an exponent
-close to one. \cgnote{Se usa la frecuencia total de cada palabra migrante? para todos los años o para alguno en particular? Hay que explicar aqu\'i tambi\'en c\'omo se calcul\'o esa figura.}
-\jmnote{la figura2 esta hecha para un año en particular, busco en estos dias cual fue el año}
+close to one. %\cgnote{Se usa la frecuencia total de cada palabra migrante? para todos los años o para alguno en particular? Hay que explicar aqu\'i tambi\'en c\'omo se calcul\'o esa figura.}
+%\jmnote{la figura2 esta hecha para un año en particular, busco en estos dias cual fue el año}.
 % To answer how stable the sets are if we altering them, we first verify that in
 % each year the accumulated migrant words between two languages, obey Zipf's law
 % $f~1/k$ if they are order ascending by their rank Fig~\ref{fig.ZL_receiving};
@@ -538,7 +517,7 @@ close to one. \cgnote{Se usa la frecuencia total de cada palabra migrante? para 
 		\caption{{\bf Zipf's law of the accumulated migrant words,
 grouped by receiving language.} We display a frequency-rank 
 plot for all language pairs, for the migrant words during the year 2000. Indeed, after a transient
-time, Zipf's law is observed. \cgnote{convendr\'ia poner una curva ``ideal'' (tal vez punteada) en cada panel, para ver qu\'e tanto se desv\'ian los datos de la ley de Zipf.}}
+time\cgnote{hay tiempo en estas curvas? son s\'olo del 2002. Tal vez simplemente quitar `time'}, Zipf's law is observed. \cgnote{convendr\'ia poner una curva ``ideal'' (tal vez punteada) en cada panel, para ver qu\'e tanto se desv\'ian los datos de la ley de Zipf. Hay alguna correlaci\'on entre la influencia de un idioma en otro y la pendiente de estas curvas? Me imagino que mientras mayor sea el \'area (pendiente menos pronunciada), esto implica que hay mayor influencia}}
 % 		\caption{{\bf The Use among languages.} \cpnote{HAcer el caption
 % cuando termine el articulo} All language pairs..... Decir que una descripcion para 
 % cada curva se da en el texto principal}
@@ -721,9 +700,10 @@ other languages.
 
 In German after WWII, and in French between 1930 and 1955, the mainly words
 involved in that increse are, \textit{terapia}, \textit{anemia},
-\textit{lepra}, \textit{tumor}, \textit{syphilis}, \textit{virus} and
-\textit{renal}. \cpnote{CarlosG, Josue, Hay alguna explicacion a este fenomeno?}
-\jmnote{yo encontre casos muy particulares, en 1874 se decubrio el virus o bascteria que genera la enfermedad \url{https://www.ncbi.nlm.nih.gov/pubmed/365786}, y en 1930 el nobel de medicina fue por tratamiento de anemias. El que estas palabras aparecieran los demás idiomas lo interpeto como que tras estos sucesos cobraron otra vez relevancia y lograron entrar en las 5 mil más ussadas}
+\textit{lepra}, \textit{tumor}, \textit{syphilis}, \textit{virus}, and
+\textit{renal}. 
+%\cpnote{CarlosG, Josue, Hay alguna explicacion a este fenomeno?}
+%\jmnote{yo encontre casos muy particulares, en 1874 se decubrio el virus o bascteria que genera la enfermedad \url{https://www.ncbi.nlm.nih.gov/pubmed/365786}, y en 1930 el nobel de medicina fue por tratamiento de anemias. El que estas palabras aparecieran los demás idiomas lo interpeto como que tras estos sucesos cobraron otra vez relevancia y lograron entrar en las 5 mil más ussadas}
 
 
 
@@ -965,8 +945,19 @@ to yield quantitative statements, paying special attention to the most used word
 %just multiply the original use by the conversion factor to obtain the reduced use. 
 
 % }}}
-\section*{Conclusiones} % {{{
-\cpnote{Vas CarlosG}
+\section*{Discussion} % {{{
+
+We presented a method and analyzed how migrant words (loanwords with the same spelling) have spread across five Indoeuropean languages. This ``blind big data'' approach can offer some insights, so as to estimate influences in different temporal periods, and how historic events might have contributed to these fluxes. Nevertheless, our method has important caveats. As it is, it requires that languages use the same alphabet (although some automatic transliteration could be used to include more languages, such as Russian). However, languages also change the spelling of words as they migrate from one to the other. For example, in Spanish it is difficult to pronounce words beginning with `s' followed by a consonant, so an `e' is added (e.g., `especial', `espectacular', `estable'; although these come from Latin, not English). Indeed, some words might have their origins in a language not considered in a specific study, e.g. `sushi', although it might be useful to learn in which languages such words became popular first, even when it is uncertain whether the word migrated directly from the original to others, or via an intermediary (such as Nahuatl words that have spread globally through Spanish, e.g. `tomatl', `xocolatl'). Still, as more data becomes available, more languages could be included in statistical studies. Another limitation of our present work is that we focus on frequently used words, although the same methodology could be used for less frequent words as well. These caveats imply that we are not attempting to replace ``insightful small data'' studies, where experts focus on particular words and study how they are shared across languages. We believe that both types of studies are complementary and necessary.
+
+***
+
+%\cgnote{Uno de los caveats es que como hacemos comparaciones automatizadas de cadenas (llam\'emosle ``blind big data''), nuestras comparaciones son puramente de palabras completas, ya no digamos sem\'anticas. Por ejemplo, estamos limitados para estudiar influencia de y hacia ruso, simplemente porque tiene otro alfabeto. Hay otras transformaciones que no detectamos, e.g. en espa\~nol se agrega `e' antes de `sp' (especial/special). Y tambi\'en hay casos donde la influencia puede ser de otros idiomas, e.g. Lat\'in, aunque en otros casos se puede detectar por d\'onde lleg\'o la influencia (e.g. sushi?). Otra limitante es que nos enfocamos en palabras de uso frecuente. S\'olo decir que los estudios comparativos de ``insightful small data'', donde humanos identifican manualmente flujos de palabras seguir\'an siendo \'utiles y necesarios. }
+
+%\jmnote{Una de las principales limitantes del meotodo para detectar la influcencia es que se necesita que los idiomas tengan el mismo alfabeto. Deel ejemplo de sushi, el metodo mostraria que "naci\'o" en alguno de los idiomas que tenemos digamos el idioma A y de ahi se fue al resto; la limitante es que A es el idioma que se uso para transmitir la palabra a los demás  pero el algoritmo identifica a A como el orige, para corregir todos los posibles casos como esté se tendrian que tener más bases de datos. }
+\
+
+
+
 % }}}
 \section*{Supporting information} % {{{
 % }}}
@@ -974,7 +965,7 @@ to yield quantitative statements, paying special attention to the most used word
 
 \nolinenumbers
 
-Support by projects CONACyT 285754 and UNAM-PAPIIT IG101421 is acknowledged. 
+Support by projects CONACyT 285754 and UNAM-PAPIIT (IG101421, IN107919, IV100120, IN105122) and from the PASPA program from UNAM-DGAPA. is acknowledged. 
 % }}}
 \bibliography{referencias} 
 \end{document}
