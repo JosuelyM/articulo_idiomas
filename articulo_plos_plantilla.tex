@@ -201,18 +201,15 @@ Mexico City, Mexico
 % de esa manera.}
 % \jmnote{Modifique el primer parrafo, el parrafo viejo quedo en el text comentado}
 
-\cgnote{Tenemos s\'olo 11 referencias, valdr\'ia la pena incluir m\'as. Se pueden obtener varias de nuestros art\'iculos previos. No digo citar por citar, pero s\'i por lo menos tener 20, mejor 30+.}
-\
 
-\cpnote{Aun no hay una justiicación de por que estudiamos lo que estudiamos. Si quieres
-	lo platicamos con CarlosG la siguiente vez que nos veamos. Mientras piensa un poco y 
-	si quieres platicar conmigo, lo podemos hacer.}
-In recent years, the emergence and development of computational tools has
+%\cpnote{Aun no hay una justiicación de por que estudiamos lo que estudiamos. Si quieres	lo platicamos con CarlosG la siguiente vez que nos veamos. Mientras piensa un poco y 	si quieres platicar conmigo, lo podemos hacer.}
+	
+In recent years, the increase of data availability~\cite{Hilbert60} and the development of computational tools~\cite{doi:10.1098/rsta.2019.0061} has
 benefited various statistical studies to understand certain characteristics of
 the human population. For example, we are able to predict with a high confidence the growth rate of a
-city~\cite{Batty:2012Cities}, the number of people who have watched a movie, the user traffic on a web
+city~\cite{Batty:2012Cities,Murcio2015}, the number of people who have watched a movie~\cite{sinha2005blockbusters}, the user traffic on a web
 page~\cite{BARABASI200069}, and even the way we use words in written language~\cite{Montemurro2001567,ZipfRnd2002}. The previous examples
-are cases of the Zipf's law, formulated by George Zipf in 1940~\cite{Zipf,Petruszewycz1973Lhistoire-de-la,newman2005power,1367-2630-13-4-043004,Perc07122012,1367-2630-15-9-093033} upon
+are cases of  Zipf's law, formulated by George Zipf in the 1930s~\cite{Zipf,Petruszewycz1973Lhistoire-de-la,newman2005power,1367-2630-13-4-043004,Perc07122012,1367-2630-15-9-093033} upon
 discovering that if  the words used in a text are ranked by their frequency of
 appearance, where the lower ranks belong to the most frequent words,  then the
 frequency  $f$  of any word and its rank  $k$ are related by a power law of the
@@ -235,7 +232,7 @@ form $f\sim1/k$.
 %several countries,  wealth of American citizens,  and population of cities.
 
 Zipf's law has been mostly used to study the structures of language.
-Nonetheless, not enough studies have been done to understand the historical and
+Nonetheless, not enough studies have been made to understand the historical and
 cultural features that language provides. One way to begin such a study is by
 noting that the languages themselves are mixed, since within the vocabulary of
 a language, words from other languages are continuously added.
@@ -259,6 +256,8 @@ causes that allowed such a flow; in addition to mentioning the previous influenc
 Arabic in Spanish and French in
 English~\cite{gorlach2005dictionary,haspelmath2009loanwords,durkin2014borrowed}. 
 
+
+
 In this work, we use the Google Books N-gram dataset~\cite{ngramv} of the most
 frequent words in books published in English, French, German, Italian, and
 Spanish. With this dataset,  we develop an algorithm that identifies
@@ -277,7 +276,9 @@ occupying a certain rank across the time. This study shows that  regardless of
 the original or receiving language,  the lower ranks are always occupied by
 fewer words, and as the rank increases, the diversity curve also increases following a sigmoid curve. 
 
-\cgnote{In the next section, ***}
+Our work is of a statistical nature, and as such, has its limitations. However, we consider that statistical studies like the one we present can be complementary to detailed linguistic studies of loanwords. Certainly, we do not attempt to replace such studies, but to add insights and suggest further avenues of research. We do not need to sacrifice precision or large amounts of data~\cite{Harford2014} when we can have both.
+
+\cgnote{In the next section, we present our methodology. Then, ***}
 
 %\cpnote{Obvio aca toca poner algunos caveats y discutir la seccion de la estabilidad} \cgnote{o tal vez al final? digo, primero hay que presentar el m\'etodo y despu\'es explicar sus l\'imites}
 
@@ -359,15 +360,15 @@ of these errors in the results, that will be shown in the following sections.
  
 The purpose of this work is to establish the influence that one language has on
 another. A first method to quantify such influence is by counting the
-\textit{new migrant words} (NMW). These are words that appear for the first time in a
+\textit{new migrant words} ($NMW$). These are words that appear for the first time in a
 receiving language and that come from a unique source language.
 
 
-We study the flow of NMW, per decade, in two ways. First, we
-count the number of NMW that a fixed language exports as a source
+We study the flow of $NMW$, per decade, in two ways. First, we
+count the number of $NMW_{out}$ that a fixed language exports as a source
 language. Second, counting, for a fixed language, the number
-of new migrant words. In this second way, we can study from 
-which language are the NMW coming. \cgnote{convendr\'ia entonces distinguir los dos tipos de NMW, tambi\'en en la figura, tal vez $NMW_{in}$ y $NMW_{out}$ para cada idioma} The results are presented in 
+of new migrant words $NMW_{in}$. In this second way, we can study from 
+which language are the $NMW_{in}$ coming.  The results are presented in 
 \Fref{fig.NMW_A} for each decade of the 20th century. 
 
 % We count new migrant words in two ways. First, by counting the number
@@ -388,11 +389,11 @@ migrated on average three times more words than it has received, where the
 greatest influence of English occurred in the 1940s and 2000s.
 Consequently, the
 largest proportion of migrant words in the other languages come
-from English. It is worth noticing that French, German, Italian, and Spanish have received more words
-during the second half of the century, after the end of World War II. \cgnote{yo no veo esta tendencia tan clara. Italiano parece que recibe m\'as antes de 1950. }
-\cpnote{CarlosG, el analisis que se hace de esta figura aun esta muy precario. 
-Creo que podemos ver la figura, y platicar tantito a ver que mas podemos decir de ella.}
-\cgnote{podemos notar que de entre los idiomas que comparamos, hay tambi\'en unos que importan menos palabras que otros... quisiera normalizar primero los ejes $y$, porque parecer\'ia que hay mucha influencia entre Espa\~nol e Italiano, pero tal vez es una influencia relativa, y absoluta sea comparable a influencias entre otros idiomas}¸
+from English. It is worth noticing that French, German, Italian, and Spanish exported more words
+during the 1940s, but their export rate has remained roughly stable, with minimums for English in the 1900s and 1980s, French in the 1950s, German in the 1960s and 1980s, Italian in the 1920s, 1950s, and 1950s, and Spanish in the 1900s and 1960s.
+
+The major influencer of English has varied across time, including German, Spanish, and French. Apart from English, French has received more influence from German and Italian, German from French and Italian, Italian from Spanish, and Spanish from Italian.
+
 
 \begin{figure} % {{{
 \begin{adjustwidth}{-1.2in}{0in}
@@ -410,20 +411,10 @@ Creo que podemos ver la figura, y platicar tantito a ver que mas podemos decir d
 % \jmnote{listo}
 % }
 \caption{{\bf New migrant words, per language and per decade.} 
-NMW are consider for each language. Each panel contains one language. 
-The dotted line displays the number of NMW that originate in the 
-corresponding language, and the bars the NMW coming to that language, 
-separated by the origin of the different NMW. \cgnote{en ejes $x$ mejor poner 'Decade', en eje $y$ no ser\'ia NMW? Tambi\'en sugiero que todos los ejes $y$ tengan la misma escala, e.g. de 0 a 100, para comparar mejor las dimensiones.}
-% 
-% Among language
-% such as sources (dotted plot)
-% and receivers (bar plot) of new words, only English language has been the
-% language that has migrated more words than it has received. 	
-% \cpnote{Explicar la curva punteada, poner los colores aparete, digamos en una
-% leyenda como un sexto grafico un poco, y describir mejor y analizar tantito
-% (una frase).}
-% \jmnote{listo}
-}
+$NMW$ are consider for each language. Each panel contains one language. 
+The dotted line displays the number of $NMW_{out}$ that originate in the 
+corresponding language, and the bars the $NMW_{in}$ coming to that language, 
+separated by the origin of the different $NMW$. }
 % 
 \label{fig.NMW_A}
 \end{adjustwidth}
@@ -449,7 +440,7 @@ to the fields of technology and globalization.
 \resizebox{\textwidth}{!}{
 \begin{tabular}{@{}cV{4.5}cV{4.5}cV{4.5}c@{}}
 \textbf{Semantic Field} & \textbf{New migrant words}
-      & \textbf{Source language} & \textbf{Receving laguage} \\
+      & \textbf{Source language} & \textbf{Receiving language} \\
 \hlineB{4.5}
 \multirow{2}{*}{World War I} 
    & \begin{tabular}[c]{@{}c@{}} \\ allemagne,  austro,\\  russie, versailles.\end{tabular} 
