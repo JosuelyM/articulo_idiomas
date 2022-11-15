@@ -536,12 +536,18 @@ over time. Since we are dealing with groups of words, we define as accumulated
 migrant words, those words with source language $A$ that already appeared in a
 receiving language $B$, and for a given year they do so again.
 
-Let us define $J_{AB}$ \cpnote{Esto tampoco se usa nunca... quepez?} as the rankings of
-the set of words in $B$ that migrated
-from $A$ and define also the frequency $f(j)$ of a word with ranking $j$. We now
+
+Consider the words that up to a given year $t$ have migrated from language $A$ to $B$. Each of these
+words will have a ranking $f(j)$ where $j$ is the ranking of the word, within the aforementioned
+list of words. 
+% 
+% Let us define $U_{\text{\tiny A} \to  \text{\tiny B} }(t)$ \cpnote{Esto tampoco se usa nunca... quepez?} as the rankings of
+% the set of words in $B$ that migrated
+% from $A$ and define also the frequency $f(j)$ of a word with ranking $j$. 
+We now
 add the frequencies of the accumulated
 migrant words of $A$ to $B$ at a year $t$ and normalize the this quantity by
-dividing it by the frequency of the five thousand words that make up the list:
+dividing it by the frequency of the first five thousand words that make up the list:
 \begin{equation}
 \label{ec.fuso}
 \underset{ \text{\tiny A} \to  \text{\tiny B} }{U}(t) = \frac{\sum_{j}
@@ -550,10 +556,10 @@ f(j)}{\sum_{k=1}^{5000} f(k)}.
 We define this new value as the \textit{use} of $A$ in $B$, and interpret is value
 as a measure of influence. It will then be said that the influence of $A$ has increased on
 $B$, if in an interval of time $\Delta t$ the use of $A$ on $B$ increases.
-Finally, to quantify the change in use within a time interval, the term ratio
-of words per year (wpy) \cpnote{quien puso esto? no se usa mas esta abreviacion...}
-will be used, obtained by dividing $\Delta U$  by
-$\Delta t$. \cpnote{Qye es delta u y que es delta t?}
+% Finally, to quantify the change in use within a time interval, the term ratio
+% of words per year (wpy) \cpnote{quien puso esto? no se usa mas esta abreviacion...}
+% will be used, obtained by dividing $\Delta U$  by
+% $\Delta t$. \cpnote{Qye es delta u y que es delta t?}
 
 We obtained the accumulated migrant words for all possible combinations of
 source and receiving languages from 1740 to 2009.  Afterwards, we calculated
@@ -615,10 +621,9 @@ grouped by source language.
 		\includegraphics{images/usoFinal.pdf}
 % 		\includegraphics[scale=0.38]{USO_A.png}
 		\caption{{\bf The use among languages.} 
-We plot the use, as defined in \eref{}, 
-\cpnote{HAcer el caption
-cuando termine el articulo} All language pairs..... Decir que una descripcion para 
-cada curva se da en el texto principal}
+We plot the use, as defined in \eref{ec.fuso} for all language pairs. 
+A discussion around the results plotted in the figure is presented in the
+main text. }
 		\label{fig.UT_art}
 	\end{adjustwidth}
 \end{figure}
