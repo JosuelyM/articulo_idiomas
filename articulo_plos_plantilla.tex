@@ -156,9 +156,11 @@
 Josué Ely Molina  \ddag\textsuperscript{1,2}, %\textsuperscript{1,2\Yinyang},
 Jorge Flores      \dag \textsuperscript{2}, %\textcurrency},
 Carlos Gershenson \textsuperscript{3,4,5},
-Sergio Sanchez    \textsuperscript{6},
+Sergio Sanchez    \textsuperscript{6},\\
 Carlos Pineda     \ddag\textsuperscript{2,*}    % \textsuperscript{2\Yinyang},
 % 
+
+
 \bigskip
 \newcommand{\unam}{Universidad Nacional Aut\'{o}noma de M\'{e}xico, Mexico City, 01000, Mexico}
 \textbf{1} Facultad de Ciencias, \unam \\
@@ -472,7 +474,8 @@ to the fields of technology and globalization.
 \end{tabular}%
 }
 \caption{\textbf{New migrant words.} 
-\cpnote{Agregar descripcion mas detallada}
+Examples of new migrant words for all pairs of languages, grouped together by semantic field.
+A notorious influence of historic events on word migration is observed. 
 We use the following abbreviations: EN for English, FR for French, GE for German, IT for
 Italian and SP for Spanish. 
 }
@@ -504,10 +507,11 @@ close to one. %\cgnote{Se usa la frecuencia total de cada palabra migrante? para
 		\centering
 		\includegraphics{images/zipfFinal.pdf}
 % 		\includegraphics[scale=0.38]{USO_A.png}
-		\caption{{\bf Zipf's law of the accumulated migrant words,
+		\caption{{\bf Zipf's law of the accumulated migrant words, for 2002,
 grouped by receiving language.} We display a frequency-rank 
-plot for all language pairs, for the migrant words during the year 2000. Indeed, after a transient
-time\cgnote{hay tiempo en estas curvas? son s\'olo del 2002. Tal vez simplemente quitar `time'}, Zipf's law is observed. \cgnote{convendr\'ia poner una curva ``ideal'' (tal vez punteada) en cada panel, para ver qu\'e tanto se desv\'ian los datos de la ley de Zipf. Hay alguna correlaci\'on entre la influencia de un idioma en otro y la pendiente de estas curvas? Me imagino que mientras mayor sea el \'area (pendiente menos pronunciada), esto implica que hay mayor influencia}}
+plot for all language pairs, for the migrant words during the year 2000.
+Indeed, after a transient, Zipf's law is observed (a dashed line with slope $-1$ is
+provided for comparison). }
 % 		\caption{{\bf The Use among languages.} \cpnote{HAcer el caption
 % cuando termine el articulo} All language pairs..... Decir que una descripcion para 
 % cada curva se da en el texto principal}
@@ -531,11 +535,18 @@ over time. Since we are dealing with groups of words, we define as accumulated
 migrant words, those words with source language $A$ that already appeared in a
 receiving language $B$, and for a given year they do so again.
 
-Let us define $J_{AB}$ as the rankings of the set of words in $B$ that migrated
-from $A$ and define also the frequency $f(j)$ of a word with ranking $j$. We now
+
+Consider the words that up to a given year $t$ have migrated from language $A$ to $B$. Each of these
+words will have a ranking $f(j)$ where $j$ is the ranking of the word, within the aforementioned
+list of words. 
+% 
+% Let us define $U_{\text{\tiny A} \to  \text{\tiny B} }(t)$ \cpnote{Esto tampoco se usa nunca... quepez?} as the rankings of
+% the set of words in $B$ that migrated
+% from $A$ and define also the frequency $f(j)$ of a word with ranking $j$. 
+We now
 add the frequencies of the accumulated
 migrant words of $A$ to $B$ at a year $t$ and normalize the this quantity by
-dividing it by the frequency of the five thousand words that make up the list:
+dividing it by the frequency of the first five thousand words that make up the list:
 \begin{equation}
 \label{ec.fuso}
 \underset{ \text{\tiny A} \to  \text{\tiny B} }{U}(t) = \frac{\sum_{j}
@@ -544,9 +555,10 @@ f(j)}{\sum_{k=1}^{5000} f(k)}.
 We define this new value as the \textit{use} of $A$ in $B$, and interpret is value
 as a measure of influence. It will then be said that the influence of $A$ has increased on
 $B$, if in an interval of time $\Delta t$ the use of $A$ on $B$ increases.
-Finally, to quantify the change in use within a time interval, the term ratio
-of words per year (wpy) will be used, obtained by dividing $\Delta U$  by
-$\Delta t$.
+% Finally, to quantify the change in use within a time interval, the term ratio
+% of words per year (wpy) \cpnote{quien puso esto? no se usa mas esta abreviacion...}
+% will be used, obtained by dividing $\Delta U$  by
+% $\Delta t$. \cpnote{Qye es delta u y que es delta t?}
 
 We obtained the accumulated migrant words for all possible combinations of
 source and receiving languages from 1740 to 2009.  Afterwards, we calculated
@@ -607,9 +619,10 @@ grouped by source language.
 		\centering
 		\includegraphics{images/usoFinal.pdf}
 % 		\includegraphics[scale=0.38]{USO_A.png}
-		\caption{{\bf The Use among languages.} \cpnote{HAcer el caption
-cuando termine el articulo} All language pairs..... Decir que una descripcion para 
-cada curva se da en el texto principal}
+		\caption{{\bf The use among languages.} 
+We plot the use, as defined in \eref{ec.fuso} for all language pairs. 
+A discussion around the results plotted in the figure is presented in the
+main text. }
 		\label{fig.UT_art}
 	\end{adjustwidth}
 \end{figure}
@@ -657,10 +670,15 @@ characters who excelled in academic areas, such as \textit{Marx},
 \textit{Engels} and \textit{Mozart}.
 
 In English and Italian, the biggest change was between 1960 and 2009, where the
-use of German decreased. In this period the words that lost influence
-\cpnote{Josue, a que te refieres con palabras que han perdido influencia?} are
-referred to the World War II, among them \textit{Berlin}, \textit{Marx},
-\textit{Hitler}, \textit{Lenin}, \textit{testen}  and \textit{reich}.
+use of German decreased. In this period the words that lost influence, in the
+sense that the usage frequency of the corresponding words decreases. 
+% \cpnote{Josue, a que te refieres con palabras que han perdido influencia?} 
+Among these words are 
+\textit{Berlin}, \textit{Marx},
+\textit{Hitler}, \textit{Lenin}, \textit{testen}  and \textit{reich}, all of which
+refer to World War II.
+% These words refer to the World War II, among them \textit{Berlin}, \textit{Marx},
+% \textit{Hitler}, \textit{Lenin}, \textit{testen}  and \textit{reich}.
 % }}}
 \subsubsection*{Italian} % {{{
 
@@ -671,8 +689,17 @@ The influence of Italian came mainly from two semantic fields, the WWII with
 \textit{suora} and \textit{cattedrale}. These semantic fields are
 responsible for the increase in English between 1930 and 1940, in German
 between 1950 and 1995, and in Spanish between 1930 and 1960.
-\cpnote{Josue, hay un pico fuere en la influencia del italiano en el aleman como 
-en 1990. Te queda facil ver que es?}
+A significant maximum of the influence of Italian in German is observed close to 1990. 
+The words that produce such peak include 
+\textit{usa},  \textit{tv}, and \textit{Rome}, which expose the limitation of our method. 
+We think that the fact that the FIFA World Cup was played in 1990, the winner was Germany 
+and the final was played in Rome might explain such behaviour in the usage. 
+% \textit{} 
+% An inspection of the detected words 
+% 
+% \cpnote{Josue, hay un pico fuere en la influencia del italiano en el aleman como 
+% en 1990. Te queda facil ver que es?}
+% \jmnote{Revise las palabras y parece ser que en algunas es un error del metodo al calfisifcar el origen italiano, desde 1990 hay palabras como usa, tv, fax; y nombres propios como maria u otto que aparecen del italiano en el alemán. Tambien hasta 1990 aparece la palabra roma en el aleman, y verifique que si es roma y no rom(su transliteracion en aleman), puede ser especular pero en 1990 el mundial fue en Italia, el ganador fue Alemania y la final se jugó en roma}
 
 In French, Italian has the lowest influence, where the aforementioned words
 began to be less frequent between 1940 and 1960.
