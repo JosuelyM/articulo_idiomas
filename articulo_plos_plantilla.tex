@@ -732,7 +732,7 @@ in each year the words are ordered in ascending order in rank, then over time,
 the same rank can be occupied by different words. One way to quantify
 this change is through rank diversity $d(k)$~\cite{iplosone}. This quantity is
 defined as the number 
-of different elements that occupy rank  $k$ within the same dataset, divided
+of different elements that occupied rank  $k$ within the same dataset, divided
 by the number of time slots considered.
 %  how many
 % different elements can occupy the same rank within the same corpus is through
@@ -756,12 +756,10 @@ by the number of time slots considered.
 Rank diversity has been used in datasets of the most used words in six
 Indo-European languages~\cite{iplosone,10.3389/fphy.2018.00045,Cocho2019}, in sports and game classifications \cite{Morales_epj}, 
 and in many other datasets~\cite{Iniguez2022}. 
-Although in
-each case the criteria for establishing a ranking are different, in both there
-is a common result: for the same set of data that have had different rankings
-over time, it is true that the lowest ranks are always occupied by fewer
-elements, thereby as the range increases, the number of elements that occupy it
-also does them.
+Although in previous studies of rank diversity of languages and the current one the criteria for establishing rankings are different, in both there
+is a common result: the lowest ranks are always occupied by fewer
+elements, thereby as the rank increases, the number of different elements that occupied it
+also does.
 
 \begin{figure} % {{{
 % \begin{adjustwidth}{-2.5cm}{1cm}
@@ -772,7 +770,7 @@ also does them.
 Diversity for all pairs of languages. Each pair is well fitted by the 
 sigmoid proposed in \eref{eq:sigmoid}, with fitting parameters $\mu$ and $\sigma$
 reported in the inset. As a reference, we show a global sigmoid (in black)
-obtain by fitting all data points. Its fiting parameters are also shown in the
+obtained by fitting all data points. Its fitting parameters are also shown in the
 inset as a black dot. 
 % 
 % All
@@ -790,7 +788,7 @@ inset as a black dot.
 \end{figure} % }}}
 After calculating the rank diversity for each source and receiving
 language pair, the diversity values resemble a sigmoid curve, as can be
-seen in Fig~\ref{fig.DR_art}. The proposed the curve is the
+seen in Fig~\ref{fig.DR_art}. This can be fitted with a curve that is
 cumulative of a Gaussian centered at $\mu$ and with 
 deviation $\sigma$, i.e.  
 \begin{equation}
@@ -814,9 +812,11 @@ are obtained with a linear regression.
 It is observed that the behavior of
 diversity increases as the rank also increases, regardless of whether the
 corpus has few or many ranks ($14$ in German-Spanish, $290$ in Spanish-Italian,
-etc). With this, it can be concluded that, the migrant accumulated words in the
+etc). \cgnote{How many time slices were used? For which years/decades?} With this, it can be concluded that, the migrant accumulated words in the
 middle and high ranks are the ones that tend to change their position the most
 within a ranking over time.
+
+These observations suggest that only (relatively) few migrant words are used frequently, during long periods of time, while most migrant words are used not so (relatively) frequently, and their usage varies (relatively) more with time. 
 
 % An final observation is that 
 % The method of the use of one language in another, showed that
