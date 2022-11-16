@@ -167,22 +167,22 @@ Carlos Pineda     \ddag\textsuperscript{2,*}    % \textsuperscript{2\Yinyang},
 \textbf{2} Instituto de F\'{\i}sica, \unam \\
 \textbf{3} Instituto de Investigaciones en Matem\'{a}ticas Aplicadas y Sistemas, \unam \\
 \textbf{4} Centro de Ciencias de la Complejidad, \unam \\
-\textbf{5} Santa Fe Institute. 1399 Hyde Park Rd., Santa Fe, NM 87501, USA
+\textbf{5} Santa Fe Institute. 1399 Hyde Park Rd., Santa Fe, NM 87501, USA\\
 \textbf{6} 
 Maestr\'{\i}a en Ciencias de la Complejidad, 
 Universidad Aut\'{o}noma de la Ciudad de M\'{e}xico,
 Mexico City, Mexico
 \\
 \bigskip
-\ddag These authors also contributed equally to this work.
+\ddag These authors contributed equally to this work.
 \dag Deceased
 * carlospgmat03@gmail.com
 \end{flushleft}
 % }}}
 \section*{Abstract} % {{{
 % Please keep the abstract below 300 words
-\cpnote{Por hacer al final}
-\cgnote{usar el t\'ermino ``loanwords''}
+
+A recent increase in data availability has allowed the possibility to perform different statistical linguistic studies. Here we use the Google Books Ngram dataset to analyze word flow among English, French, German, Italian, and Spanish. We study what we define as ``migrant words'', a type of loanwords that do not change their spelling. We quantify migrant words from one language to another for different decades, and notice that most migrant words can be aggregated in semantic fields and associated to historic events. We also study the statistical properties of accumulated migrant words and their rank dynamics. We propose a measure of \emph{use} of migrant words that could be used as a proxy of cultural influence. Our methodology is not exempt of caveats, but our results are encouraging to promote further studies in this direction.
 
 
 % }}}
@@ -280,7 +280,7 @@ fewer words, and as the rank increases, the diversity curve also increases follo
 
 Our work is of a statistical nature, and as such, has its limitations. However, we consider that statistical studies like the one we present can be complementary to detailed linguistic studies of loanwords. Certainly, we do not attempt to replace such studies, but to add insights and suggest further avenues of research. We do not need to sacrifice precision or large amounts of data~\cite{Harford2014} when we can have both.
 
-\cgnote{In the next section, we present our methodology. Then, ***}
+In the next section, we present our methodology. Then, we show results and discuss for new migrant words per decade from the 1900s to the 2000s. We also analyze accumulated migrant words and their use. Afterwards, we study the rank dynamics of migrant words. Finally, we measure the robustness of our results by removing migrant words and comparing the resulting sets with the original ones. A discussion closes the paper.
 
 %\cpnote{Obvio aca toca poner algunos caveats y discutir la seccion de la estabilidad} \cgnote{o tal vez al final? digo, primero hay que presentar el m\'etodo y despu\'es explicar sus l\'imites}
 
@@ -840,9 +840,9 @@ English.
 
 
 To check the stability of the results presented and the importance of omitting
-certain words, we proceeded as follows.  Take the original set (the one
-obtained in the previous section) of the accumulated words of a pair of source
-language and receiving language, and from this set, eliminate a certain group
+certain words, we proceeded as follows:  Take the original set (the one
+used in the previous section) of the accumulated words of a pair of source
+language and receiving language. From this set, eliminate a certain group
 of words, in order to obtain a reduced set; in both,  equation~\ref{ec.fuso} is
 used to obtain the modified use between the years 1900 and 2009.  The next
 thing is to determine how similar the use of both sets are. We normalized the
@@ -864,9 +864,9 @@ normalized usage.
 
 
 Recalling that migrant words have frequency inversely proportional to the rank,
-it is clear that some words are more important than others, see
-\fref{fig.ZL_receiving}.  Thus care must be taken when one removes a fixed
-proportion of words, or a fixed frequency, as it can make a big difference. 
+it is clear that some words are more important than others (see
+\fref{fig.ZL_receiving}).  Thus, care must be taken when one removes a fixed
+proportion of words, or a fixed frequency, as it can cause a big difference. 
 One way to explore such aspect is to remove words from higher ranks
 or lower ranks. 
 % In particular, we consider two sets, 
@@ -875,7 +875,7 @@ and receiving language pair, we carry out two types of elimination, in the
 first we begin to eliminate the words with the lowest ranks gradually 
 increasing the proportion of words removed $R_{p}$ (from 1$\%$ to a
 99$\%$); in the opposite way, for the second case,  we begin by
-eliminating those words with highest ranks Fig~\ref{fig.RP}. In both cases,
+eliminating those words with highest ranks. In both cases,
 each time the eliminated portion was increased, the average difference was
 calculated to observe the similarity.
 
@@ -903,9 +903,9 @@ calculated to observe the similarity.
 		\caption{{Similarity of use when some words are eliminated.}
 We study the similarity of the shape of usage \eref{ec.fuso}, as measured by
 $\left\langle D \right\rangle $ (see \eref{ec.Davg}), when some words are eliminated.
-The top plots correspond to the case in which the lower rank words are being
-eliminated, whereas in the lower plots we start eliminating the higher rank
-words. 
+The upper plots correspond to the case in which the lower ranked words (more frequent) are being
+eliminated first, whereas in the lower plots we start eliminating the higher ranked
+words (less frequent). \cgnote{For these plots I would also suggest to have all plots with the same $y$ scale (0..1). If this would take several days, not to delay the submission, it would be OK to submit as it is now, and correct the figures while the paper is under review.}
 % {\bf Portion of eliminated words with lows ranks.}{\bf Portion of eliminated
 % words with high ranks.} 
 }
@@ -924,7 +924,7 @@ words.
 % \end{figure}
 % 
 
-In those figures we can observe how much the shape of the curves for usage changes, 
+In Fig.~\ref{fig.RP} we can observe how much the shape of the curves for usage changes, 
 with an increasing proportion of words eliminated. Clearly, when removing the 
 lower ranking words, the deformation is greater. However, we see that in 
 most cases,  removing the 60\% of the higher ranked words produces
@@ -946,8 +946,10 @@ Spanish influencing German and Italian).
 % Por eso en el parrafo decia que los resultados de robustez pueden ser contraproducentes ya que la estabiulidad del uso no depende de los grupos de palabras del mismo campo semantico, sino que la estabilidad ocurre sino se eliminan palabras con rangos bajos.
 % }
 This result implies that care must be taken when doing this analysis with respect to 
-words that have low ranks. Thus, care must be taken when using this automated approach
-to yield quantitative statements, paying special attention to the most used words. 
+words that have low ranks. Thus, using this automated approach
+to yield quantitative statements should pay special attention to the most frequently used words. 
+
+\cgnote{Question: why the upper figures do not have a maximum at 100\% equal to the lower figures? shouldn't the distances be the same once you removed all migrant words? Also, it was not clear to me whether the distance was taken only between sets of migrant words, or all words (as you remove only migrant words)}
 
 % , despite showing the stability of the sets when eliminating words
 % from them, can be counterproductive \cpnote{WTF} with the results of the
@@ -962,14 +964,9 @@ to yield quantitative statements, paying special attention to the most used word
 
 We presented a method and analyzed how migrant words (loanwords with the same spelling) have spread across five Indoeuropean languages. This ``blind big data'' approach can offer some insights, so as to estimate influences in different temporal periods, and how historic events might have contributed to these fluxes. Nevertheless, our method has important caveats. As it is, it requires that languages use the same alphabet (although some automatic transliteration could be used to include more languages, such as Russian). However, languages also change the spelling of words as they migrate from one to the other. For example, in Spanish it is difficult to pronounce words beginning with `s' followed by a consonant, so an `e' is added (e.g., `especial', `espectacular', `estable'; although these come from Latin, not English). Indeed, some words might have their origins in a language not considered in a specific study, e.g. `sushi', although it might be useful to learn in which languages such words became popular first, even when it is uncertain whether the word migrated directly from the original to others, or via an intermediary (such as Nahuatl words that have spread globally through Spanish, e.g. `tomatl', `xocolatl'). Still, as more data becomes available, more languages could be included in statistical studies. Another limitation of our present work is that we focus on frequently used words, although the same methodology could be used for less frequent words as well. These caveats imply that we are not attempting to replace ``insightful small data'' studies, where experts focus on particular words and study how they are shared across languages. We believe that both types of studies are complementary and necessary.
 
-***el hecho de que se use un apellido o un lugar de otro pa\'is denota que se le da cierta importancia. Proxy de influencia cultural. Presidentes de EEUU se han vuelto palabras frecuentes (top 5000) en otros idiomas. 
+Additionally from the linguistic aspects of these studies, they can be useful to study cultural influence as well. The fact that a name of a place or person from one place is used frequently in another implies relevance. Thus, migrant words can be used also as proxies of cultural influence.
 
-%\cgnote{Uno de los caveats es que como hacemos comparaciones automatizadas de cadenas (llam\'emosle ``blind big data''), nuestras comparaciones son puramente de palabras completas, ya no digamos sem\'anticas. Por ejemplo, estamos limitados para estudiar influencia de y hacia ruso, simplemente porque tiene otro alfabeto. Hay otras transformaciones que no detectamos, e.g. en espa\~nol se agrega `e' antes de `sp' (especial/special). Y tambi\'en hay casos donde la influencia puede ser de otros idiomas, e.g. Lat\'in, aunque en otros casos se puede detectar por d\'onde lleg\'o la influencia (e.g. sushi?). Otra limitante es que nos enfocamos en palabras de uso frecuente. S\'olo decir que los estudios comparativos de ``insightful small data'', donde humanos identifican manualmente flujos de palabras seguir\'an siendo \'utiles y necesarios. }
-
-%\jmnote{Una de las principales limitantes del meotodo para detectar la influcencia es que se necesita que los idiomas tengan el mismo alfabeto. Deel ejemplo de sushi, el metodo mostraria que "naci\'o" en alguno de los idiomas que tenemos digamos el idioma A y de ahi se fue al resto; la limitante es que A es el idioma que se uso para transmitir la palabra a los demás  pero el algoritmo identifica a A como el orige, para corregir todos los posibles casos como esté se tendrian que tener más bases de datos. }
-\
-
-
+More sophisticated statistical linguistic studies are becoming possible because of increasing data availability and computational processing power. Still, we must be aware of the limitations of these methods. They can offer useful insights, complementary to but not replacing other approaches in linguistics and culturomics.
 
 % }}}
 \section*{Supporting information} % {{{
@@ -978,7 +975,7 @@ We presented a method and analyzed how migrant words (loanwords with the same sp
 
 \nolinenumbers
 
-Support by projects CONACyT 285754 and UNAM-PAPIIT (IG101421, IN107919, IV100120, IN105122) and from the PASPA program from UNAM-DGAPA. is acknowledged. 
+Support by projects CONACyT 285754 and UNAM-PAPIIT (IG101421, IN107919, IV100120, IN105122) and from the PASPA program from UNAM-DGAPA is acknowledged. 
 % }}}
 \bibliography{referencias} 
 \end{document}
