@@ -450,7 +450,7 @@ to the fields of technology and globalization.
 \hlineB{4.5}
 	\multirow{5}{*}{World War II}                                                                    & \begin{tabular}[c]{@{}c@{}}catastrophe, churchill,\\ nazis, stalin, territories.\end{tabular}                                                           & EN                       & \begin{tabular}[c]{@{}c@{}}FR (1940), \\ IT (1940).\end{tabular}                                                     \\
 	& \begin{tabular}[c]{@{}c@{}}berchtold, bestimmungen,\\  hitler, kaiser, lenin, \\ minister, regierung.\end{tabular}                                      & GE                       & \begin{tabular}[c]{@{}c@{}}EN (1930), FR (1940),\\ IT (1930, 1940),\\ SP (1930).\end{tabular}                        \\
-	& \begin{tabular}[c]{@{}c@{}}duce, mussolini, \\ panzer\cgnote{tal vez quitarla? panzer viene del alem\'an}, regime.\end{tabular}                                                                             & IT                       & \begin{tabular}[c]{@{}c@{}}EN (1930), FR (1930),\\ GE (1930, 1940),\\ SP (1930).\end{tabular}                        \\
+	& \begin{tabular}[c]{@{}c@{}}duce, mussolini, \\ panzer\cgnote{tal vez quitarla? panzer viene del alem\'an} \jmnote{ya lo revise y fue un error del metodo en la clasificacion, desde la tesis tengo mal calfisicada esta palabra :S, lo mejor es quitarla } regime.\end{tabular}                                                                             & IT                       & \begin{tabular}[c]{@{}c@{}}EN (1930), FR (1930),\\ GE (1930, 1940),\\ SP (1930).\end{tabular}                        \\
 	
 	\hlineB{4.5}
 	Aftermath of WWII                                                                                & onu, urss, vietnam                                                                                                                                      & FR                       & SP (1960, 1990).                                                                                                     \\
@@ -467,7 +467,7 @@ to the fields of technology and globalization.
 	
 	Technology                                                                                       & \begin{tabular}[c]{@{}c@{}}digital, internet, mail, \\ online, software.\end{tabular}                                                                   &                          & \begin{tabular}[c]{@{}c@{}}FR (1990), GE (1990),\\ IT (1990, 2000), \\ SP (1990, 2000).\end{tabular}                 \\
 	Globalization                                                                                    & \begin{tabular}[c]{@{}c@{}}business, customer, management, \\ market, marketing, standars.\end{tabular}                                                 &                          & \begin{tabular}[c]{@{}c@{}}FR (2000), GE (1990, 2000),\\ IT (2000),  SP ( 2000).\end{tabular}                        \\
-	\begin{tabular}[c]{@{}c@{}}Presidents of the\\ United States of\\ America\end{tabular}           & \begin{tabular}[c]{@{}c@{}}roosevelt, truman, kennedy,\\ johnson, nixon, reagan,\\ bush, clinton.\end{tabular}                                          &                          & \begin{tabular}[c]{@{}c@{}}FR (1960, 1970), GE (1930,1940),\\ IT (1940),  SP (1940-1990).\end{tabular}               \\
+	\begin{tabular}[c]{@{}c@{}}Presidents of the\\ United States of\\p America\end{tabular}           & \begin{tabular}[c]{@{}c@{}}roosevelt, truman, kennedy,\\ johnson, nixon, reagan,\\ bush, clinton.\end{tabular}                                          &                          & \begin{tabular}[c]{@{}c@{}}FR (1960, 1970), GE (1930,1940),\\ IT (1940),  SP (1940-1990).\end{tabular}               \\
 	\hlineB{4.5}
 	Medicine                                                                                         & \begin{tabular}[c]{@{}c@{}}anemia, anestesia, colesterina,\\ endovenosa, gastrica, lepra\\ metabolismo, sintomatologia, virus,\\ vitamina.\end{tabular} & \multirow{2}{*}{SP}      & \begin{tabular}[c]{@{}c@{}}EN (1940), GE (1990,1940),\\ IT (1920, 1930),\end{tabular}                                \\
 	\begin{tabular}[c]{@{}c@{}}Latinoamerican countries \\ and cities\end{tabular}                   & 
@@ -812,7 +812,7 @@ are obtained with a linear regression.
 It is observed that the behavior of
 diversity increases as the rank also increases, regardless of whether the
 corpus has few or many ranks ($14$ in German-Spanish, $290$ in Spanish-Italian,
-etc). \cgnote{How many time slices were used? For which years/decades?} With this, it can be concluded that, the migrant accumulated words in the
+etc). \cgnote{How many time slices were used? For which years/decades?} \jmnote{la diversidad de rango se calculo para cada año entre 1900 y 2009, el conteo fue por año no por decada.}With this, it can be concluded that, the migrant accumulated words in the
 middle and high ranks are the ones that tend to change their position the most
 within a ranking over time.
 
@@ -951,6 +951,7 @@ to yield quantitative statements should pay special attention to the most freque
 
 \cgnote{Question: why the upper figures do not have a maximum at 100\% equal to the lower figures? shouldn't the distances be the same once you removed all migrant words? Also, it was not clear to me whether the distance was taken only between sets of migrant words, or all words (as you remove only migrant words)}
 
+\jmnote{Para la robustes se eliminaron palabras migrantes de un idioma en otro, y a partir de la eliminacion se calculo el uso ec1. Con ello ya se tienen dos curvas una original (con las frecuencias de todas las palabras migrantes) y otra que es una fraccion o porcion de ella (algunas frecuencias de las palabras migrantes); para ver que tan similares son se normalizo cada una por su valor promedio y se calculo ec3. La razon de que las graficas no esten con la misma escala esque la normalizacion del promedio no ajusta los valores entre cero y uno, solo sabemos que entre mas pequeña sea la distancia la similitud es mejor.  }
 % , despite showing the stability of the sets when eliminating words
 % from them, can be counterproductive \cpnote{WTF} with the results of the
 % previous sections, since in those we try to find relationships based on the
