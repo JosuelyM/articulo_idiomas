@@ -1,3 +1,4 @@
+cover_letter_draft.pdf ::
 articulo_plos_plantilla.pdf ::
 
 -include ~/makefile
