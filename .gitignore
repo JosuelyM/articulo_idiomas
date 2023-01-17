@@ -1,3 +1,4 @@
+
 documento_candidatura.pdf
 cover_letter_draft.pdf
 talk_cuernavaca_190619.pdf
@@ -22,6 +23,7 @@ paper_marioORIG.pdf
 fidelity
 commutator_spins
 ## Core latex/pdflatex auxiliary files:
+*.zip
 *.aux
 *.lof
 *.log
