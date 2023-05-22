@@ -66,10 +66,13 @@
 \usepackage{pdfpages}
 \usepackage{tcolorbox}
 \usepackage{colortbl}
+
 \usepackage[draft,inline,nomargin]{fixme} \fxsetup{theme=color}
 \FXRegisterAuthor{jm}{jmm}{\color{purple}Josue}
+\FXRegisterAuthor{nr}{nrr}{\color{brown}{NR}}
 \FXRegisterAuthor{cp}{acp}{\color{blue}CP}
 \FXRegisterAuthor{cg}{cgg}{\color{red}CG}
+
 \definecolor{C1-EN}{RGB}{0,132,170}
 \definecolor{C1-FR}{RGB}{255,117,0}
 \definecolor{C1-GE}{RGB}{134,0,179}
@@ -182,7 +185,7 @@ Carlos Pineda     \ddag\textsuperscript{2,*}    % \textsuperscript{2\Yinyang},
 \section*{Abstract} % {{{
 % Please keep the abstract below 300 words
 
-A recent increase in data availability has allowed the possibility to perform different statistical linguistic studies. Here we use the Google Books Ngram dataset to analyze word flow among English, French, German, Italian, and Spanish. We study what we define as ``migrant words'', a type of loanwords that do not change their spelling. We quantify migrant words from one language to another for different decades, and notice that most migrant words can be aggregated in semantic fields and associated to historic events. We also study the statistical properties of accumulated migrant words and their rank dynamics. We propose a measure of \emph{use} of migrant words that could be used as a proxy of cultural influence. Our methodology is not exempt of caveats, but our results are encouraging to promote further studies in this direction.
+A recent increase in data availability has allowed the possibility to perform different statistical linguistic studies. Here we use the Google Books Ngram dataset to analyze word flow among English, French, German, Italian, and Spanish. We study what we define as ``migrant words'', a type of loanwords that do not change their spelling. We quantify migrant words from one language to another for different decades, and notice that most migrant words can be aggregated in semantic fields and associated to historic events. We also study some properties of accumulated migrant words and their rank dynamics. We propose a measure of \emph{use} of migrant words that could be used as a proxy of cultural influence. Our methodology is not exempt of caveats, but our results are encouraging to promote further studies in this direction.
 
 
 % }}}
@@ -251,19 +254,21 @@ causes that allowed such a flow; in addition to mentioning the previous influenc
 Arabic in Spanish and French in
 English~\cite{gorlach2005dictionary,haspelmath2009loanwords,durkin2014borrowed}. 
 
-
+\nrnote{On page 2 it is stated that there are two “models” used to quantify the influence of one language on another. However, these are not statistical models that are being used. They are simply two different transformations of the data. “Approaches” is a better word than “model” although there are other words that would also be suitable,}
+	
+\jmnote{se cambio la palabra modelo por approach }
 
 In this work, we use the Google Books N-gram dataset~\cite{ngramv} of the most
 frequent words in books published in English, French, German, Italian, and
 Spanish. With this dataset,  we develop an algorithm that identifies
 the words of one language and that are being used exactly with the same 
 spelling by others. Once these words
-have been classified, we construct two models to quantify the influence that
-one language has had on another during the 20th century. In the first model, we
+have been classified, we construct two approaches to quantify the influence that
+one language has had on another during the 20th century. In the first approach, we
 count the number of new words that a language received from another. In
-the second model, we develop the concept of the use of one language in
+the second approach, we develop the concept of the use of one language in
 another, from quantifying the relative frequency of  the words of a language
-that are being used in another language. In both models, we identify historical, social,
+that are being used in another language. In both approaches, we identify historical, social,
 and cultural causes that are responsible for the flow of words.
 
 Next, we use the concept of rank diversity~\cite{iplosone},  that shows the number of words
@@ -271,7 +276,11 @@ occupying a certain rank across the time. This study shows that  regardless of
 the original or receiving language,  the lower ranks are always occupied by
 fewer words, and as the rank increases, the diversity curve also increases following a sigmoid curve. 
 
-Our work is of a statistical nature, and as such, has its limitations. However, we consider that statistical studies like the one we present can be complementary to detailed linguistic studies of loanwords. Certainly, we do not attempt to replace such studies, but to add insights and suggest further avenues of research. We do not need to sacrifice precision or large amounts of data~\cite{Harford2014} when we can have both.
+\jmnote{se rescribio el parrafo para "eliminar" el termino statistical, se dejo comentado el texto original}
+
+Our work is of a exploratory in nature, and as such, has its limitations. However, we consider that  studies like the one we present can be complementary to detailed linguistic studies of loanwords. Certainly, we do not attempt to replace such studies, but to add insights and suggest further avenues of research. We do not need to sacrifice precision or large amounts of data~\cite{Harford2014} when we can have both.
+
+%Our work is of a statistical nature, and as such, has its limitations. However, we consider that statistical studies like the one we present can be complementary to detailed linguistic studies of loanwords. Certainly, we do not attempt to replace such studies, but to add insights and suggest further avenues of research. We do not need to sacrifice precision or large amounts of data~\cite{Harford2014} when we can have both.
 
 In the next section, we present our methodology. Then, we show results and discuss for new migrant words per decade from the 1900s to the 2000s. We also analyze accumulated migrant words and their use. Afterwards, we study the rank dynamics of migrant words. Finally, we measure the robustness of our results by removing migrant words and comparing the resulting sets with the original ones. A discussion closes the paper.
 
@@ -291,12 +300,25 @@ $N$-grams are the words or set of words that make up the text of a
 book, where the number $N$ indicates the number of words that make up the gram,
 being a 1-gram an individual word, a 2-gram a pair of words,
 a 3-gram a sequence of three words, and so on.
-We removed certain words that did not contributed to the analysis: articles,
+
+\nrnote{In the first paragraph of Methodology I would make the following
+	change. “We removed certain words that did not contributed to the
+	analysis:” to “We removed the following types of words:”}
+	
+\nrnote{There is a description of data cleaning and then the following
+	sentence. “From this dataset, and after cleaning the data,…” This
+	makes it sound like there was additional data cleaning in addition to
+	just removing certain types of words. This should be more specific in
+	what is meant by data cleaning.}
+
+\jmnote{se cambio a la oracion sugerida y en el segundo parrafo se omitio la palabra cleaning }
+
+We removed the following types of words: articles,
 pronouns, propositions, and conjunctions (all  of which are functional words),
 since these serve to give a structure to the message. Then, we consider content
 words such as nouns, main verbs, adjectives, and adverbs. 
 %\st{Although the names of people, countries and cities are also considered functional words, we did not eliminate them, since for some languages these words show a cultural trend that we have decided to take into account. } \cgnote{no es cierto, todos los sustantivos son content words \url{https://en.wikipedia.org/wiki/Content_word} }
-From this dataset, and after cleaning the data, the lists of the five thousand
+After removing the functional words from the dataset, the lists of the five thousand
 most used 1-grams each year
 between 1740 and 2009 were extracted for the English, French, German, Italian,
 and Spanish languages.
