@@ -59,6 +59,8 @@
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage{pbox}
+\usepackage{makecell}
 \usepackage{boldline,multirow}
 
 \usepackage{soul}
@@ -66,6 +68,8 @@
 \usepackage{pdfpages}
 \usepackage{tcolorbox}
 \usepackage{colortbl}
+
+\usepackage{booktabs}
 
 \usepackage[draft,inline,nomargin]{fixme} \fxsetup{theme=color}
 \FXRegisterAuthor{jm}{jmm}{\color{purple}Josue}
@@ -407,7 +411,79 @@ from English. It is worth noticing that French, German, Italian, and Spanish exp
 during the 1940s, but their export rate has remained roughly stable, with minimums for English in the 1900s and 1980s, French in the 1950s, German in the 1960s and 1980s, Italian in the 1920s, 1950s, and 1950s, and Spanish in the 1900s and 1960s.
 
 The major influencer of English has varied across time, including German, Spanish, and French. Apart from English, French has received more influence from German and Italian, German from French and Italian, Italian from Spanish, and Spanish from Italian. Thus, it could be said that the second most influential language among the five studied has been Italian. 
+\nrnote{Below Figure 1 on page 3 is the sentence “Thus, it could be said
+	that the second most influential language among the five studies has
+	been Italian.” Is there a statistical measure or test that can be
+	pointed towards as validation for this statement?}
+\jmnote{Para responder esta duda se calculó cuantas palabras migraron cada idioma origen a todos los demas, y cuiantas palabras recibieron cada idioma receptor de los demas origenes. Si hablamos de que tanto han influido los idiomas origenes, decuardo a la ~\ref{tab.opcional:new_wordsA}  el ingles ha migrado la mayor cantidad de palabras con 575 donde el idioma que más recibio fue el frances con un 39\% de ellas; el itialiano ha migrado la seguna mayor cantidad con 213 donde el español recibio el 38\% de ellas; es por ello que decimos que el Ingles ha sido el que mas ha influenciado, seguido del italiano, el frances, el aleman y el español.}
 
+\jmnote{En caso de que tanho han sido influenciados los idiomas, se dispone la tabla~\ref{tab.opcional:new_wordsB} donde de conto cuantas palabras llegaron a un idioma receptor en todo el siglo; y que porcntaje influyo cada idioma orgien. Tomando al infioma ingles, este ha sido mas influenciado por el frances, donde el 36\% de las palabras que migraron hacia el inglés, provienen desde el frances. Tomando los datos de la tabla, el frances ha indfluido mas al ingles; el ingles más al frances; el ingles mas al aleman, el ingles mas al italiano, y el italiano mas al español. }
+
+
+\begin{table}
+	\centering
+	\begin{tabular}{cccccccc}
+		\toprule
+		\thead{Idioma \\ A} & \thead{Idioma \\ B} & \thead{Global \\ migradas \\ por A} & \thead{Total \\ recibidas \\ A en B} & \thead{Porcentaje \\ A en B} & \thead{Decada \\ mayor \\ migracion} & \thead{Valor \\decada \\ mayor migracion} & \thead{Porcentaje \\decada \\ mayor \\migracion} \\
+		\midrule
+		 EN &       FR &                    575 &                     229 &             39.826 &                    1940 &                            36 &                             15.721 \\
+		EN &       GE &                    575 &                     317 &             55.130 &                    2000 &                            65 &                             20.505 \\
+		EN &       IT &                    575 &                     136 &             23.652 &                    1950 &                            19 &                             13.971 \\
+		EN &       SP &                    575 &                      82 &             14.261 &                    1990 &                            14 &                             17.073 \\
+		FR &       EN &                    199 &                      61 &             30.653 &                    1940 &                             9 &                             14.754 \\
+		FR &       GE &                    199 &                      91 &             45.729 &                    1940 &                            14 &                             15.385 \\
+		FR &       IT &                    199 &                      42 &             21.106 &                    1910 &                             8 &                             19.048 \\
+		FR &       SP &                    199 &                      30 &             15.075 &                    1970 &                             6 &                             20.000 \\
+		GE &       EN &                    139 &                      37 &             26.619 &                    1930 &                             9 &                             24.324 \\
+		GE &       FR &                    139 &                      75 &             53.957 &                    1940 &                            15 &                             20.000 \\
+		GE &       IT &                    139 &                      45 &             32.374 &                    1940 &                            11 &                             24.444 \\
+		GE &       SP &                    139 &                      20 &             14.388 &                    1970 &                             5 &                             25.000 \\
+		IT &       EN &                    213 &                      37 &             17.371 &                    1910 &                             5 &                             13.514 \\
+		IT &       FR &                    213 &                      63 &             29.577 &                    1940 &                            14 &                             22.222 \\
+		IT &       GE &                    213 &                      56 &             26.291 &                    1930 &                            10 &                             17.857 \\
+		IT &       SP &                    213 &                      83 &             38.967 &                    1900 &                            12 &                             14.458 \\
+		SP &       EN &                    131 &                      32 &             24.427 &                    1940 &                            10 &                             31.250 \\
+		SP &       FR &                    131 &                      38 &             29.008 &                    1970 &                             7 &                             18.421 \\
+		SP &       GE &                    131 &                      31 &             23.664 &                    1930 &                             4 &                             12.903 \\
+		SP &       IT &                    131 &                      49 &             37.405 &                    1930 &                            12 &                             24.490 \\
+		\bottomrule
+	\end{tabular}
+	\caption{\textbf{Palabras nuevas por idioma Origen}. Para leer esta tabla, notar que el idioma A (idioma origen) es igual cada 4 filas, donde \textit{Global migradas por A} Significa cuantas palabras migro el idioma A a todos los demas receptores, por ejemplo el ingles mirgo 575 palabras a los demás. \textit{Total recibidas A en B} significa cuantas palabras recibio el idioma B de A, por ejemplo de las 575 palabras que el Ingles migró, 229 llegaron al frances mientras  \textit{Porcentaje A en B} es el procentaje que representa el 229 a 575. \textit{Decada mayor migraciion} es la decada entre el idioma A y B donde migraron mas palabras donde \textit{Valor decada} tiene esa cantidad. \textit{Porcentaje decada mayor migracion} es el porcentaje que respresenta el valor de la decada de mayor migracion para el total de recibidas de A en B, por ejemplo para el ingles y frances, en 1940 hubieron 36 migraciones siendo esto el 15\% de las 229 que migraron en todo el siglo.}
+	\label{tab.opcional:new_wordsA}
+\end{table}
+
+
+\begin{table}
+	\centering
+	\begin{tabular}{cccccccc}
+		\toprule
+		\thead{Idioma \\ A} & \thead{Idioma \\ B} & \thead{Global \\ recibidas \\ por B} & \thead{Total \\ migradas \\ A en B} & \thead{Porcentaje \\ A en B} & \thead{Decada \\ mayor \\ recepcion} & \thead{Valor \\decada \\ mayor recepcion} & \thead{Porcentaje \\decada \\ mayor \\recepcion} \\
+		\midrule
+		FR &       EN &                     167 &                     61 &             36.527 &                    1940 &                             9 &                             14.754 \\
+		GE &       EN &                     167 &                     37 &             22.156 &                    1930 &                             9 &                             24.324 \\
+		IT &       EN &                     167 &                     37 &             22.156 &                    1910 &                             5 &                             13.514 \\
+		SP &       EN &                     167 &                     32 &             19.162 &                    1940 &                            10 &                             31.250 \\
+		EN &       FR &                     405 &                    229 &             56.543 &                    1940 &                            36 &                             15.721 \\
+		GE &       FR &                     405 &                     75 &             18.519 &                    1940 &                            15 &                             20.000 \\
+		IT &       FR &                     405 &                     63 &             15.556 &                    1940 &                            14 &                             22.222 \\
+		SP &       FR &                     405 &                     38 &              9.383 &                    1970 &                             7 &                             18.421 \\
+		EN &       GE &                     495 &                    317 &             64.040 &                    2000 &                            65 &                             20.505 \\
+		FR &       GE &                     495 &                     91 &             18.384 &                    1940 &                            14 &                             15.385 \\
+		IT &       GE &                     495 &                     56 &             11.313 &                    1930 &                            10 &                             17.857 \\
+		SP &       GE &                     495 &                     31 &              6.263 &                    1930 &                             4 &                             12.903 \\
+		EN &       IT &                     272 &                    136 &             50.000 &                    1950 &                            19 &                             13.971 \\
+		FR &       IT &                     272 &                     42 &             15.441 &                    1910 &                             8 &                             19.048 \\
+		GE &       IT &                     272 &                     45 &             16.544 &                    1940 &                            11 &                             24.444 \\
+		SP &       IT &                     272 &                     49 &             18.015 &                    1930 &                            12 &                             24.490 \\
+		EN &       SP &                     215 &                     82 &             38.140 &                    1990 &                            14 &                             17.073 \\
+		FR &       SP &                     215 &                     30 &             13.953 &                    1970 &                             6 &                             20.000 \\
+		GE &       SP &                     215 &                     20 &              9.302 &                    1970 &                             5 &                             25.000 \\
+		IT &       SP &                     215 &                     83 &             38.605 &                    1900 &                            12 &                             14.458 \\
+		\bottomrule
+	\end{tabular}
+	\caption{\textbf{Palabras nuevas por idioma Receptor}. Para leer esta tabla, notar que el idioma B (idioma receptor) es igual cada 4 filas, donde \textit{Global recibidas por B} Significa cuantas palabras recibio el idioma B de todos los demas origenes, por ejemplo el ingles recibio 167 palabras de los demás. \textit{Total migradas A en B} significa cuantas palabras recibio el idioma B de A, por ejemplo de las 167 palabras que el Ingles recibio de los demas, 61 llegaron desde el frances mientras  \textit{Porcentaje A en B} es el procentaje que representa el 61 a 167. \textit{Decada mayor recepcion} es la decada entre el idioma A y B donde se recibieron mas palabras donde \textit{Valor decada mayor recepcion} tiene esa cantidad. \textit{Porcentaje decada mayor recepcion} es el porcentaje que respresenta el valor de la decada de mayor migracion para el total de recibidas de A en B, por ejemplo para el frances y el ingles, en 1940 hubieron 9 migraciones siendo esto el 14\% de las 61 palabras que migraron en todo el siglo.}
+	\label{tab.opcional:new_wordsB}
+\end{table}
 
 \begin{figure} % {{{
 \begin{adjustwidth}{-1.2in}{0in}
@@ -492,6 +568,55 @@ influence of Germany seen through surnames of historic figures. Finally, Spanish
 countries~\cite{crisis_chile}. The fact that locations from one country become frequent words in another language suggests that some people speaking the latter are interested in the former. Similarly, influence can be seen e.g. as USA presidents become commonly used words (in the top 5000) in other languages. This suggests that migrant words could be used as a proxy measure of cultural influence (see next Section).
 
 Another interesting feature that we observed is that migrant words also fulfill Zipf's law~\cite{Zipf}. In Fig~\ref{fig.ZL_receiving} we present all language pairs, grouped by receiving language and we observe (within fluctuations), an asymptotic power-law decay with an exponent close to one. 
+
+\nrnote{The very last sentence of New Words reads “…within statistical
+	fluctuations, an asymptotic power law decay with an exponent close to
+	one.” What is meant by statistical fluctuations? That infers that
+	there was a statistical model with a measure of variance. Was there a
+	statistical model fit with these curves to evaluate the fit of a
+	power-law decay}
+	
+\jmnote{Para la ley de zipf de las parejas de idiomas, se hizo un ajuste por el meotodo de minimos cuadrados para encontrar la ecuacion que ajuste los datos. La funcion que mejor ajusta es de la forma $f(k) = \alpha k^{\beta} $  donde los parametros $\alpha$ y $\beta$ se presentan en la tabla~\ref{tab.Ajustes Zipf}, donde ademas se calculo el ceoficiente de determinacion $R^{2}$ para medir la fiabilidad del ajuste. La formula para determinar R2 \[
+	R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
+	\], donde $y_{i}$ es el valor real i-esimo de los datos, $\bar{y}$ el promedio de todos los datos, $\hat{y}_i$ el valor predicho i-esimo del ajuste }
+
+
+\begin{table}
+	\centering
+	\begin{tabular}{ccccc}
+		\toprule
+		\thead{Idioma A} & \thead{Idioma B} & \thead{$\alpha$} & \thead{$\beta$} & \thead{ $R^{2}$ } \\
+		\midrule
+		FR & EN & 1.366 & -0.506 & 0.905 \\
+		GE & EN & 0.984 & -1.149 & 0.994 \\
+		IT & EN & 1.168 & -0.631 & 0.946 \\
+		SP & EN & 1.201 & -0.580 & 0.946 \\
+		Todos & EN & 1.180 & -0.716 & 0.000 \\
+		EN & FR & 1.156 & -0.541 & 0.955 \\
+		GE & FR & 1.033 & -0.802 & 0.985 \\
+		IT & FR & 0.976 & -0.894 & 0.992 \\
+		SP & FR & 1.261 & -0.646 & 0.910 \\
+		Todos & FR & 1.106 & -0.721 & 0.000 \\
+		EN & GE & 0.868 & -0.797 & 0.948 \\
+		FR & GE & 1.345 & -0.496 & 0.878 \\
+		IT & GE & 0.909 & -0.956 & 0.944 \\
+		SP & GE & 1.140 & -0.630 & 0.936 \\
+		Todos & GE & 1.066 & -0.720 & 0.000 \\
+		EN & IT & 1.241 & -0.489 & 0.941 \\
+		FR & IT & 1.260 & -0.613 & 0.905 \\
+		GE & IT & 0.994 & -1.907 & 0.993 \\
+		SP & IT & 1.068 & -0.740 & 0.985 \\
+		Todos & IT & 1.141 & -0.937 & 0.000 \\
+		EN & SP & 1.062 & -0.501 & 0.947 \\
+		FR & SP & 1.002 & -1.141 & 0.988 \\
+		GE & SP & 0.875 & -0.505 & 0.877 \\
+		IT & SP & 1.276 & -0.596 & 0.947 \\
+		Todos & SP & 1.054 & -0.686 & 0.000 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Tabla de ajustes Zipf}
+	\label{tab.Ajustes Zipf}
+\end{table}
 
 %Another interesting feature that we observed is that migrant words also fulfill Zipf's law~\cite{Zipf}. In Fig~\ref{fig.ZL_receiving} we present all language pairs, grouped by receiving language and we observe, within statistical fluctuations, an asymptotic power-law decay with an exponent close to one.
 
@@ -619,6 +744,15 @@ main text. }
 
 The use of English in French and Spanish has increased steadily in the last century
 whereas in Italian, it has maintained a constant level. 
+\nrnote{In the English section under Accumulated Words it states that “the
+	use of English in French and Spanish has increased steadily in the
+	last century whereas in Italian, it has maintained a constant level.”
+	This is an observational description of trends seen in the data and
+	there is not a statistical model and analysis to evaluate if trends
+	are constant or increasing at some rate. It would be nice to include
+	those trend rates. The same is true for the French, German, Italian,
+	and Spanish sections. }
+\jmnote{Ver histogramas}
 An increase of its use in German occurred after 1990, just after the fall of the Berlin Wall. We associate the cause of these increases
 with the emergence of the United States as a world power, after the end of the
 World War II, the propagation of its economic model, as well as the development
