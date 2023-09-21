@@ -21,7 +21,8 @@ articulo_plos_gitdiff.pdf ::
 	cp articulo_plos_plantilla.tex /tmp/v2.tex 
 	latexdiff /tmp/v1.tex /tmp/v2.tex > /tmp/v_diff.tex
 	git checkout master
-	pdflatex -draftmode /tmp/v_diff.tex
+	make /tmp/v_diff.pdf
+# 	pdflatex -draftmode /tmp/v_diff.tex
 # 	bibtex cg_paper_gitdiff.aux
 # 	pdflatex -draftmode cg_paper_gitdiff.tex
 # 	pdflatex cg_paper_gitdiff.tex
