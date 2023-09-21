@@ -14,18 +14,19 @@ LOCALGITREPOSITORY=git@github.com:JosuelyM/articulo_idiomas.git
 
 articulo_plos_gitdiff.pdf ::
 	git checkout $(gitone)
-	latexpand cg_paper.tex -o /tmp/cg_paper_expanded_one.tex
+	make articulo_plos_plantilla.pdf
+	cp articulo_plos_plantilla.tex /tmp/v1.tex 
 	git checkout master
 	git checkout $(gittwo)
-	latexpand cg_paper.tex -o /tmp/cg_paper_expanded_two.tex
-	latexdiff /tmp/cg_paper_expanded_one.tex /tmp/cg_paper_expanded_two.tex > cg_paper_gitdiff.tex
+	cp articulo_plos_plantilla.tex /tmp/v2.tex 
+	latexdiff /tmp/v1.tex /tmp/v2.tex > /tmp/v_diff.tex
 	git checkout master
-	pdflatex -draftmode cg_paper_gitdiff.tex
-	bibtex cg_paper_gitdiff.aux
-	pdflatex -draftmode cg_paper_gitdiff.tex
-	pdflatex cg_paper_gitdiff.tex
+	pdflatex -draftmode /tmp/v_diff.tex
+# 	bibtex cg_paper_gitdiff.aux
+# 	pdflatex -draftmode cg_paper_gitdiff.tex
+# 	pdflatex cg_paper_gitdiff.tex
 
 
-cg_paper_gitdiff_PRL_1_and_2.pdf ::
-	make cg_paper_gitdiff.pdf  gitone=prlv1 gittwo=prlv3
+articulo_plos_gitdiff_master_and_plos_v1.pdf ::
+	make articulo_plos_gitdiff.pdf  gitone=plos_v1 gittwo=master
 
