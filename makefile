@@ -7,7 +7,9 @@ articulo.zip ::
 -include ~/makefile
 
 # Repositorio: 
+# Repo antiguo LOCALGITREPOSITORY=git@github.com:JosuelyM/articulo_idiomas.git
 LOCALGITREPOSITORY=git@github.com:JosuelyM/articulo_idiomas.git
+
 
 
 
